@@ -1,7 +1,9 @@
-# Resume v0.1.1
+# Resume v0.1.2
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## Change Log
+### v0.1.2
+* Restructured repo
 ### v0.1.1
 * Added compass and sass and bootstrap-sass
 * Added bundler gem to manage ruby dependencies
