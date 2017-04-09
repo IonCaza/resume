@@ -16,4 +16,4 @@
 * npm install
 * bundler install
 ## Development
-* Use `compass watch` in order to 
+* Use `compass watch` in order to monitor changes between scss -> stylesheets
