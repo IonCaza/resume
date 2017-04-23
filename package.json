@@ -4,6 +4,8 @@
   "description": "dependencies for Ion Caza's resume",
   "main": "index.js",
   "dependencies": {
+    "sitemap-generator": "^6.0.0",
+    "sitemap-generator-cli": "^6.0.1"
   },
   "devDependencies": {},
   "scripts": {
