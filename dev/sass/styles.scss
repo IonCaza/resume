@@ -6,3 +6,12 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
+
+// Show Grid for Dev
+div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-"] {
+    background-color: rgba(255, 0, 0, 0.2);
+}
