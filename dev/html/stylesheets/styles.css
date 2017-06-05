@@ -7342,7 +7342,8 @@ div[class^="col-"] {
   background-color: rgba(255, 0, 0, 0.2);
 }
 
-ul, li[class^="list-"] {
+ul,
+li[class^="list-"] {
   border: 0;
   list-style-type: square;
   padding: 2px 20px;
@@ -7356,4 +7357,8 @@ li:before {
   margin-top: 3px;
   margin-left: -13px;
   color: #000;
+}
+
+.degree {
+  padding-bottom: 10px;
 }

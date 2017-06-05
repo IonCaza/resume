@@ -1,36 +1,37 @@
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
-
 // Import custom Bootstrap variables
 @import "bootstrap-variables";
-
 @import "bootstrap-sprockets";
-
 // Import Bootstrap for Sass
 @import "bootstrap";
-
 // Show Grid for Dev
 div[class="row"] {
-    border: 1px dotted rgba(0, 0, 0, 0.5);
+ border: 1px dotted rgba(0, 0, 0, 0.5);
 }
 
 div[class^="col-"] {
-    background-color: rgba(255, 0, 0, 0.2);
+ background-color: rgba(255, 0, 0, 0.2);
 }
 
 // Lists
-ul,li[class^="list-"] { 
-    border: 0; 
-    list-style-type: square;
-    padding: 2px 20px;
+ul,
+li[class^="list-"] {
+ border: 0;
+ list-style-type: square;
+ padding: 2px 20px;
 }
 
 li:before {
-    content: "\f069";
-    font-family: FontAwesome;
-    font-size: 8px;
-    float: left;
-    margin-top: 3px;
-    margin-left: -13px;
-    color: #000;
+ content: "\f069";
+ font-family: FontAwesome;
+ font-size: 8px;
+ float: left;
+ margin-top: 3px;
+ margin-left: -13px;
+ color: #000;
+}
+
+.degree {
+ padding-bottom: 10px;
 }
