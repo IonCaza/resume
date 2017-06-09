@@ -25,10 +25,7 @@
 
   <!-- Header -->
   <div class="row">
-   <div class="picture col-md-2 col-sm-push-6">
-    Cool pic bro
-   </div>
-   <div class="contact col-md-2 col-sm-push-8">
+   <div class="contact col-md-3 col-md-push-6">
     <h2>Contact</h2>
     <p translate="no" typeof="schema:PostalAddress">
      <span property="schema:name" class="name">Ion Caza</span><br>
@@ -41,10 +38,18 @@
      <span property="schema:telephone" class="phone">+1 (248) 250 4056</span>
     </p>
    </div>
-   <div class="links col-md-2 col-sm-push-4">
+   <div class="links col-md-3 col-md-push-6">
     <h2>Links</h2>
+    <div class="links">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="https://www.linkedin.com/in/ioncaza/">LinkedIn</a></li>
+      <li class="list-group-item"><a href="https://github.com/JohnCaza/resume/">Resume Repo</a></li>
+      <li class="list-group-item"><a href="https://www.motor.com/products/selectline/">Selectline</a></li>
+      <li class="list-group-item"><a href="https://www.mopar.com/">Mopar.com</a></li>
+    </ul>
+    </div>
    </div>
-   <div class="description col-md-6 col-sm-pull-6">
+   <div class="description col-md-6 col-md-pull-6">
     <h2>Description</h2>
     I'm a highly motivated technical product owner with a focus on Information Technology. As a senior project manager, business analyst, and solution architect, my experience allows me to define processes and best practices to create efficiencies and synergies
     within the product lifecycle. My goal is to successfully deliver products by employing a technical and strategic problem-solving skillset.
@@ -53,211 +58,150 @@
 
   <!-- Body -->
   <div class="row">
-   <div class="jobs">
-    <div class="subtitle col-md-9">
-     <h2>Experience</h2>
-    </div>
-    <div class="job col-md-9">
-     <div class="job-title">Product Owner & Senior Technical Project Manager</div>
-     <div class="job-location">Royal Oak, Michigan</div>
-     <div class="job-date">May 2016 - Present</div>
-     <div class="job-description"></div>
-     <div class="job-responsibilities"></div>
-     <ul class="list-group">
-      <li class="list-group-item">1</li>
-      <li class="list-group-item">2</li>
-      <li class="list-group-item">3</li>
-      <li class="list-group-item">4</li>
-     </ul>
-    </div>
-    <div class="job col-md-9">
-     <div class="job-title">Technical Project Manager</div>
-     <div class="job-company">Gas Station TV</div>
-     <div class="job-location">Birmingham & Detroit, Michigan</div>
-     <div class="job-date">August 2014 - May 2016</div>
-     <div class="job-description">GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.</div>
-     <div class="job-responsibilities">
-      <ul class="list-group">
-       <li class="list-group-item">Scrum master</li>
-       <li class="list-group-item">Defined the Scrum Agile Software Development Lifecycle (SDLC) and introduced checks and balances that led to a significant increase in the team’s performance</li>
-       <li class="list-group-item">Implemented JIRA and Confluence and designed the workflow to integrate these tools seamlessly in the SDLC</li>
-       <li class="list-group-item">Estimated, planned, and tracked time, scope, and cost for Gbase – a custom ERP built in-house that will be used by all the departments of the company</li>
-       <li class="list-group-item">Managed other projects that revolved around production applications and processes</li>
-       <li class="list-group-item">Gathered requirements from internal and external stakeholders while interacting with all levels of management </li>
-       <li class="list-group-item">Developed full stack technical specifications for the development of Gbase</li>
-       <li class="list-group-item">Architected an extensible data model based on Gbase’s data requirements</li>
-       <li class="list-group-item">Architected interim applications used to automate functions of Gbase and transition several departments to Gbase</li>
-       <li class="list-group-item">Developed processes and scripts to facilitate Extracting, Transforming, and Loading (ETL) data from legacy data sources into the Gbase database</li>
-       <li class="list-group-item">Maintained legacy applications and databases that were critical to the company</li>
-       <li class="list-group-item">Managed relationship with third party resources that augmented the main development team</li>
-       <li class="list-group-item">Trained QA personnel</li>
-       <li class="list-group-item">Advised QA on the creation of test cases and test plans for all internal projects</li>
-       <li class="list-group-item">Actively participated in UX/UI improvement and design discussions</li>
-       <li class="list-group-item">Performed UAT validation testing with business stakeholders</li>
-       <li class="list-group-item">Improved the accuracy of inventory reports for the executive team by 60% - this increased their understanding of when GSTV is oversold and undersold as a network, with the help of data gathered from previous projects
-       </li>
-      </ul>
+   <div class="left-pane col-md-9">
+    <div class="jobs">
+     <div class="subtitle">
+      <h2>Experience</h2>
+     </div>
+     <div class="job">
+      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Product Owner & Senior Technical Project Manager</a></div>
+      <div class="job-panel collapse in">
+       <div class="job-company">Vectorform Inc</div>
+       <div class="job-location">Royal Oak, Michigan</div>
+       <div class="job-date">May 2016 - Present</div>
+       <div class="job-description"></div>
+       <div class="job-responsibilities">
+        <ul class="list-group">
+         <li class="list-group-item">1</li>
+         <li class="list-group-item">2</li>
+         <li class="list-group-item">3</li>
+         <li class="list-group-item">4</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="job">
+      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Project Manager</a></div>
+      <div class="job-panel collapse in">
+       <div class="job-company">Gas Station TV</div>
+       <div class="job-location">Birmingham & Detroit, Michigan</div>
+       <div class="job-date">August 2014 - May 2016</div>
+       <div class="job-description">GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.</div>
+       <div class="job-responsibilities">
+        <ul class="list-group">
+         <li class="list-group-item">Scrum master</li>
+         <li class="list-group-item">Defined the Scrum Agile Software Development Lifecycle (SDLC) and introduced checks and balances that led to a significant increase in the team’s performance</li>
+         <li class="list-group-item">Implemented JIRA and Confluence and designed the workflow to integrate these tools seamlessly in the SDLC</li>
+         <li class="list-group-item">Estimated, planned, and tracked time, scope, and cost for Gbase – a custom ERP built in-house that will be used by all the departments of the company</li>
+         <li class="list-group-item">Managed other projects that revolved around production applications and processes</li>
+         <li class="list-group-item">Gathered requirements from internal and external stakeholders while interacting with all levels of management </li>
+         <li class="list-group-item">Developed full stack technical specifications for the development of Gbase</li>
+         <li class="list-group-item">Architected an extensible data model based on Gbase’s data requirements</li>
+         <li class="list-group-item">Architected interim applications used to automate functions of Gbase and transition several departments to Gbase</li>
+         <li class="list-group-item">Developed processes and scripts to facilitate Extracting, Transforming, and Loading (ETL) data from legacy data sources into the Gbase database</li>
+         <li class="list-group-item">Maintained legacy applications and databases that were critical to the company</li>
+         <li class="list-group-item">Managed relationship with third party resources that augmented the main development team</li>
+         <li class="list-group-item">Trained QA personnel</li>
+         <li class="list-group-item">Advised QA on the creation of test cases and test plans for all internal projects</li>
+         <li class="list-group-item">Actively participated in UX/UI improvement and design discussions</li>
+         <li class="list-group-item">Performed UAT validation testing with business stakeholders</li>
+         <li class="list-group-item">Improved the accuracy of inventory reports for the executive team by 60% - this increased their understanding of when GSTV is oversold and undersold as a network, with the help of data gathered from previous projects
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="job">
+      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Senior Technical Business Analyst</a></div>
+      <div class="job-panel collapse in">
+       <div class="job-company">MOTOR Information Systems</div>
+       <div class="job-location">Troy, Michigan</div>
+       <div class="job-date">October 2013 - August 2014</div>
+       <div class="job-description">MOTOR is the largest provider of aftermarket automotive information in the world; it is a big data company with hundreds of databases and terabytes of data that it packages into products.</div>
+       <div class="job-responsibilities"></div>
+       <ul class="list-group">
+        <li class="list-group-item">Defined a hybrid-agile SDLC process at MOTOR</li>
+        <li class="list-group-item">Drove meetings on improving the role of Business Analysts in the company and defining the SDLC process for both Agile and Waterfall projects</li>
+        <li class="list-group-item">Introduced the usage of Sharepoint for document management within the Selectline Estimating Application (for BA and QA)</li>
+        <li class="list-group-item">Crafted BA Approach Documents for both Agile and Waterfall projects revolving around ETL-ing data</li>
+        <li class="list-group-item">Streamlined communication between Application Development stakeholders</li>
+        <li class="list-group-item">Gather, clarified, and approved requirements with product managers weekly</li>
+        <li class="list-group-item">Met with CTO monthly to discuss their vision of the application development process</li>
+        <li class="list-group-item">Translated requirements into detailed technical specifications</li>
+        <li class="list-group-item">Created use cases for business requirements</li>
+        <li class="list-group-item">Helped the UX/UI and WebServices team get a thorough comprehension of the data and the structure of the data that they handle by providing samples</li>
+        <li class="list-group-item">Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA</li>
+        <li class="list-group-item">Actively performed QA tasks; created and executed formal test cases using MSTM</li>
+        <li class="list-group-item">Streamlined Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders</li>
+        <li class="list-group-item">Trained stakeholders in the usage of Team Foundation Server</li>
+        <li class="list-group-item">Created various advanced queries, stored procedures, and table valued functions in SQL Server 2012 to help data team and retrieve samples for development team</li>
+       </ul>
+      </div>
+     </div>
+     <div class="job">
+      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Business Analyst</a></div>
+      <div class="job-panel collapse in">
+       <div class="job-company">ATEX Appraisal Inc</div>
+       <div class="job-location">Troy & Westland, Michigan</div>
+       <div class="job-date">December 2005 - October 2013</div>
+       <div class="job-description">ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.</div>
+       <div class="job-responsibilities"></div>
+       <ul class="list-group">
+        <li class="list-group-item">Managed Information Systems</li>
+        <li class="list-group-item">Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market</li>
+        <li class="list-group-item">Expanded company horizons to new markets shifting focus from residential appraising to servicing the industry with new solutions developed internally</li>
+        <li class="list-group-item">Interacted with higher management level to determine goals and requirements for various IT projects</li>
+        <li class="list-group-item">Created business requirement documents for process automation</li>
+        <li class="list-group-item">Acted as cross-functional liaison establishing proper communication channels between PM, development team, QA and other stakeholders</li>
+        <li class="list-group-item">Conducted product feasibility, market and profitability studies</li>
+        <li class="list-group-item">Implemented SDLC and DSDM agile methodologies in company’s project management framework</li>
+        <li class="list-group-item">Coordinated with QA for thorough front-end to back-end testing of developed .NET 4.0 applications and interactions with SQL databases</li>
+        <li class="list-group-item">Constructed complex SQL queries to help development team with reporting</li>
+        <li class="list-group-item">Built stored procedures and functions in SQL to help development team optimize database transactions</li>
+        <li class="list-group-item">Provided hands-on support of application front-end development in HTML5, Javascript</li>
+       </ul>
+      </div>
+     </div>
+     <div class="job">
+      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Web developer</a></div>
+      <div class="job-panel collapse in">
+       <div class="job-company">Enertia Solutions</div>
+       <div class="job-location">Ann Arbor, Michigan</div>
+       <div class="job-date">June 2008 - August 2008</div>
+       <div class="job-description">Enertia is a web design company with clients all over the nation; its solutions span from simple websites to full-fledged web-based applications</div>
+       <div class="job-responsibilities"></div>
+       <ul class="list-group">
+        <li class="list-group-item">Developed web applications, websites and various projects from start to finish</li>
+        <li class="list-group-item">Communicated with stakeholders to identify project requirements</li>
+        <li class="list-group-item">Managed relationship between Enertia and clients during and post development</li>
+        <li class="list-group-item">Provided customer support to clients on previously developed projects</li>
+       </ul>
+      </div>
      </div>
     </div>
-    <div class="job col-md-9">
-     <div class="job-title">Senior Technical Business Analyst</div>
-     <div class="job-company">MOTOR Information Systems</div>
-     <div class="job-location">Troy, Michigan</div>
-     <div class="job-date">October 2013 - August 2014</div>
-     <div class="job-description">MOTOR is the largest provider of aftermarket automotive information in the world; it is a big data company with hundreds of databases and terabytes of data that it packages into products.</div>
-     <div class="job-responsibilities"></div>
-     <ul class="list-group">
-      <li class="list-group-item">Defined a hybrid-agile SDLC process at MOTOR</li>
-      <li class="list-group-item">Drove meetings on improving the role of Business Analysts in the company and defining the SDLC process for both Agile and Waterfall projects</li>
-      <li class="list-group-item">Introduced the usage of Sharepoint for document management within the Selectline Estimating Application (for BA and QA)</li>
-      <li class="list-group-item">Crafted BA Approach Documents for both Agile and Waterfall projects revolving around ETL-ing data</li>
-      <li class="list-group-item">Streamlined communication between Application Development stakeholders</li>
-      <li class="list-group-item">Gather, clarified, and approved requirements with product managers weekly</li>
-      <li class="list-group-item">Met with CTO monthly to discuss their vision of the application development process</li>
-      <li class="list-group-item">Translated requirements into detailed technical specifications</li>
-      <li class="list-group-item">Created use cases for business requirements</li>
-      <li class="list-group-item">Helped the UX/UI and WebServices team get a thorough comprehension of the data and the structure of the data that they handle by providing samples</li>
-      <li class="list-group-item">Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA</li>
-      <li class="list-group-item">Actively performed QA tasks; created and executed formal test cases using MSTM</li>
-      <li class="list-group-item">Streamlined Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders</li>
-      <li class="list-group-item">Trained stakeholders in the usage of Team Foundation Server</li>
-      <li class="list-group-item">Created various advanced queries, stored procedures, and table valued functions in SQL Server 2012 to help data team and retrieve samples for development team</li>
-     </ul>
-    </div>
-    <div class="job col-md-9">
-     <div class="job-title">Technical Business Analyst</div>
-     <div class="job-company">ATEX Appraisal Inc</div>
-     <div class="job-location">Troy & Westland, Michigan</div>
-     <div class="job-date">December 2005 - October 2013</div>
-     <div class="job-description">ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.</div>
-     <div class="job-responsibilities"></div>
-     <ul class="list-group">
-      <li class="list-group-item">Managed Information Systems</li>
-      <li class="list-group-item">Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market</li>
-      <li class="list-group-item">Expanded company horizons to new markets shifting focus from residential appraising to servicing the industry with new solutions developed internally</li>
-      <li class="list-group-item">Interacted with higher management level to determine goals and requirements for various IT projects</li>
-      <li class="list-group-item">Created business requirement documents for process automation</li>
-      <li class="list-group-item">Acted as cross-functional liaison establishing proper communication channels between PM, development team, QA and other stakeholders</li>
-      <li class="list-group-item">Conducted product feasibility, market and profitability studies</li>
-      <li class="list-group-item">Implemented SDLC and DSDM agile methodologies in company’s project management framework</li>
-      <li class="list-group-item">Coordinated with QA for thorough front-end to back-end testing of developed .NET 4.0 applications and interactions with SQL databases</li>
-      <li class="list-group-item">Constructed complex SQL queries to help development team with reporting</li>
-      <li class="list-group-item">Built stored procedures and functions in SQL to help development team optimize database transactions</li>
-      <li class="list-group-item">Provided hands-on support of application front-end development in HTML5, Javascript</li>
-     </ul>
-    </div>
-    <div class="job col-md-9">
-     <div class="job-title">Web developer</div>
-     <div class="job-company">Enertia Solutions</div>
-     <div class="job-location">Ann Arbor, Michigan</div>
-     <div class="job-date">June 2008 - August 2008</div>
-     <div class="job-description">Enertia is a web design company with clients all over the nation; its solutions span from simple websites to full-fledged web-based applications</div>
-     <div class="job-responsibilities"></div>
-     <ul class="list-group">
-      <li class="list-group-item">Developed web applications, websites and various projects from start to finish</li>
-      <li class="list-group-item">Communicated with stakeholders to identify project requirements</li>
-      <li class="list-group-item">Managed relationship between Enertia and clients during and post development</li>
-      <li class="list-group-item">Provided customer support to clients on previously developed projects</li>
-     </ul>
-    </div>
-    
-
-    <div class="education col-md-12">
+    <div class="education">
      <h2>Education</h2>
-     <div class="degree col-md-6">
+     <div class="degree col-md-4">
       <div class="degree-title">Master of Business Administration</div>
       <div class="degree-school">University of Michigan</div>
       <div class="degree-date">September 2011 - March 2013</div>
      </div>
-     <div class="degree col-md-6">
+     <div class="degree col-md-4">
       <div class="degree-title">Bachelor of Business Administration</div>
       <div class="degree-school">University of Michigan</div>
       <div class="degree-date">September 2007 - August 2011</div>
      </div>
     </div>
    </div>
-
-   <div class="skills col-md-12">
-    <h2>Skills</h2>
-    <div id="skills"></div>
-    <script>document.getElementById("skills").innerHTML = skills;</script>
-    <!--
-    <div class="skills-general col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">Process Automation</li>
-      <li class="list-group-item">Planning & Strategy</li>
-      <li class="list-group-item">Vendor Management</li>
-      <li class="list-group-item">IT Management</li>
-      <li class="list-group-item">Quality Assurance</li>
-      <li class="list-group-item">Reporting</li>
-      <li class="list-group-item">Wireframing</li>
-      <li class="list-group-item">Diagraming</li>
-      <li class="list-group-item">Technical Writing</li>
-      <li class="list-group-item">Cloud Technology</li>
-      <li class="list-group-item">Mobile Applications</li>
-      <li class="list-group-item">Desktop Applications</li>
-      <li class="list-group-item">Web Applications</li>
-      <li class="list-group-item">Windows Services</li>
-      <li class="list-group-item">Linux</li>
-      <li class="list-group-item">Big Data Processing</li>
-      <li class="list-group-item">Support Applications</li>
-     </ul>
+   <div class="right-pane col-md-3">
+    <div class="skills">
+     <h2>Skills</h2>
+     All skills are ordered from most to least favorite. General skills are represented in years of experience.
+     <div class="skillset"></div>
+     <script>
+      $('.skillset').html(skills);
+     </script>
     </div>
-    <div class="skills-language col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">German: Basic</li>
-      <li class="list-group-item">Spanish: Advanced</li>
-      <li class="list-group-item">Romanian: Flawless</li>
-     </ul>
-    </div>
-    <div class="skills-collaboration col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">JIRA</li>
-      <li class="list-group-item">Confluence</li>
-      <li class="list-group-item">Bitbucket/li>
-       <li class="list-group-item">Github</li>
-       <li class="list-group-item">Team Foundation Server</li>
-       <li class="list-group-item">Sharepoint</li>
-       <li class="list-group-item">Trello</li>
-     </ul>
-    </div>
-    <div class="skills-visual col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">Omnigraffle</li>
-      <li class="list-group-item">Visio</li>
-      <li class="list-group-item">Balsamiq</li>
-      <li class="list-group-item">Axure</li>
-      <li class="list-group-item">Photoshop</li>
-      <li class="list-group-item">Illustrator</li>
-     </ul>
-    </div>
-    <div class="skills-development col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">Visual Studio 2017</li>
-      <li class="list-group-item">.NET 4.5</li>
-      <li class="list-group-item">MS SQL 2014</li>
-      <li class="list-group-item">Mongo</li>
-      <li class="list-group-item">MySQL 5.7</li>
-      <li class="list-group-item">JAVA 8</li>
-     </ul>
-    </div>
-    <div class="skills-web-development col-md-4">
-     <ul class="list-group">
-      <li class="list-group-item">AEM 6.0-6.3</li>
-      <li class="list-group-item">Apache</li>
-      <li class="list-group-item">PHP</li>
-      <li class="list-group-item">Node</li>
-      <li class="list-group-item">Angular</li>
-      <li class="list-group-item">React</li>
-      <li class="list-group-item">Express</li>
-      <li class="list-group-item">Ruby</li>
-      <li class="list-group-item">Compass</li>
-      <li class="list-group-item">Bootstrap</li>
-      <li class="list-group-item">Sass</li>
-      <li class="list-group-item">Jenkins</li>
-      <li class="list-group-item">Amazon Web Services</li>
-     </ul>
-    </div>-->
    </div>
   </div>
 
@@ -265,21 +209,6 @@
   <div class="row">
   </div>
 
-  <!-- Template 
-   <div class="job col-md-9">
-    <div class="job-title"></div>
-    <div class="job-company"></div>
-    <div class="job-location"></div>
-    <div class="job-date"></div>
-    <div class="job-description"></div>
-    <div class="job-responsibilities"></div>
-    <ul class="list-group">
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-    </ul>
-   </div>
-  -->
 </body>
+
 </html>
