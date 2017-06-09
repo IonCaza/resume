@@ -1,0 +1,66 @@
+{
+    "skills-general": [
+        "Process Automation",
+        "Planning & Strategy",
+        "Vendor Management",
+        "IT Management",
+        "Quality Assurance",
+        "Reporting",
+        "Wireframing",
+        "Diagraming",
+        "Technical Writing",
+        "Cloud Technology",
+        "Mobile Applications",
+        "Desktop Applications",
+        "Web Applications",
+        "Windows Services",
+        "Linux",
+        "Big Data Processing",
+        "Support Applications"
+    ],
+    "skills-language": [
+        "German: Basic",
+        "Spanish: Advanced",
+        "Romanian: Flawless"
+    ],
+    "skills-collaboration": [
+        "JIRA",
+        "Confluence",
+        "Bitbucket",
+        "Github",
+        "Team Foundation Server",
+        "Sharepoint",
+        "Trello"
+    ],
+    "skills-visual": [
+        "Omnigraffle",
+        "Visio",
+        "Balsamiq",
+        "Axure",
+        "Photoshop",
+        "Illustrator"
+    ],
+    "skills-development": [
+        "Visual Studio 2017",
+        ".NET 4.5",
+        "MS SQL 2014",
+        "Mongo",
+        "MySQL 5.7",
+        "JAVA 8"
+    ],
+    "skills-web-development": [
+        "AEM 6.0-6.3",
+        "Apache",
+        "PHP",
+        "Node",
+        "Angular",
+        "React",
+        "Express",
+        "Ruby",
+        "Compass",
+        "Bootstrap",
+        "Sass",
+        "Jenkins",
+        "Amazon Web Services"
+    ]
+}

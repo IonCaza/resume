@@ -5,23 +5,26 @@
  <meta charset="utf-8" />
  <title>Ion Caza - Technical Resume</title>
  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- <script src="javascripts/site.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+ <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/jsontree.min.js"></script>
+ <script src="js/site.js"></script>
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
+ <link rel="stylesheet" href="css/styles.css" type="text/css" />
+ <link rel="stylesheet" href="css/jsontree.css" type="text/css" />
 </head>
 
 <body>
  <div class="container">
+  <!-- Title -->
   <div class="row">
-   <!-- Title -->
    <div class="title col-md-12">
     <h1>Resume</h1>
    </div>
   </div>
+
+  <!-- Header -->
   <div class="row">
-   <!-- Header -->
    <div class="picture col-md-2 col-sm-push-6">
     Cool pic bro
    </div>
@@ -47,10 +50,13 @@
     within the product lifecycle. My goal is to successfully deliver products by employing a technical and strategic problem-solving skillset.
    </div>
   </div>
+
+  <!-- Body -->
   <div class="row">
-   <!-- Body -->
    <div class="jobs">
-    <h2>Experience</h2>
+    <div class="subtitle col-md-9">
+     <h2>Experience</h2>
+    </div>
     <div class="job col-md-9">
      <div class="job-title">Product Owner & Senior Technical Project Manager</div>
      <div class="job-location">Royal Oak, Michigan</div>
@@ -154,22 +160,8 @@
       <li class="list-group-item">Provided customer support to clients on previously developed projects</li>
      </ul>
     </div>
-    <!-- Template 
-   <div class="job col-md-9">
-    <div class="job-title"></div>
-    <div class="job-company"></div>
-    <div class="job-location"></div>
-    <div class="job-date"></div>
-    <div class="job-description"></div>
-    <div class="job-responsibilities"></div>
-    <ul class="list-group">
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-     <li class="list-group-item"></li>
-    </ul>
-   </div>
--->
+    
+
     <div class="education col-md-12">
      <h2>Education</h2>
      <div class="degree col-md-6">
@@ -187,6 +179,9 @@
 
    <div class="skills col-md-12">
     <h2>Skills</h2>
+    <div id="skills"></div>
+    <script>document.getElementById("skills").innerHTML = skills;</script>
+    <!--
     <div class="skills-general col-md-4">
      <ul class="list-group">
       <li class="list-group-item">Process Automation</li>
@@ -262,13 +257,29 @@
       <li class="list-group-item">Jenkins</li>
       <li class="list-group-item">Amazon Web Services</li>
      </ul>
-    </div>
-   </div>
-
-   <div class="row">
-    <!-- Footer -->
+    </div>-->
    </div>
   </div>
-</body>
 
+  <!-- Footer -->
+  <div class="row">
+  </div>
+
+  <!-- Template 
+   <div class="job col-md-9">
+    <div class="job-title"></div>
+    <div class="job-company"></div>
+    <div class="job-location"></div>
+    <div class="job-date"></div>
+    <div class="job-description"></div>
+    <div class="job-responsibilities"></div>
+    <ul class="list-group">
+     <li class="list-group-item"></li>
+     <li class="list-group-item"></li>
+     <li class="list-group-item"></li>
+     <li class="list-group-item"></li>
+    </ul>
+   </div>
+  -->
+</body>
 </html>
