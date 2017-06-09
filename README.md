@@ -18,8 +18,8 @@
 * Installed npm
 * Starting frontend 
 ## Requirements
-* node.js + npm
-* bundler 
+* node.js
+* ruby
 ## Install
 * npm install
 * bundler install
