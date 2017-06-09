@@ -1,4 +1,4 @@
-# Resume v0.1.3
+# My Resume - Ion Caza - 06/09/2017
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## Change Log
@@ -23,5 +23,6 @@
 ## Install
 * npm install
 * bundler install
+* node index.js
 ## Development
-* Use `compass watch` in order to monitor changes between scss -> stylesheets
+* Use `compass watch` in order to monitor changes between scss -> css
