@@ -1,7 +1,13 @@
-# Resume v0.1.2
+# Resume v0.1.3
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## Change Log
+### v0.1.3
+* Many style changes
+* Added all the content of previous resume
+* Added jsontree
+* Changed file paths
+* Added node server
 ### v0.1.2
 * Restructured repo
 ### v0.1.1
