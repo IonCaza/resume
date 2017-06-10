@@ -8581,10 +8581,7 @@ span.avoidwrap {
   display: inline-block;
 }
 
-.job-company-location {
-  padding-bottom: 0px;
-}
-
+.job-company-location,
 .job-company-description {
   padding-bottom: 0px;
 }
@@ -8603,4 +8600,30 @@ h5 {
 .description,
 .job {
   padding-bottom: 15px;
+}
+
+.expst:before {
+  content: "+ ";
+  font-family: "Lucida Console";
+  padding-right: 5px;
+  top: -2px;
+  position: relative;
+  font-size: 1.5em;
+  color: #000;
+  float: left;
+}
+
+.colst:before {
+  content: "- ";
+  font-family: "Lucida Console";
+  padding-right: 5px;
+  top: -2px;
+  position: relative;
+  font-size: 1.5em;
+  color: #000;
+  float: left;
+}
+
+.job-title {
+  padding-left: 10px;
 }
