@@ -1,10 +1,14 @@
-// Import Bootstrap Compass integration
-@import "bootstrap-compass";
-// Import custom Bootstrap variables
-@import "bootstrap-variables";
-@import "bootstrap-sprockets";
+// or Import Bootstrap Flex
+// @import "bootstrap-flex";
+// or Import Bootstrap Grid
+// @import "bootstrap-grid";
+// or Import Bootstrap Reboot
+// @import "bootstrap-reboot";
+
 // Import Bootstrap for Sass
 @import "bootstrap";
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
 // Show Grid for Dev
 div[class="row"] {
  border: 1px dotted rgba(0, 0, 0, 0.5);
@@ -14,24 +18,83 @@ div[class^="col-"] {
  background-color: rgba(255, 0, 0, 0.2);
 }
 
+// Mixins
+@mixin breakpoint($class) {
+ @if $class==xs {
+  @media (max-width: 767px) {
+   @content;
+  }
+ }
+ @else if $class==sm {
+  @media (min-width: 768px) {
+   @content;
+  }
+ }
+ @else if $class==md {
+  @media (min-width: 992px) {
+   @content;
+  }
+ }
+ @else if $class==lg {
+  @media (min-width: 1200px) {
+   @content;
+  }
+ }
+ @else {
+  @warn "Breakpoint mixin supports: xs, sm, md, lg";
+ }
+}
+
 // Lists
 ul,
 li[class^="list-"] {
  border: 0;
  list-style-type: square;
- padding: 2px 20px;
+ padding: 2px 5px;
 }
 
 li:before {
  content: "\f069";
  font-family: FontAwesome;
- font-size: 8px;
+ font-size: 10px;
  float: left;
  margin-top: 3px;
- margin-left: -13px;
+ margin-left: 0px;
+ margin-right: 5px;
  color: #000;
 }
 
+// General CSS
 .degree {
  padding-bottom: 10px;
+}
+
+span.avoidwrap {
+ display: inline-block;
+}
+
+.job-company-location {
+ padding-bottom: 0px;
+}
+
+.job-company-description {
+ padding-bottom: 10px;
+}
+
+.skillset {
+ padding-top: 10px;
+}
+
+// Breakpoint Specific CSS
+.job-date {
+ text-align: right;
+ padding-top: 2px;
+ @include breakpoint(xs) {
+  font-size: 0.78em;
+  padding-top: 13px;
+ }
+}
+
+.contact, .links, .description, .job {
+    padding-bottom: 15px;
 }

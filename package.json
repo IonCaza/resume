@@ -4,6 +4,7 @@
   "description": "dependencies for Ion Caza's resume",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "finalhandler": "^1.0.3",
     "serve-static": "^1.12.3",
     "sitemap-generator": "^6.0.0",

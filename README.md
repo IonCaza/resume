@@ -2,6 +2,8 @@
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## Change Log
+### v0.2
+* Migrated to bootstrap 4... what a pain
 ### v0.1.3
 * Many style changes
 * Added all the content of previous resume

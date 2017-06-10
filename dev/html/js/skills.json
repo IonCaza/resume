@@ -1,70 +1,70 @@
 {
-    "skills-general": {
-        "Product Ownership": 8,
-        "Project Management": 7,
-        "Business Analysis": 12,
-        "Vendor Management": 6,
-        "IT Management": 9,
-        "Process Definition": 10,
-        "Planning & Strategy": 12,
-        "Automation": 8,
-        "Quality Assurance": 12,
-        "Reporting": 5,
-        "Wireframing": 6,
-        "Diagraming": 12,
-        "Technical Writing": 4,
-        "Cloud Technology": 10,
-        "Mobile Applications": 4,
-        "Desktop Applications": 14,
-        "Web Applications": 12,
-        "Windows Services": 3,
-        "Linux": 15,
-        "Big Data Processing": 2,
-        "Support Applications": 5
-    },
-    "skills-language": 
-        {"German": "Basic",
-        "Spanish": "Advanced",
-        "Romanian": "Flawless",
-        "Engrish": "Yarggg"},
-    "skills-collaboration": [
-        "JIRA",
-        "Confluence",
-        "Bitbucket",
-        "Github",
-        "Team Foundation Server",
-        "Sharepoint",
-        "Trello"
-    ],
-    "skills-visual": [
-        "Omnigraffle",
-        "Visio",
-        "Balsamiq",
-        "Axure",
-        "Photoshop",
-        "Illustrator"
-    ],
-    "skills-development": [
-        "Visual Studio 2017",
-        ".NET 4.5",
-        "SQL Server 2016",
-        "Mongo",
-        "MySQL 5.7",
-        "JAVA 8"
-    ],
-    "skills-web-development": [
-        "AEM 6.0-6.3",
-        "Apache",
-        "PHP",
-        "Node",
-        "Angular",
-        "React",
-        "Express",
-        "Ruby",
-        "Compass",
-        "Bootstrap",
-        "Sass",
-        "Jenkins",
-        "Amazon Web Services"
-    ]
+ "skills-general": {
+  "Product Ownership": 8,
+  "Vendor Management": 6,
+  "IT Management": 9,
+  "Process Definition": 10,
+  "Planning & Strategy": 12,
+  "Project Management": 7,
+  "Business Analysis": 12,
+  "Automation": 8,
+  "Cloud Technology": 10,
+  "Reporting": 5,
+  "Quality Assurance": 12,
+  "Diagraming": 12,
+  "Wireframing": 6,
+  "Technical Writing": 4,
+  "Linux": 15,
+  "Desktop Applications": 14,
+  "Mobile Applications": 4,
+  "Web Applications": 12,
+  "Windows Services": 3,
+  "Big Data Processing": 2,
+  "Support Applications": 5
+ },
+ "skills-language": {
+  "Romanian": "Flawless",
+  "Spanish": "Advanced",
+  "German": "Basic"
+ },
+ "skills-collaboration": [
+  "JIRA",
+  "Confluence",
+  "Github",
+  "Team Foundation Server",
+  "Sharepoint",
+  "Trello",
+  "Bitbucket"
+ ],
+ "skills-visual": [
+  "Axure",
+  "Photoshop",
+  "Omnigraffle",
+  "Visio",
+  "Balsamiq",
+  "Illustrator"
+ ],
+ "skills-development": [
+  "Visual Studio 2017",
+  ".NET 4.5",
+  "SQL Server 2016",
+  "Mongo",
+  "MySQL 5.7",
+  "JAVA 8"
+ ],
+ "skills-web-development": [
+  "Amazon Web Services",
+  "Apache",
+  "PHP",
+  "Node",
+  "Express",
+  "AEM 6.0-6.3",
+  "React",
+  "Ruby",
+  "Angular",
+  "Sass",
+  "Compass",
+  "Bootstrap",
+  "Jenkins"
+ ]
 }

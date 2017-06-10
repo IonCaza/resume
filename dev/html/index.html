@@ -25,9 +25,9 @@
 
   <!-- Header -->
   <div class="row">
-   <div class="contact col-md-3 col-md-push-6">
+   <div class="contact col-md-3 push-md-6">
     <h2>Contact</h2>
-    <p translate="no" typeof="schema:PostalAddress">
+    <div translate="no" typeof="schema:PostalAddress">
      <span property="schema:name" class="name">Ion Caza</span><br>
      <span property="schema:streetAddress" class="address">16241 Quakertown Ln</span><br>
      <span property="schema:addressLocality" class="address">Livonia</span>, <abbr title="Michigan" property="schema:addressRegion" class="address">MI</abbr> <span property="schema:postalCode" class="address">48154</span><br>
@@ -36,20 +36,18 @@
       gmtl('let', 'caza.in', 'Opportunity awaits!');
      </script><br>
      <span property="schema:telephone" class="phone">+1 (248) 250 4056</span>
-    </p>
-   </div>
-   <div class="links col-md-3 col-md-push-6">
-    <h2>Links</h2>
-    <div class="links">
-    <ul class="list-group">
-      <li class="list-group-item"><a href="https://www.linkedin.com/in/ioncaza/">LinkedIn</a></li>
-      <li class="list-group-item"><a href="https://github.com/JohnCaza/resume/">Resume Repo</a></li>
-      <li class="list-group-item"><a href="https://www.motor.com/products/selectline/">Selectline</a></li>
-      <li class="list-group-item"><a href="https://www.mopar.com/">Mopar.com</a></li>
-    </ul>
     </div>
    </div>
-   <div class="description col-md-6 col-md-pull-6">
+   <div class="links col-md-3 push-md-6">
+    <h2>Links</h2>
+    <ul class="list-group">
+     <li class="list-group-item"><a href="https://www.linkedin.com/in/ioncaza/">LinkedIn</a></li>
+     <li class="list-group-item"><a href="https://github.com/JohnCaza/resume/">Resume Repo</a></li>
+     <li class="list-group-item"><a href="https://www.motor.com/products/selectline/">Selectline</a></li>
+     <li class="list-group-item"><a href="https://www.mopar.com/">Mopar.com</a></li>
+    </ul>
+   </div>
+   <div class="description col-md-6 pull-md-6">
     <h2>Description</h2>
     I'm a highly motivated technical product owner with a focus on Information Technology. As a senior project manager, business analyst, and solution architect, my experience allows me to define processes and best practices to create efficiencies and synergies
     within the product lifecycle. My goal is to successfully deliver products by employing a technical and strategic problem-solving skillset.
@@ -64,13 +62,24 @@
       <h2>Experience</h2>
      </div>
      <div class="job">
-      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Product Owner & Senior Technical Project Manager</a></div>
+      <div class="job-title">
+       <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');"><span class="avoidwrap">Product Owner & </span> <span class="avoidwrap">Senior Technical Project Manager</span></a></h3>
+      </div>
       <div class="job-panel collapse in">
-       <div class="job-company">Vectorform Inc</div>
-       <div class="job-location">Royal Oak, Michigan</div>
-       <div class="job-date">May 2016 - Present</div>
-       <div class="job-description"></div>
+       <div class="row">
+        <div class="job-company col-6">
+         <h4>Vectorform Inc</h4>
+        </div>
+        <div class="job-date col-6">May 2016 - Present</div>
+       </div>
+       <div class="job-company-location">Royal Oak, Michigan</div>
+       <div class="job-company-description">Company Desc goes here</div>
+       <div class="job-summary">
+        <h5>Summary</h5>
+        This is where it's at.
+       </div>
        <div class="job-responsibilities">
+        <h5>Responsibilities</h5>
         <ul class="list-group">
          <li class="list-group-item">1</li>
          <li class="list-group-item">2</li>
@@ -81,13 +90,24 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Project Manager</a></div>
+      <div class="job-title">
+       <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Project Manager</a></h3>
+      </div>
       <div class="job-panel collapse in">
-       <div class="job-company">Gas Station TV</div>
-       <div class="job-location">Birmingham & Detroit, Michigan</div>
-       <div class="job-date">August 2014 - May 2016</div>
-       <div class="job-description">GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.</div>
+       <div class="row">
+        <div class="job-company col-6">
+         <h4>Gas Station TV</h4>
+        </div>
+        <div class="job-date col-6">August 2014 - May 2016</div>
+       </div>
+       <div class="job-company-location">Birmingham & Detroit, Michigan</div>
+       <div class="job-company-description">GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.</div>
+       <div class="job-summary">
+        <h5>Summary</h5>
+        This is where it's at.
+       </div>
        <div class="job-responsibilities">
+        <h5>Responsibilities</h5>
         <ul class="list-group">
          <li class="list-group-item">Scrum master</li>
          <li class="list-group-item">Defined the Scrum Agile Software Development Lifecycle (SDLC) and introduced checks and balances that led to a significant increase in the team’s performance</li>
@@ -112,70 +132,104 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Senior Technical Business Analyst</a></div>
+      <div class="job-title">
+       <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Senior Technical Business Analyst</a></h3>
+      </div>
       <div class="job-panel collapse in">
-       <div class="job-company">MOTOR Information Systems</div>
-       <div class="job-location">Troy, Michigan</div>
-       <div class="job-date">October 2013 - August 2014</div>
-       <div class="job-description">MOTOR is the largest provider of aftermarket automotive information in the world; it is a big data company with hundreds of databases and terabytes of data that it packages into products.</div>
-       <div class="job-responsibilities"></div>
-       <ul class="list-group">
-        <li class="list-group-item">Defined a hybrid-agile SDLC process at MOTOR</li>
-        <li class="list-group-item">Drove meetings on improving the role of Business Analysts in the company and defining the SDLC process for both Agile and Waterfall projects</li>
-        <li class="list-group-item">Introduced the usage of Sharepoint for document management within the Selectline Estimating Application (for BA and QA)</li>
-        <li class="list-group-item">Crafted BA Approach Documents for both Agile and Waterfall projects revolving around ETL-ing data</li>
-        <li class="list-group-item">Streamlined communication between Application Development stakeholders</li>
-        <li class="list-group-item">Gather, clarified, and approved requirements with product managers weekly</li>
-        <li class="list-group-item">Met with CTO monthly to discuss their vision of the application development process</li>
-        <li class="list-group-item">Translated requirements into detailed technical specifications</li>
-        <li class="list-group-item">Created use cases for business requirements</li>
-        <li class="list-group-item">Helped the UX/UI and WebServices team get a thorough comprehension of the data and the structure of the data that they handle by providing samples</li>
-        <li class="list-group-item">Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA</li>
-        <li class="list-group-item">Actively performed QA tasks; created and executed formal test cases using MSTM</li>
-        <li class="list-group-item">Streamlined Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders</li>
-        <li class="list-group-item">Trained stakeholders in the usage of Team Foundation Server</li>
-        <li class="list-group-item">Created various advanced queries, stored procedures, and table valued functions in SQL Server 2012 to help data team and retrieve samples for development team</li>
-       </ul>
+       <div class="row">
+        <div class="job-company col-6">
+         <h4><span class="avoidwrap">MOTOR</span> <span class="avoidwrap">Information Systems</span></h4>
+        </div>
+        <div class="job-date col-6">October 2013 - August 2014</div>
+       </div>
+       <div class="job-company-location">Troy, Michigan</div>
+       <div class="job-company-description">MOTOR is the largest provider of aftermarket automotive information in the world; it is a big data company with hundreds of databases and terabytes of data that it packages into products.</div>
+       <div class="job-summary">
+        <h5>Summary</h5>
+        This is where it's at.</div>
+       <div class="job-responsibilities">
+        <h5>Responsibilities</h5>
+        <ul class="list-group">
+         <li class="list-group-item">Defined a hybrid-agile SDLC process at MOTOR</li>
+         <li class="list-group-item">Drove meetings on improving the role of Business Analysts in the company and defining the SDLC process for both Agile and Waterfall projects</li>
+         <li class="list-group-item">Introduced the usage of Sharepoint for document management within the Selectline Estimating Application (for BA and QA)</li>
+         <li class="list-group-item">Crafted BA Approach Documents for both Agile and Waterfall projects revolving around ETL-ing data</li>
+         <li class="list-group-item">Streamlined communication between Application Development stakeholders</li>
+         <li class="list-group-item">Gather, clarified, and approved requirements with product managers weekly</li>
+         <li class="list-group-item">Met with CTO monthly to discuss their vision of the application development process</li>
+         <li class="list-group-item">Translated requirements into detailed technical specifications</li>
+         <li class="list-group-item">Created use cases for business requirements</li>
+         <li class="list-group-item">Helped the UX/UI and WebServices team get a thorough comprehension of the data and the structure of the data that they handle by providing samples</li>
+         <li class="list-group-item">Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA</li>
+         <li class="list-group-item">Actively performed QA tasks; created and executed formal test cases using MSTM</li>
+         <li class="list-group-item">Streamlined Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders</li>
+         <li class="list-group-item">Trained stakeholders in the usage of Team Foundation Server</li>
+         <li class="list-group-item">Created various advanced queries, stored procedures, and table valued functions in SQL Server 2012 to help data team and retrieve samples for development team</li>
+        </ul>
+       </div>
       </div>
      </div>
      <div class="job">
-      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Business Analyst</a></div>
+      <div class="job-title">
+       <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Business Analyst</a></h3>
+      </div>
       <div class="job-panel collapse in">
-       <div class="job-company">ATEX Appraisal Inc</div>
-       <div class="job-location">Troy & Westland, Michigan</div>
-       <div class="job-date">December 2005 - October 2013</div>
-       <div class="job-description">ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.</div>
-       <div class="job-responsibilities"></div>
-       <ul class="list-group">
-        <li class="list-group-item">Managed Information Systems</li>
-        <li class="list-group-item">Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market</li>
-        <li class="list-group-item">Expanded company horizons to new markets shifting focus from residential appraising to servicing the industry with new solutions developed internally</li>
-        <li class="list-group-item">Interacted with higher management level to determine goals and requirements for various IT projects</li>
-        <li class="list-group-item">Created business requirement documents for process automation</li>
-        <li class="list-group-item">Acted as cross-functional liaison establishing proper communication channels between PM, development team, QA and other stakeholders</li>
-        <li class="list-group-item">Conducted product feasibility, market and profitability studies</li>
-        <li class="list-group-item">Implemented SDLC and DSDM agile methodologies in company’s project management framework</li>
-        <li class="list-group-item">Coordinated with QA for thorough front-end to back-end testing of developed .NET 4.0 applications and interactions with SQL databases</li>
-        <li class="list-group-item">Constructed complex SQL queries to help development team with reporting</li>
-        <li class="list-group-item">Built stored procedures and functions in SQL to help development team optimize database transactions</li>
-        <li class="list-group-item">Provided hands-on support of application front-end development in HTML5, Javascript</li>
-       </ul>
+       <div class="row">
+        <div class="job-company col-6">
+         <h4>ATEX Appraisal Inc</h4>
+        </div>
+        <div class="job-date col-6">December 2005 - October 2013</div>
+       </div>
+       <div class="job-company-location">Troy & Westland, Michigan</div>
+       <div class="job-company-description">ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.</div>
+       <div class="job-summary">
+        <h5>Summary</h5>
+        Long engagement where I accumulated experience in the entire product life cycle by creating products that help internal and external end-users in the fulfillment of the residential appraising process.
+       </div>
+       <div class="job-responsibilities">
+        <h5>Responsibilities</h5>
+        <ul class="list-group">
+         <li class="list-group-item">Managed Information Systems</li>
+         <li class="list-group-item">Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market</li>
+         <li class="list-group-item">Expanded company horizons to new markets shifting focus from residential appraising to servicing the industry with new solutions developed internally</li>
+         <li class="list-group-item">Interacted with higher management level to determine goals and requirements for various IT projects</li>
+         <li class="list-group-item">Created business requirement documents for process automation</li>
+         <li class="list-group-item">Acted as cross-functional liaison establishing proper communication channels between PM, development team, QA and other stakeholders</li>
+         <li class="list-group-item">Conducted product feasibility, market and profitability studies</li>
+         <li class="list-group-item">Implemented SDLC and DSDM agile methodologies in company’s project management framework</li>
+         <li class="list-group-item">Coordinated with QA for thorough front-end to back-end testing of developed .NET 4.0 applications and interactions with SQL databases</li>
+         <li class="list-group-item">Constructed complex SQL queries to help development team with reporting</li>
+         <li class="list-group-item">Built stored procedures and functions in SQL to help development team optimize database transactions</li>
+         <li class="list-group-item">Provided hands-on support of application front-end development in HTML5, Javascript</li>
+        </ul>
+       </div>
       </div>
      </div>
      <div class="job">
-      <div class="job-title"><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Web developer</a></div>
+      <div class="job-title">
+       <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Web developer</a></h3>
+      </div>
       <div class="job-panel collapse in">
-       <div class="job-company">Enertia Solutions</div>
-       <div class="job-location">Ann Arbor, Michigan</div>
-       <div class="job-date">June 2008 - August 2008</div>
-       <div class="job-description">Enertia is a web design company with clients all over the nation; its solutions span from simple websites to full-fledged web-based applications</div>
-       <div class="job-responsibilities"></div>
-       <ul class="list-group">
-        <li class="list-group-item">Developed web applications, websites and various projects from start to finish</li>
-        <li class="list-group-item">Communicated with stakeholders to identify project requirements</li>
-        <li class="list-group-item">Managed relationship between Enertia and clients during and post development</li>
-        <li class="list-group-item">Provided customer support to clients on previously developed projects</li>
-       </ul>
+       <div class="row">
+        <div class="job-company col-6">
+         <h4>Enertia Solutions</h4>
+        </div>
+        <div class="job-date col-6">June 2008 - August 2008</div>
+       </div>
+       <div class="job-company-location">Ann Arbor, Michigan</div>
+       <div class="job-company-description">Enertia is a web design company with clients all over the nation; its solutions span from simple websites to full-fledged web-based applications.</div>
+       <div class="job-summary">
+        <h5>Summary</h5>
+        Summer contract position that involved LAMP stack development.</div>
+       <div class="job-responsibilities">
+        <h5>Responsibilities</h5>
+        <ul class="list-group">
+         <li class="list-group-item">Developed web applications, websites and various projects from start to finish</li>
+         <li class="list-group-item">Communicated with stakeholders to identify project requirements</li>
+         <li class="list-group-item">Managed relationship between Enertia and clients during and post development</li>
+         <li class="list-group-item">Provided customer support to clients on previously developed projects</li>
+        </ul>
+       </div>
       </div>
      </div>
     </div>
