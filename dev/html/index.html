@@ -57,16 +57,16 @@
 
   <!-- Body -->
   <div class="row">
-   <div class="left-pane col-8">
+   <div class="left-pane col-sm-8">
     <div class="jobs">
      <div class="subtitle">
       <h2>Experience</h2>
      </div>
      <div class="job">
-      <div class="job-title">
+      <div class="job-title colst" onclick="expColToggle(this);">
        <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');"><span class="avoidwrap">Product Owner & </span> <span class="avoidwrap">Senior Technical Project Manager</span></a></h3>
       </div>
-      <div class="job-panel collapse in">
+      <div class="job-panel collapse show">
        <div class="row">
         <div class="job-company col-6">
          <h4>Vectorform Inc</h4>
@@ -91,10 +91,10 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title">
+      <div class="job-title colst" onclick="expColToggle(this);">
        <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Project Manager</a></h3>
       </div>
-      <div class="job-panel collapse in">
+      <div class="job-panel collapse show">
        <div class="row">
         <div class="job-company col-6">
          <h4>Gas Station TV</h4>
@@ -133,10 +133,10 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title">
+      <div class="job-title colst" onclick="expColToggle(this);">
        <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Senior Technical Business Analyst</a></h3>
       </div>
-      <div class="job-panel collapse in">
+      <div class="job-panel collapse show">
        <div class="row">
         <div class="job-company col-6">
          <h4><span class="avoidwrap">MOTOR</span> <span class="avoidwrap">Information Systems</span></h4>
@@ -171,10 +171,10 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title">
+      <div class="job-title expst" onclick="expColToggle(this);">
        <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Technical Business Analyst</a></h3>
       </div>
-      <div class="job-panel collapse in">
+      <div class="job-panel collapse">
        <div class="row">
         <div class="job-company col-6">
          <h4>ATEX Appraisal Inc</h4>
@@ -207,10 +207,10 @@
       </div>
      </div>
      <div class="job">
-      <div class="job-title">
+      <div class="job-title expst" onclick="expColToggle(this);">
        <h3><a data-toggle="collapse" onclick="$(this).parents().next('div.job-panel.collapse').collapse('toggle');">Web developer</a></h3>
       </div>
-      <div class="job-panel collapse in">
+      <div class="job-panel collapse">
        <div class="row">
         <div class="job-company col-6">
          <h4>Enertia Solutions</h4>
@@ -250,7 +250,7 @@
      </div>
     </div>
    </div>
-   <div class="right-pane col-4">
+   <div class="right-pane col-sm-4">
     <div class="skills">
      <h2>Skills</h2>
      All skills are ordered from most to least favorite. General skills are represented in years of experience.
