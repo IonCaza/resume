@@ -6,7 +6,11 @@
 * Add Vectorform description
 * Style job-location
 * Do testing per breakpoint by changing html {} values
+* Add summaries
 ## Change Log
+### v0.2.1
+* Added favicon
+* More styling
 ### v0.2
 * Migrated to bootstrap 4... what a pain
 ### v0.1.3
