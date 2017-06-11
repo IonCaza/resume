@@ -1,6 +1,11 @@
 # My Resume - Ion Caza - 06/09/2017
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
+## To Do
+* Create Print stylesheet
+* Add Vectorform description
+* Style job-location
+* Do testing per breakpoint by changing html {} values
 ## Change Log
 ### v0.2
 * Migrated to bootstrap 4... what a pain
