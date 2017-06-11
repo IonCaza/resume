@@ -42,7 +42,7 @@ li[class^="list-"] {
  border: 0;
  padding-top: 0px;
  padding-bottom: 0px;
- padding-left: 15px;
+ padding-left: 10px;
  display: inline-block;
 }
 
@@ -50,8 +50,20 @@ li:before {
  content: "\f069";
  font-family: FontAwesome;
  padding-right: 5px;
+ position:relative;
+ top: 4px;
+ font-size: 0.60em;
  float: left;
  color: #000;
+  @include media-breakpoint-up(sm) {
+   top: 4px;
+ }
+ @include media-breakpoint-up(md) {
+   top: 5px;
+ }
+ @include media-breakpoint-up(lg) {
+   top: 6px;
+ }
 }
 
 // General CSS
@@ -104,8 +116,4 @@ h5 {
  font-size: 1.5em;
  color: #000;
  float: left;
-}
-
-.job-title {
- padding-left: 10px;
 }

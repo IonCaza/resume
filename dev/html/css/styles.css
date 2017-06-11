@@ -8561,7 +8561,7 @@ li[class^="list-"] {
   border: 0;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 15px;
+  padding-left: 10px;
   display: inline-block;
 }
 
@@ -8569,8 +8569,26 @@ li:before {
   content: "\f069";
   font-family: FontAwesome;
   padding-right: 5px;
+  position: relative;
+  top: 4px;
+  font-size: 0.60em;
   float: left;
   color: #000;
+}
+@media (min-width: 576px) {
+  li:before {
+    top: 4px;
+  }
+}
+@media (min-width: 768px) {
+  li:before {
+    top: 5px;
+  }
+}
+@media (min-width: 992px) {
+  li:before {
+    top: 6px;
+  }
 }
 
 .degree {
@@ -8622,8 +8640,4 @@ h5 {
   font-size: 1.5em;
   color: #000;
   float: left;
-}
-
-.job-title {
-  padding-left: 10px;
 }
