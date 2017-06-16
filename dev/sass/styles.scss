@@ -9,6 +9,7 @@
 // Import custom Bootstrap variables
 @import "bootstrap-variables";
 // Show Grid for Dev
+
 /*div[class="row"] {
  border: 1px dotted rgba(0, 0, 0, 0.5);
 }
@@ -62,6 +63,10 @@ li:before {
 }
 
 // General CSS
+.body {
+ padding-top: 10px;
+}
+
 .degree {
  padding-bottom: 10px;
 }

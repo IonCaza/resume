@@ -8585,6 +8585,10 @@ li:before {
   }
 }
 
+.body {
+  padding-top: 10px;
+}
+
 .degree {
   padding-bottom: 10px;
 }
