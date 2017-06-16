@@ -1,4 +1,5 @@
 # My Resume - Ion Caza - 06/09/2017
+https://ioncaza.github.io/resume/
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## To Do
