@@ -20,6 +20,8 @@ div[class^="col"] {
 
 // Breakpoint Specific CSS
 html {
+ padding-top: 7vw;
+ padding-bottom: 7vw;
  font-size: 10px;
  @include media-breakpoint-up(sm) {
   font-size: 12px;

@@ -1,5 +1,5 @@
 {
- "skills-general": {
+ "general": {
   "Product Ownership": 8,
   "Vendor Management": 6,
   "IT Management": 9,
@@ -23,12 +23,12 @@
   "Big Data Processing": 2,
   "Support Applications": 5
  },
- "skills-language": {
+ "language": {
   "Romanian": "Flawless",
   "Spanish": "Advanced",
   "German": "Basic"
  },
- "skills-collaboration": [
+ "collaboration": [
   "JIRA",
   "Confluence",
   "Github",
@@ -37,7 +37,7 @@
   "Trello",
   "Bitbucket"
  ],
- "skills-visual": [
+ "visual": [
   "Axure",
   "Photoshop",
   "Omnigraffle",
@@ -45,7 +45,7 @@
   "Balsamiq",
   "Illustrator"
  ],
- "skills-development": [
+ "development": [
   "Visual Studio 2017",
   ".NET 4.5",
   "SQL Server 2016",
@@ -53,7 +53,7 @@
   "MySQL 5.7",
   "JAVA 8"
  ],
- "skills-web-development": [
+ "web-development": [
   "Amazon Web Services",
   "Apache",
   "PHP",

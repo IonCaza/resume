@@ -8532,6 +8532,8 @@ div[class^="col"] {
  border: dotted rgba(255, 0, 0, 0.2);
 }*/
 html {
+  padding-top: 7vw;
+  padding-bottom: 7vw;
   font-size: 10px;
 }
 @media (min-width: 576px) {
