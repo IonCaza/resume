@@ -8550,6 +8550,14 @@ html {
   }
 }
 
+@media (min-width: 576px) {
+  .job-summary,
+  .job-achievements,
+  .job-responsibilities,
+  .list-group {
+    padding-left: 10px;
+  }
+}
 ul,
 li[class^="list-"] {
   border: 0;
@@ -8619,6 +8627,12 @@ span.avoidwrap {
   padding-bottom: 15px;
 }
 
+.job-summary,
+.job-responsibilities,
+.job-achievements {
+  padding-bottom: 5px;
+}
+
 h5 {
   margin-top: 5px;
   margin-bottom: 0px;
@@ -8646,6 +8660,10 @@ h5 {
   float: left;
 }
 
+.job-company-location {
+  font-weight: bold;
+}
+
 @media print {
   ::first-letter {
     margin: 0;
@@ -8665,13 +8683,23 @@ h5 {
     display: none;
   }
 
+  .job,
+  .education {
+    page-break-inside: avoid;
+  }
+
+  .skills {
+    page-break-before: always;
+  }
+
   li:before {
     content: "*";
     font-family: Lucida Console;
     top: 1px;
   }
 
-  .colst:before, .expst:before {
+  .colst:before,
+  .expst:before {
     display: none;
   }
 }
