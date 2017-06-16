@@ -9,20 +9,15 @@
 // Import custom Bootstrap variables
 @import "bootstrap-variables";
 // Show Grid for Dev
-div[class="row"] {
+/*div[class="row"] {
  border: 1px dotted rgba(0, 0, 0, 0.5);
 }
 
 div[class^="col"] {
  border: dotted rgba(255, 0, 0, 0.2);
-}
+}*/
 
 // Breakpoint Specific CSS
-.job-date {
- text-align: right;
- padding-top: 2px;
-}
-
 html {
  font-size: 10px;
  @include media-breakpoint-up(sm) {
@@ -50,19 +45,19 @@ li:before {
  content: "\f069";
  font-family: FontAwesome;
  padding-right: 5px;
- position:relative;
+ position: relative;
  top: 4px;
  font-size: 0.60em;
  float: left;
  color: #000;
-  @include media-breakpoint-up(sm) {
-   top: 4px;
+ @include media-breakpoint-up(sm) {
+  top: 4px;
  }
  @include media-breakpoint-up(md) {
-   top: 5px;
+  top: 5px;
  }
  @include media-breakpoint-up(lg) {
-   top: 6px;
+  top: 6px;
  }
 }
 
@@ -75,14 +70,14 @@ span.avoidwrap {
  display: inline-block;
 }
 
+.job-date {
+ text-align: right;
+ padding-top: 2px;
+}
+
 .job-company-location,
 .job-company-description {
  padding-bottom: 0px;
-}
-
-h5 {
- margin-top: 5px;
- margin-bottom: 0px;
 }
 
 .skillset {
@@ -94,6 +89,11 @@ h5 {
 .description,
 .job {
  padding-bottom: 15px;
+}
+
+h5 {
+ margin-top: 5px;
+ margin-bottom: 0px;
 }
 
 .expst:before {
@@ -116,4 +116,18 @@ h5 {
  font-size: 1.5em;
  color: #000;
  float: left;
+}
+
+// Print Stylesheet
+@media print {
+ ::first-letter {
+  margin: 0;
+  padding: 0;
+ }
+ .html {
+  color: black;
+ }
+ .links {
+  display: none;
+ }
 }
