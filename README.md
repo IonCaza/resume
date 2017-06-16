@@ -4,10 +4,13 @@ https://ioncaza.github.io/resume/
 * To gain exposure and job opportunities in IT and Tech
 ## To Do
 * Refine Print stylesheet
+* Expand on print
 * Style job-location
 * Do testing per breakpoint by changing html {} values
 * Mustache templating
 ## Change Log
+### v0.3.1 
+* Styling changes 
 ### v0.3
 * Cleaned Print Stylesheet
 * Added job descriptions and summaries
