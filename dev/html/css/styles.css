@@ -8585,7 +8585,8 @@ li:before {
   }
 }
 
-.body {
+.body,
+.header {
   padding-top: 10px;
 }
 
@@ -8655,7 +8656,22 @@ h5 {
     color: black;
   }
 
+  .body,
+  .header {
+    padding-top: 0px;
+  }
+
   .links {
+    display: none;
+  }
+
+  li:before {
+    content: "*";
+    font-family: Lucida Console;
+    top: 1px;
+  }
+
+  .colst:before, .expst:before {
     display: none;
   }
 }

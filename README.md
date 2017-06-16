@@ -3,13 +3,14 @@ https://ioncaza.github.io/resume/
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## To Do
-* Create Print stylesheet
-* Add Vectorform description
+* Refine Print stylesheet
 * Style job-location
 * Do testing per breakpoint by changing html {} values
-* Add summaries
 * Mustache templating
 ## Change Log
+### v0.3
+* Cleaned Print Stylesheet
+* Added job descriptions and summaries
 ### v0.2.2 
 * Hosting with github.io
 ### v0.2.1
