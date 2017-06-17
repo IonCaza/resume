@@ -160,6 +160,8 @@ h5 {
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 8px;
+  margin-top: 20px; 
+  margin-bottom: 20px;
  }
  .body,
  .header {
@@ -169,6 +171,7 @@ h5 {
   display: none;
  }
  .jobs,
+ .list-group,
  .education {
   page-break-inside: avoid;
  }
