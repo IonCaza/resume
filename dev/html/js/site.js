@@ -21,6 +21,33 @@ var skillsdata = (function() {
 var skills = JSONTree.create(skillsdata);
 
 function expColToggle(x) {
-   x.classList.toggle("expst");
-   x.classList.toggle("colst");
+ x.classList.toggle("expst");
+ x.classList.toggle("colst");
 }
+
+// Expand all jobs before print
+(function() {
+ var beforePrint = function() {
+  $('.job-panel').each(function(i, obj) {
+   if ($(this).hasClass('show') == false) {
+    $(this).addClass('show');
+    expColToggle($(this).prev().get(0));
+   }
+  });
+ };
+ var afterPrint = function() {};
+
+ if (window.matchMedia) {
+  var mediaQueryList = window.matchMedia('print');
+  mediaQueryList.addListener(function(mql) {
+   if (mql.matches) {
+    beforePrint();
+   } else {
+    afterPrint();
+   }
+  });
+ }
+
+ window.onbeforeprint = beforePrint;
+ window.onafterprint = afterPrint;
+}());

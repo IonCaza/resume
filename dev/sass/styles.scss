@@ -156,9 +156,10 @@ h5 {
  }
  .html {
   color: black;
+  background-color: white;
   padding-top: 0px;
   padding-bottom: 0px;
-  font-size: 12px;
+  font-size: 8px;
  }
  .body,
  .header {
@@ -168,7 +169,6 @@ h5 {
   display: none;
  }
  .jobs,
- .job,
  .education {
   page-break-inside: avoid;
  }
@@ -182,6 +182,9 @@ h5 {
  }
  .colst:before,
  .expst:before {
+  display: none;
+ }
+ sup {
   display: none;
  }
 }
