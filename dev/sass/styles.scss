@@ -154,12 +154,20 @@ h5 {
   margin: 0;
   padding: 0;
  }
+ .jobs,
+ .education {
+     display:block !important;
+  page-break-inside: avoid;
+       page-break-before: always;
+       page-break-after: always;
+ }
+
  .html {
   color: black;
   background-color: white;
   padding-top: 0px;
   padding-bottom: 0px;
-  font-size: 8px;
+  font-size: 8px !important; 
   margin-top: 20px; 
   margin-bottom: 20px;
  }
@@ -169,14 +177,6 @@ h5 {
  }
  .links {
   display: none;
- }
- .jobs,
- .list-group,
- .education {
-  page-break-inside: avoid;
- }
- .skills {
-  page-break-before: always;
  }
  li:before {
   content: "*";
