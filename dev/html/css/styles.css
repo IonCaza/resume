@@ -8532,25 +8532,25 @@ div[class^="col"] {
  border: dotted rgba(255, 0, 0, 0.2);
 }*/
 html {
-  font-size: 10px;
+  font-size: 4vw;
 }
 @media (min-width: 576px) {
   html {
-    font-size: 12px;
+    font-size: 2vw;
   }
 }
 @media (min-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 2vw;
   }
 }
 @media (min-width: 992px) {
   html {
-    font-size: 16px;
+    font-size: 0.8vw;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   .job-summary,
   .job-achievements,
   .job-responsibilities,
@@ -8558,6 +8558,7 @@ html {
     padding-left: 10px;
   }
 }
+
 ul,
 li[class^="list-"] {
   border: 0;
