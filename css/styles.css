@@ -8532,21 +8532,28 @@ div[class^="col"] {
  border: dotted rgba(255, 0, 0, 0.2);
 }*/
 html {
-  font-size: 4vw;
+  font-size: 16px;
+  padding-top: 7vw;
+  padding-bottom: 7vw;
 }
 @media (min-width: 576px) {
   html {
-    font-size: 2vw;
+    font-size: 14px;
   }
 }
 @media (min-width: 768px) {
   html {
-    font-size: 2vw;
+    font-size: 16px;
   }
 }
 @media (min-width: 992px) {
   html {
-    font-size: 0.8vw;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
   }
 }
 
@@ -8673,6 +8680,9 @@ h5 {
 
   .html {
     color: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
   }
 
   .body,
@@ -8684,6 +8694,7 @@ h5 {
     display: none;
   }
 
+  .jobs,
   .job,
   .education {
     page-break-inside: avoid;
