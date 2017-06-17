@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 06/15/2017
+# My Resume - Ion Caza - 06/17/2017
 https://ioncaza.github.io/resume/
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
@@ -9,6 +9,8 @@ https://ioncaza.github.io/resume/
 * Do testing per breakpoint by changing html {} values
 * Mustache templating
 ## Change Log
+### v0.3.2
+* Font fixes
 ### v0.3.1 
 * Styling changes 
 ### v0.3

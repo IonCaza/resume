@@ -20,15 +20,20 @@ div[class^="col"] {
 
 // Breakpoint Specific CSS
 html {
- font-size: 4vw;
+ font-size: 16px;
+ padding-top: 7vw;
+ padding-bottom: 7vw;
  @include media-breakpoint-up(sm) {
-  font-size: 2vw;
+  font-size: 14px;
  }
  @include media-breakpoint-up(md) {
-  font-size: 2vw;
+  font-size: 16px;
  }
  @include media-breakpoint-up(lg) {
-  font-size: 0.8vw;
+  font-size: 15px;
+ }
+ @include media-breakpoint-up(xl) {
+  font-size: 16px;
  }
 }
 
@@ -151,6 +156,9 @@ h5 {
  }
  .html {
   color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 12px;
  }
  .body,
  .header {
@@ -159,6 +167,7 @@ h5 {
  .links {
   display: none;
  }
+ .jobs,
  .job,
  .education {
   page-break-inside: avoid;
