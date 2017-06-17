@@ -8680,9 +8680,10 @@ h5 {
 
   .html {
     color: black;
+    background-color: white;
     padding-top: 0px;
     padding-bottom: 0px;
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .body,
@@ -8695,7 +8696,6 @@ h5 {
   }
 
   .jobs,
-  .job,
   .education {
     page-break-inside: avoid;
   }
@@ -8712,6 +8712,10 @@ h5 {
 
   .colst:before,
   .expst:before {
+    display: none;
+  }
+
+  sup {
     display: none;
   }
 }
