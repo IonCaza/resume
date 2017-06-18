@@ -149,31 +149,56 @@ h5 {
 }
 
 // Print Stylesheet
+@media all {
+ .page-break {
+  display: none;
+ }
+}
+
 @media print {
  ::first-letter {
   margin: 0;
   padding: 0;
  }
- .jobs,
- .education {
-     display:block !important;
-  page-break-inside: avoid;
-       page-break-before: always;
-       page-break-after: always;
- }
-
+ /*.brp {
+  display: block;
+  page-break-before: always;
+ }*/
  .html {
   color: black;
   background-color: white;
   padding-top: 0px;
   padding-bottom: 0px;
-  font-size: 8px !important; 
-  margin-top: 20px; 
+  margin-top: 20px;
   margin-bottom: 20px;
  }
  .body,
  .header {
   padding-top: 0px;
+ }
+ h1,
+ .h1 {
+  font-size: 16pt;
+ }
+ h2,
+ .h2 {
+  font-size: 15pt;
+ }
+ h3,
+ .h3 {
+  font-size: 14pt;
+ }
+ h4,
+ .h4 {
+  font-size: 13pt;
+ }
+ h5,
+ .h5 {
+  font-size: 12pt;
+ }
+ body,
+ .body {
+  font-size: 10pt;
  }
  .links {
   display: none;
@@ -189,5 +214,8 @@ h5 {
  }
  sup {
   display: none;
+ }
+ .skillset {
+  font-size: 8pt;
  }
 }
