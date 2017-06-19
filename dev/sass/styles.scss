@@ -208,21 +208,11 @@ h5 {
 }
 
 // Print Stylesheet
-@media all {
- .page-break {
-  display: none;
- }
-}
-
 @media print {
  ::first-letter {
   margin: 0;
   padding: 0;
  }
- /*.brp {
-  display: block;
-  page-break-before: always;
- }*/
  .collapse {
   display: block !important;
   height: auto !important;
@@ -281,5 +271,16 @@ h5 {
  .skillset {
   font-size: 8pt;
   overflow: visible !important;
+ }
+ .jstProperty,
+ .jstBool,
+ .jstNum,
+ .jstNull,
+ .jstStr {
+  color: #000;
+ }
+ @page {
+  margin-top: 14mm;
+  margin-bottom: 20mm;
  }
 }

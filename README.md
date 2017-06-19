@@ -1,14 +1,14 @@
 # My Resume - Ion Caza - 06/17/2017
-https://ioncaza.github.io/resume/
+http://let.caza.in/
 ## Purpose
 * To gain exposure and job opportunities in IT and Tech
 ## To Do
-* Refine Print stylesheet
-* Expand on print
-* Style job-location
-* Do testing per breakpoint by changing html {} values
+* Add analytics
 * Mustache templating
 ## Change Log
+### v0.4
+* Print is fixed (margins still wonky)
+* JS cleaned up
 ### v0.3.2
 * Font fixes
 ### v0.3.1 
