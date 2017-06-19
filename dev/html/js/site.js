@@ -25,15 +25,9 @@ function expColToggle(x) {
  x.classList.toggle("colst");
 }
 
-// Expand all jobs before print
+// Capture print event
 /*(function() {
- var beforePrint = function() {
-  $('.job-panel').each(function(i, obj) {
-   if ($(this).hasClass('show') == false) {
-    $(this).addClass('show');
-    expColToggle($(this).prev().get(0));
-   }
-  });
+ var beforePrint = function() {  
  };
  var afterPrint = function() {};
 
