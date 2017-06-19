@@ -26,7 +26,7 @@ function expColToggle(x) {
 }
 
 // Expand all jobs before print
-(function() {
+/*(function() {
  var beforePrint = function() {
   $('.job-panel').each(function(i, obj) {
    if ($(this).hasClass('show') == false) {
@@ -51,3 +51,4 @@ function expColToggle(x) {
  window.onbeforeprint = beforePrint;
  window.onafterprint = afterPrint;
 }());
+*/

@@ -8601,6 +8601,64 @@ li:before {
   }
 }
 
+.jstValue {
+  white-space: pre-wrap;
+  /*font-size: 14px;*/
+  font-weight: 400;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.jstComma {
+  white-space: pre-wrap;
+}
+
+.jstProperty {
+  color: #666;
+  word-wrap: break-word;
+}
+
+.jstBracket {
+  white-space: pre-wrap;
+}
+
+.jstBool {
+  color: #2525CC;
+}
+
+.jstNum {
+  color: #D036D0;
+}
+
+.jstNull {
+  color: gray;
+}
+
+.jstStr {
+  color: #2DB669;
+}
+
+.jstFold:after {
+  content: ' -';
+  cursor: pointer;
+}
+
+.jstExpand {
+  white-space: normal;
+}
+
+.jstExpand:after {
+  content: ' +';
+  cursor: pointer;
+}
+
+.jstFolded {
+  white-space: normal !important;
+}
+
+.jstHiddenBlock {
+  display: none;
+}
+
 .body,
 .header {
   padding-top: 10px;
@@ -8687,6 +8745,11 @@ h5 {
    display: block;
    page-break-before: always;
   }*/
+  .collapse {
+    display: block !important;
+    height: auto !important;
+  }
+
   .html {
     color: black;
     background-color: white;
@@ -8701,27 +8764,33 @@ h5 {
     padding-top: 0px;
   }
 
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 16pt;
   }
 
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 15pt;
   }
 
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 14pt;
   }
 
-  h4, .h4 {
+  h4,
+  .h4 {
     font-size: 13pt;
   }
 
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 12pt;
   }
 
-  body, .body {
+  body,
+  .body {
     font-size: 10pt;
   }
 
@@ -8746,5 +8815,6 @@ h5 {
 
   .skillset {
     font-size: 8pt;
+    overflow: visible !important;
   }
 }
