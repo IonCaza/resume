@@ -1,17 +1,23 @@
 {
   "name": "resume",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "npm": "^5.8.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
-  },
+  "version": "2.0.0",
+  "description": "Ion Caza's resume",
+  "main": "index.js",
   "scripts": {
-    "start": "PORT=1337 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonCaza/resume.git"
+  },
+  "keywords": [
+    "technical",
+    "resume"
+  ],
+  "author": "Ion Caza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IonCaza/resume/issues"
+  },
+  "homepage": "https://github.com/IonCaza/resume#readme"
 }
