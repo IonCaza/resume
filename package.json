@@ -1,30 +1,23 @@
 {
   "name": "resume",
-  "version": "0.0.1",
-  "description": "dependencies for Ion Caza's resume",
+  "version": "2.0.0",
+  "description": "Ion Caza's resume",
   "main": "index.js",
-  "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "finalhandler": "^1.0.3",
-    "serve-static": "^1.12.3",
-    "sitemap-generator": "^6.0.0",
-    "sitemap-generator-cli": "^6.0.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JohnCaza/resume.git"
+    "url": "git+https://github.com/IonCaza/resume.git"
   },
   "keywords": [
+    "technical",
     "resume"
   ],
   "author": "Ion Caza",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JohnCaza/resume/issues"
+    "url": "https://github.com/IonCaza/resume/issues"
   },
-  "homepage": "https://github.com/JohnCaza/resume#readme"
+  "homepage": "https://github.com/IonCaza/resume#readme"
 }
