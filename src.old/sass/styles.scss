@@ -1,0 +1,286 @@
+// or Import Bootstrap Flex
+// @import "bootstrap-flex";
+// or Import Bootstrap Grid
+// @import "bootstrap-grid";
+// or Import Bootstrap Reboot
+// @import "bootstrap-reboot";
+// Import Bootstrap for Sass
+@import "bootstrap";
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+// Show Grid for Dev
+
+/*div[class="row"] {
+ border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col"] {
+ border: dotted rgba(255, 0, 0, 0.2);
+}*/
+
+// Breakpoint Specific CSS
+html {
+ font-size: 16px;
+ padding-top: 7vw;
+ padding-bottom: 7vw;
+ @include media-breakpoint-up(sm) {
+  font-size: 14px;
+ }
+ @include media-breakpoint-up(md) {
+  font-size: 16px;
+ }
+ @include media-breakpoint-up(lg) {
+  font-size: 15px;
+ }
+ @include media-breakpoint-up(xl) {
+  font-size: 16px;
+ }
+}
+
+.job-summary,
+.job-achievements,
+.job-responsibilities,
+.list-group {
+ @include media-breakpoint-up(xl) {
+  padding-left: 10px;
+ }
+}
+
+// Lists
+ul,
+li[class^="list-"] {
+ border: 0;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ padding-left: 0px;
+ display: inline-block;
+}
+
+li:before {
+ content: "\f069";
+ font-family: FontAwesome;
+ padding-right: 5px;
+ position: relative;
+ top: 4px;
+ font-size: 0.60em;
+ float: left;
+ color: #000;
+ @include media-breakpoint-up(sm) {
+  top: 4px;
+ }
+ @include media-breakpoint-up(md) {
+  top: 5px;
+ }
+ @include media-breakpoint-up(lg) {
+  top: 6px;
+ }
+}
+
+// JsonTree
+.jstValue {
+ white-space: pre-wrap;
+ /*font-size: 14px;*/
+ font-weight: 400;
+ font-family: "Lucida Console", Monaco, monospace;
+}
+
+.jstComma {
+ white-space: pre-wrap;
+}
+
+.jstProperty {
+ color: #666;
+ word-wrap: break-word;
+}
+
+.jstBracket {
+ white-space: pre-wrap;
+}
+
+.jstBool {
+ color: #2525CC;
+}
+
+.jstNum {
+ color: #D036D0;
+}
+
+.jstNull {
+ color: gray;
+}
+
+.jstStr {
+ color: #2DB669;
+}
+
+.jstFold:after {
+ content: ' -';
+ cursor: pointer;
+}
+
+.jstExpand {
+ white-space: normal;
+}
+
+.jstExpand:after {
+ content: ' +';
+ cursor: pointer;
+}
+
+.jstFolded {
+ white-space: normal !important;
+}
+
+.jstHiddenBlock {
+ display: none;
+}
+
+// General CSS
+.body,
+.header {
+ padding-top: 10px;
+}
+
+.degree {
+ padding-bottom: 10px;
+}
+
+span.avoidwrap {
+ display: inline-block;
+}
+
+.job-date {
+ text-align: right;
+ padding-top: 2px;
+}
+
+.job-company-location,
+.job-company-description {
+ padding-bottom: 0px;
+}
+
+.skillset {
+ padding-top: 10px;
+}
+
+.contact,
+.links,
+.description,
+.job {
+ padding-bottom: 15px;
+}
+
+.job-summary,
+.job-responsibilities,
+.job-achievements {
+ padding-bottom: 5px;
+}
+
+h5 {
+ margin-top: 5px;
+ margin-bottom: 0px;
+}
+
+.expst:before {
+ content: "+ ";
+ font-family: "Lucida Console";
+ padding-right: 5px;
+ top: -2px;
+ position: relative;
+ font-size: 1.5em;
+ color: #000;
+ float: left;
+}
+
+.colst:before {
+ content: "- ";
+ font-family: "Lucida Console";
+ padding-right: 5px;
+ top: -2px;
+ position: relative;
+ font-size: 1.5em;
+ color: #000;
+ float: left;
+}
+
+.job-company-location {
+ font-weight: bold;
+}
+
+// Print Stylesheet
+@media print {
+ ::first-letter {
+  margin: 0;
+  padding: 0;
+ }
+ .collapse {
+  display: block !important;
+  height: auto !important;
+ }
+ .html {
+  color: black;
+  background-color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ .body,
+ .header {
+  padding-top: 0px;
+ }
+ h1,
+ .h1 {
+  font-size: 16pt;
+ }
+ h2,
+ .h2 {
+  font-size: 15pt;
+ }
+ h3,
+ .h3 {
+  font-size: 14pt;
+ }
+ h4,
+ .h4 {
+  font-size: 13pt;
+ }
+ h5,
+ .h5 {
+  font-size: 12pt;
+ }
+ body,
+ .body {
+  font-size: 10pt;
+ }
+ .links {
+  display: none;
+ }
+ li:before {
+  content: "*";
+  font-family: Lucida Console;
+  top: 1px;
+ }
+ .colst:before,
+ .expst:before {
+  display: none;
+ }
+ sup {
+  display: none;
+ }
+ .skillset {
+  font-size: 8pt;
+  overflow: visible !important;
+ }
+ .jstProperty,
+ .jstBool,
+ .jstNum,
+ .jstNull,
+ .jstStr {
+  color: #000;
+ }
+ @page {
+  margin-top: 14mm;
+  margin-bottom: 20mm;
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "resume",
+  "version": "2.0.0",
+  "description": "Ion Caza's resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonCaza/resume.git"
+  },
+  "keywords": [
+    "technical",
+    "resume"
+  ],
+  "author": "Ion Caza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IonCaza/resume/issues"
+  },
+  "homepage": "https://github.com/IonCaza/resume#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  }
+}
