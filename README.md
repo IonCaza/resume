@@ -10,8 +10,7 @@ Can be accessed at <http://let.caza.in/>
 
 * Recreate resume using react
 * Add EsLint
-* Add react-router
-* Break out pages
+* Add tests
 
 ## Stack
 
@@ -20,6 +19,11 @@ Can be accessed at <http://let.caza.in/>
 * SASS
 
 ## Change Log
+
+### v2.0.1
+
+* Adds material-ui
+* Adds react-router
 
 ### v2.0
 

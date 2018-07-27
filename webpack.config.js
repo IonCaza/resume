@@ -8,13 +8,6 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   module: {
-    /*loaders: [      {
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['env', 'react', 'es2015']
-      }
-    }],*/
     rules: [
       {
         test: /\.js$/,
