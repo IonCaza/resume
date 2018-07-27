@@ -9,7 +9,6 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Recreate resume using react
-* Add EsLint
 * Add tests
 * Consider adding Service Worker
 * Clean up paths.js
@@ -20,8 +19,13 @@ Can be accessed at <http://let.caza.in/>
 * Webpack
 * SASS
 * Material UI
+* ESLint
 
 ## Change Log
+
+### v2.0.2
+
+* Adds ESLint
 
 ### v2.0.1
 

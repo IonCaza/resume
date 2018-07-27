@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -12,23 +12,17 @@ const styles = theme => ({
   },
 });
 
-class Header extends Component {
-  // constructor() {
-  //   super();
-  // }
+const Header = props => {
+  const { classes } = props;
 
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <Typography variant="display1" gutterBottom>
-          Ion Caza&apos;s Resume
-        </Typography>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classes.root}>
+      <Typography variant="display1" gutterBottom>
+        Ion Caza&apos;s Resume
+      </Typography>
+    </div>
+  );
+};
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
