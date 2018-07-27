@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import withRoot from './withRoot';
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -12,9 +13,9 @@ const styles = theme => ({
 });
 
 class Header extends Component {
-  constructor() {
-    super();
-  };
+  // constructor() {
+  //   super();
+  // }
 
   render() {
     const { classes } = this.props;
@@ -22,7 +23,7 @@ class Header extends Component {
     return (
       <div className={classes.root}>
         <Typography variant="display1" gutterBottom>
-          Ion Caza's Resume
+          Ion Caza&apos;s Resume
         </Typography>
       </div>
     );

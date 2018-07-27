@@ -10,8 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
 import withRoot from './withRoot';
+
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -32,19 +32,19 @@ class App extends Component {
 
     this.handleClose = this.handleClose.bind(this);
     this.handleClick = this.handleClick.bind(this);
-  };
+  }
 
   handleClose() {
     this.setState({
       open: false,
     });
-  };
+  }
 
   handleClick() {
     this.setState({
       open: true,
     });
-  };
+  }
 
   render() {
     const { classes } = this.props;
