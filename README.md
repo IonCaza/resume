@@ -9,7 +9,7 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Recreate resume using react
-* Add tests
+* Make Jest run part of build
 * Consider adding Service Worker
 * Clean up paths.js
 
@@ -20,12 +20,14 @@ Can be accessed at <http://let.caza.in/>
 * SASS
 * Material UI
 * ESLint
+* Jest
 
 ## Change Log
 
 ### v2.0.2
 
 * Adds ESLint
+* Adds Jest
 
 ### v2.0.1
 
