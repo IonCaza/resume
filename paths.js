@@ -21,7 +21,6 @@ module.exports = () => {
     prototypeBuildPath: path.join(buildPath, 'prototype'),
     assetsBuildPath: path.join(publicBuildPath, '/'),
     userPrototypePath: path.join(userRootPath, 'prototype.js'),
-    userKytConfigPath: path.join(userRootPath, 'kyt.config.js'),
     userNodeModulesPath: path.join(userRootPath, 'node_modules'),
     userPackageJSONPath: path.join(userRootPath, 'package.json'),
     userBabelrcPath: path.join(userRootPath, '.babelrc'),

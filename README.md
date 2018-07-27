@@ -11,12 +11,15 @@ Can be accessed at <http://let.caza.in/>
 * Recreate resume using react
 * Add EsLint
 * Add tests
+* Consider adding Service Worker
+* Clean up paths.js
 
 ## Stack
 
 * React
 * Webpack
 * SASS
+* Material UI
 
 ## Change Log
 
