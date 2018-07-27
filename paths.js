@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = () => {
   const userRootPath = path.resolve(process.cwd());
-  const buildPath = path.join(userRootPath, 'build');
+  const buildPath = path.join(userRootPath, 'dist');
   const srcPath = path.join(userRootPath, 'src');
   const publicBuildPath = path.join(buildPath, 'public');
 
