@@ -9,6 +9,9 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Recreate resume using react
+* Add EsLint
+* Add react-router
+* Break out pages
 
 ## Stack
 

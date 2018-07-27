@@ -8,13 +8,21 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 import withRoot from '../Root/withRoot';
-import './App.css';
 
 const styles = theme => ({
   root: {
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
 });
 
@@ -65,6 +73,29 @@ class App extends Component {
         <Button variant="contained" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+        <Grid container spacing={24}>
+          <Grid item xs={12}>
+            <Paper className={classes.paper}>xs=12</Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>xs=6</Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>xs=6</Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid>
+        </Grid>
       </div>
     );
   }
