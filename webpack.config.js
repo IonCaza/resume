@@ -10,28 +10,28 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: ["babel-loader"],
+        test: /\.(js|jsx)$/,
+        use: ['babel-loader'],
         exclude: /(node_modules)/
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
+      },
+      {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
         exclude: [publicSrcPath],
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: [publicSrcPath],
       },
       {
         test: /\.(png|jpe?g|gif|ico|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {}
-          }
-        ]
+        use: ['file-loader']
       }
     ]
   },
