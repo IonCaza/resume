@@ -10,6 +10,12 @@ Can be accessed at <http://let.caza.in/>
 
 * Recreate resume using react
 
+## Stack
+
+* React
+* Webpack
+* SASS
+
 ## Change Log
 
 ### v2.0
