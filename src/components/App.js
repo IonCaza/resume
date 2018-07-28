@@ -15,7 +15,9 @@ import withRoot from './withRoot';
 const styles = theme => ({
   root: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
+    paddingTop: theme.spacing.unit * 5,
+    marginLeft: theme.spacing.unit * 2,
+    marginRight: theme.spacing.unit * 2,
     flexGrow: 1,
   },
   paper: {
