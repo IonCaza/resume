@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = () => {
   const userRootPath = path.resolve(process.cwd());
-  const buildPath = path.join(userRootPath, 'dist');
+  const buildPath = path.join(userRootPath, 'build');
   const srcPath = path.join(userRootPath, 'src');
   const publicBuildPath = path.join(buildPath, 'public');
 
@@ -11,6 +11,7 @@ module.exports = () => {
     srcPath,
     buildPath,
     publicBuildPath,
+    entryPoint: path.join(srcPath, 'index.js'),
     publicSrcPath: path.join(srcPath, 'public'),
     serverSrcPath: path.join(srcPath, 'server'),
     clientSrcPath: path.join(srcPath, 'client'),

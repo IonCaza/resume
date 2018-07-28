@@ -49,6 +49,6 @@ Can be accessed at <http://let.caza.in/>
 ## Run
 
 * Development: `yarn dev` (starts Jest and webserver)
-* Build: `yarn build` (builds to ./dist)
+* Build: `yarn build` (builds to ./build)
 * Start locally: `yarn start`
 * Run tests: `yarn test`

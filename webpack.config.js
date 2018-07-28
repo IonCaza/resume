@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const { userNodeModulesPath } = require('./utils/paths')();
+const { userNodeModulesPath, entryPoint, buildPath } = require('./utils/paths')();
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/assets/index.html',
@@ -7,7 +7,11 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: '',
+  entry: entryPoint,
+  output: {
+    path: buildPath,
+    filename: 'bundle.js',
+  },
   module: {
     rules: [
       {
