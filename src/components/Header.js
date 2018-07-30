@@ -19,7 +19,7 @@ const Header = props => {
   return (
     <div className={classes.root}>
       <Typography variant="display1" gutterBottom>
-        Not another proj
+        Not something it is not
       </Typography>
     </div>
   );
