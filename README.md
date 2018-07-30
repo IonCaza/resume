@@ -9,7 +9,7 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Recreate resume using react
-* Make Jest run part of build
+* Consider .env
 * Consider adding Service Worker
 * Clean up paths.js
 
@@ -23,6 +23,11 @@ Can be accessed at <http://let.caza.in/>
 * Jest
 
 ## Change Log
+
+### v2.0.3
+
+* Ejects CRA
+* Fixes JEST
 
 ### v2.0.2
 
