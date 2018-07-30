@@ -11,6 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import withRoot from './withRoot';
+import '../styles/App.scss';
 
 const styles = theme => ({
   root: {
@@ -76,7 +77,9 @@ class App extends Component {
         </Button>
         <Grid container spacing={24}>
           <Grid item xs={12}>
-            <Paper className={classes.paper}>xs=12</Paper>
+            <Paper className={classes.paper}>
+              <div className="test">xs=12</div>
+            </Paper>
           </Grid>
           <Grid item xs={6}>
             <Paper className={classes.paper}>xs=6</Paper>

@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const { userNodeModulesPath, entryPoint, buildPath } = require('./utils/paths')();
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
@@ -26,20 +28,37 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader'],
+        }),
         exclude: [userNodeModulesPath],
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
         exclude: [userNodeModulesPath],
       },
       {
-        test: /\.(png|jpe?g|gif|ico|svg)$/,
-        use: ['file-loader'],
-        exclude: [userNodeModulesPath],
+        test: /\.(jpe?g|png|gif|ico)$/,
+        use: [
+          {
+            /* inline if smaller than 10 KB, otherwise load as a file */
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff2?|otf)$/,
+        use: 'file-loader',
       },
     ],
   },
-  plugins: [htmlWebpackPlugin],
+  plugins: [htmlWebpackPlugin, new ExtractTextPlugin({ filename: 'style.css' })],
 };
