@@ -14,8 +14,8 @@
     "react-router-dom": "^4.3.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open --config ./config/webpack.js",
+    "build": "webpack --mode production --config ./config/webpack.js",
     "test": "jest --verbose",
     "dev": "npm-run-all test start"
   },
@@ -32,7 +32,9 @@
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
@@ -65,7 +67,7 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/utils/jest/polyfills.js"
+      "<rootDir>/config/jest/polyfills.js"
     ],
     "testMatch": [
       "<rootDir>/__tests__/**/*.{js,jsx,mjs}",
@@ -75,8 +77,8 @@
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/utils/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/utils/jest/fileTransform.js"
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
@@ -97,12 +99,17 @@
       "window": true
     }
   },
-  "babel": {
-    "presets": [
-      "react-app"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "./config/.eslintrc"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "babel": {
+    "babelrc": false,
+    "presets": [
+      "env",
+      "react"
+    ]
   }
 }
