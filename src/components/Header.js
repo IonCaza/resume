@@ -5,8 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import PrintIcon from '@material-ui/icons/Print';
+import MenuIcon from '@material-ui/icons/MenuSharp';
+import PrintIcon from '@material-ui/icons/PrintSharp';
 import SaveIcon from '@material-ui/icons/SaveAltSharp';
 import '../styles/Header.scss';
 
@@ -18,6 +18,7 @@ const styles = () => ({
   },
   flex: {
     flexGrow: 1,
+    // textAlign: 'center',
   },
   menuButton: {
     marginLeft: 0,
@@ -30,7 +31,7 @@ const Header = props => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
