@@ -4,7 +4,7 @@
   "description": "Ion Caza's resume",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.4.1",
+    "@material-ui/core": "^1.4.2",
     "@material-ui/icons": "^2.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
