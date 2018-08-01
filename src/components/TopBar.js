@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -93,13 +91,14 @@ const styles = theme => ({
 });
 
 class TopBar extends Component {
-  constructor(props) {
-    super(props);
+  toggleDraw(tf) {
+    const { toggleDrawer } = this.props;
+    toggleDrawer(tf);
   }
 
   render() {
     // const { drawerIsOpen } = this.state;
-    const { classes, toggleDrawer, drawerIsOpen } = this.props;
+    const { classes, drawerIsOpen } = this.props;
     return (
       <AppBar
         className={classNames(classes.appBar, {
@@ -112,7 +111,7 @@ class TopBar extends Component {
             className={classNames(classes.menuButton, drawerIsOpen && classes.hide)}
             color="inherit"
             aria-label="Menu"
-            onClick={() => toggleDrawer(true)}
+            onClick={() => this.toggleDraw(true)}
           >
             <MenuIcon />
           </IconButton>
