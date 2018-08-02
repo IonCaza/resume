@@ -165,11 +165,11 @@ class Navigation extends Component {
     this.openDrawer = this.toggleDrawer.bind(this, true);
   }
 
-  toggleDrawer(tf) {
+  toggleDrawer = tf => {
     this.setState({
       drawerIsOpen: tf,
     });
-  }
+  };
 
   render() {
     const { classes } = this.props;
@@ -200,7 +200,7 @@ class Navigation extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.appFrame}>
-          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={this.drawerIsOpen} />
+          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
           {drawer}
           <main
             className={classNames(classes.content, classes['content-left'], {

@@ -91,14 +91,27 @@ const styles = theme => ({
 });
 
 class TopBar extends Component {
-  toggleDraw(tf) {
-    const { toggleDrawer } = this.props;
-    toggleDrawer(tf);
+  constructor(props) {
+    super(props);
+    this.state = {
+      drawerIsOpen: props.drawerIsOpen,
+    };
+    this.openDrawer = this.toggleLocal.bind(this, true);
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ drawerIsOpen: nextProps.drawerIsOpen });
+  }
+
+  toggleLocal = tf => {
+    this.setState({ drawerIsOpen: tf });
+    const { toggleDrawer } = this.props;
+    toggleDrawer(tf);
+  };
+
   render() {
-    // const { drawerIsOpen } = this.state;
-    const { classes, drawerIsOpen } = this.props;
+    const { drawerIsOpen } = this.state;
+    const { classes } = this.props;
     return (
       <AppBar
         className={classNames(classes.appBar, {
@@ -111,7 +124,7 @@ class TopBar extends Component {
             className={classNames(classes.menuButton, drawerIsOpen && classes.hide)}
             color="inherit"
             aria-label="Menu"
-            onClick={() => this.toggleDraw(true)}
+            onClick={this.openDrawer}
           >
             <MenuIcon />
           </IconButton>
@@ -133,7 +146,7 @@ class TopBar extends Component {
 TopBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
-  drawerIsOpen: PropTypes.object.isRequired,
+  drawerIsOpen: PropTypes.bool.isRequired,
 };
 
 export default withRoot(withStyles(styles)(TopBar));
