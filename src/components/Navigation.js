@@ -8,13 +8,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-
-import Typography from '@material-ui/core/Typography';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import MenuIcon from '@material-ui/icons/MenuSharp';
-import PrintIcon from '@material-ui/icons/PrintSharp';
-import SaveIcon from '@material-ui/icons/SaveAltSharp';
+import '../styles/Navigation.scss';
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -28,6 +22,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/Report';
 
 import App from './App';
+import TopBar from './TopBar';
 import withRoot from './withRoot';
 
 export const mailFolderListItems = (
@@ -170,11 +165,11 @@ class Navigation extends Component {
     this.openDrawer = this.toggleDrawer.bind(this, true);
   }
 
-  toggleDrawer(tf) {
+  toggleDrawer = tf => {
     this.setState({
       drawerIsOpen: tf,
     });
-  }
+  };
 
   render() {
     const { classes } = this.props;
@@ -205,32 +200,7 @@ class Navigation extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.appFrame}>
-          <AppBar
-            className={classNames(classes.appBar, {
-              [classes.appBarShift]: drawerIsOpen,
-              [classes['appBarShift-left']]: drawerIsOpen,
-            })}
-          >
-            <Toolbar disableGutters={!drawerIsOpen}>
-              <IconButton
-                className={classNames(classes.menuButton, drawerIsOpen && classes.hide)}
-                color="inherit"
-                aria-label="Menu"
-                onClick={this.openDrawer}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="title" color="inherit" className={classes.flex}>
-                Ion Caza&apos;s Resume
-              </Typography>
-              <IconButton className={classes.menuButton} color="inherit" aria-label="Print">
-                <PrintIcon />
-              </IconButton>
-              <IconButton className={classes.menuButton} color="inherit" aria-label="Download PDF">
-                <SaveIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
+          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
           {drawer}
           <main
             className={classNames(classes.content, classes['content-left'], {
