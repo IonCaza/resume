@@ -15,23 +15,9 @@ import withRoot from './withRoot';
 const drawerWidth = 240;
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  appFrame: {
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-  },
   flex: {
     flexGrow: 1,
     // textAlign: 'center',
-  },
-  drawer: {
-    position: 'fixed',
-    top: 0,
   },
   appBar: {
     position: 'fixed',
@@ -56,37 +42,6 @@ const styles = theme => ({
   },
   hide: {
     display: 'none',
-  },
-  drawerPaper: {
-    position: 'relative',
-    width: drawerWidth,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  'content-left': {
-    marginLeft: 0,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'contentShift-left': {
-    marginLeft: drawerWidth,
   },
 });
 
@@ -129,7 +84,7 @@ class TopBar extends Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Ion Caza&apos;s Resume
+            React Application with Material Design
           </Typography>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Print">
             <PrintIcon />
