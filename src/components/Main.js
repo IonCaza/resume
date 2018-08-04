@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import withRoot from './withRoot';
-import '../styles/App.scss';
+import '../styles/Main.scss';
 
 const styles = theme => ({
   root: {
@@ -28,7 +28,7 @@ const styles = theme => ({
   },
 });
 
-class App extends Component {
+class Main extends Component {
   constructor() {
     super();
     this.state = { open: false };
@@ -285,8 +285,8 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+Main.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(App));
+export default withRoot(withStyles(styles)(Main));
