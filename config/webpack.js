@@ -25,6 +25,10 @@ module.exports = {
   output: {
     path: buildPath,
     filename: 'bundle.[chunkhash].js',
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [

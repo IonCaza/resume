@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 import ListItem from '@material-ui/core/ListItem';
@@ -23,13 +24,13 @@ import withRoot from './withRoot';
 
 export const mailFolderListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component={Link} to="/exp">
       <ListItemIcon>
         <InboxIcon />
       </ListItemIcon>
       <ListItemText primary="Inbox" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/">
       <ListItemIcon>
         <StarIcon />
       </ListItemIcon>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
@@ -9,6 +9,7 @@ import Main from './Main';
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
+import Experience from './Experience';
 
 const drawerWidth = 240;
 
@@ -103,21 +104,24 @@ class Layout extends Component {
     const { drawerIsOpen } = this.state;
 
     return (
-      <div className={classes.root}>
-        <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-        <LeftNav toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-        <main
-          className={classNames(classes.content, classes['content-left'], {
-            [classes.contentShift]: drawerIsOpen,
-            [classes['contentShift-left']]: drawerIsOpen,
-          })}
-        >
-          <Switch>
-            <Route path="/" exact component={Main} />
-            <Redirect to="/" />
-          </Switch>
-        </main>
-      </div>
+      <BrowserRouter>
+        <div className={classes.root}>
+          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
+          <LeftNav toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
+          <main
+            className={classNames(classes.content, classes['content-left'], {
+              [classes.contentShift]: drawerIsOpen,
+              [classes['contentShift-left']]: drawerIsOpen,
+            })}
+          >
+            <Switch>
+              <Route path="/" exact component={Main} />
+              <Route path="/exp" component={Experience} />
+              <Redirect to="/" />
+            </Switch>
+          </main>
+        </div>
+      </BrowserRouter>
     );
   }
 }
