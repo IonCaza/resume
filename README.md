@@ -12,7 +12,7 @@ Can be accessed at <http://let.caza.in/>
 * Add contact component with schema.org
 * Add skills component
 * Add education component
-* Update links in LeftNav
+* Breakout links component in LeftNav
 * Create tracking viewer NavBar on Experience
 * Integrate recommendations from LinkedIn
 * Add Jenkins for CI to prod

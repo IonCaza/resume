@@ -90,10 +90,20 @@ class TopBar extends Component {
           <Typography variant="title" color="inherit" className={classes.flex}>
             React Application with Material Design
           </Typography>
-          <IconButton className={classes.rightButton} color="inherit" aria-label="Print">
+          <IconButton
+            className={classes.rightButton}
+            color="inherit"
+            aria-label="Print"
+            disabled="true"
+          >
             <PrintIcon />
           </IconButton>
-          <IconButton className={classes.rightButton} color="inherit" aria-label="Download PDF">
+          <IconButton
+            className={classes.rightButton}
+            color="inherit"
+            aria-label="Download PDF"
+            disabled="true"
+          >
             <SaveIcon />
           </IconButton>
         </Toolbar>

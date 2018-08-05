@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import '../styles/Layout.scss';
 
-import Main from './Main';
+// import Main from './Main';
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
@@ -115,9 +115,8 @@ class Layout extends Component {
             })}
           >
             <Switch>
-              <Route path="/" exact component={Main} />
               <Route path="/exp" component={Experience} />
-              <Redirect to="/" />
+              <Redirect to="/exp" />
             </Switch>
           </main>
         </div>

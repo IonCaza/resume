@@ -6,13 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
+import LinkIcon from '@material-ui/icons/Link';
 
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -24,57 +19,61 @@ import Typography from '@material-ui/core/Typography';
 import withRoot from './withRoot';
 import packageJson from '../../package';
 
-export const mailFolderListItems = (
+const mainItems = (
   <div>
     <ListItem button component={Link} to="/exp">
       <ListItemIcon>
-        <InboxIcon />
-      </ListItemIcon>
-      <ListItemText primary="Inbox" />
-    </ListItem>
-    <ListItem button component={Link} to="/">
-      <ListItemIcon>
         <StarIcon />
       </ListItemIcon>
-      <ListItemText primary="Starred" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SendIcon />
-      </ListItemIcon>
-      <ListItemText primary="Send mail" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <DraftsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Drafts" />
+      <ListItemText primary="Experience" />
     </ListItem>
   </div>
 );
 
-export const otherMailFolderListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <MailIcon />
-      </ListItemIcon>
-      <ListItemText primary="All mail" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <DeleteIcon />
-      </ListItemIcon>
-      <ListItemText primary="Trash" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ReportIcon />
-      </ListItemIcon>
-      <ListItemText primary="Spam" />
-    </ListItem>
-  </div>
-);
+const links = [
+  {
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/ioncaza/',
+  },
+  {
+    title: 'Github',
+    url: 'https://github.com/IonCaza/',
+  },
+  {
+    title: 'MOPAR',
+    url: 'https://www.mopar.com/',
+  },
+  {
+    title: 'Selectline',
+    url: 'https://www.motor.com/products/selectline/',
+  },
+  {
+    title: 'ATEX Appraisal',
+    url: 'https://www.atexappraisal.com/',
+  },
+  {
+    title: 'Soundcloud',
+    url: 'http://www.johncaza.com/',
+  },
+];
+
+const linkItems = props => {
+  const { classes } = props;
+  return (
+    <div>
+      {links.map(link => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer" className={classes.a}>
+          <ListItem button>
+            <ListItemIcon>
+              <LinkIcon />
+            </ListItemIcon>
+            <ListItemText primary={link.title} />
+          </ListItem>
+        </a>
+      ))}
+    </div>
+  );
+};
 
 const drawerWidth = 240;
 
@@ -98,6 +97,9 @@ const styles = () => ({
     textAlign: 'left',
     left: '-12px',
     position: 'relative',
+  },
+  a: {
+    textDecoration: 'none',
   },
 });
 
@@ -144,9 +146,9 @@ class LeftNav extends Component {
           </IconButton>
         </div>
         <Divider />
-        <List>{mailFolderListItems}</List>
+        <List>{mainItems}</List>
         <Divider />
-        <List>{otherMailFolderListItems}</List>
+        <List>{linkItems(this.props)}</List>
       </Drawer>
     );
 
@@ -158,6 +160,10 @@ LeftNav.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   drawerIsOpen: PropTypes.bool.isRequired,
+};
+
+linkItems.propTypes = {
+  classes: PropTypes.object.isRequired,
 };
 
 export default withRoot(withStyles(styles)(LeftNav));
