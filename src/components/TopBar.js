@@ -36,9 +36,13 @@ const styles = theme => ({
   'appBarShift-left': {
     marginLeft: drawerWidth,
   },
-  menuButton: {
+  leftButton: {
+    marginLeft: 8,
+    marginRight: 12,
+  },
+  rightButton: {
     marginLeft: 0,
-    marginRight: 10,
+    marginRight: 8,
   },
   hide: {
     display: 'none',
@@ -76,7 +80,7 @@ class TopBar extends Component {
       >
         <Toolbar disableGutters={!drawerIsOpen}>
           <IconButton
-            className={classNames(classes.menuButton, drawerIsOpen && classes.hide)}
+            className={classNames(classes.leftButton, drawerIsOpen && classes.hide)}
             color="inherit"
             aria-label="Menu"
             onClick={this.openDrawer}
@@ -86,10 +90,10 @@ class TopBar extends Component {
           <Typography variant="title" color="inherit" className={classes.flex}>
             React Application with Material Design
           </Typography>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Print">
+          <IconButton className={classes.rightButton} color="inherit" aria-label="Print">
             <PrintIcon />
           </IconButton>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Download PDF">
+          <IconButton className={classes.rightButton} color="inherit" aria-label="Download PDF">
             <SaveIcon />
           </IconButton>
         </Toolbar>

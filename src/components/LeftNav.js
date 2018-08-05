@@ -96,6 +96,8 @@ const styles = () => ({
   },
   name: {
     textAlign: 'left',
+    left: '-12px',
+    position: 'relative',
   },
 });
 

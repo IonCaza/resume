@@ -9,6 +9,7 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Add print to pdf
+* Integrate recommendations from LinkedIn
 * Add Jenkins for CI to prod
 * Transition local data to mongoDB
 * Style experience

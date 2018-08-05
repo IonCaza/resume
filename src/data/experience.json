@@ -2,7 +2,11 @@
   "jobs": [
     {
         "company": "Pillar",
+        "position": "Delv",
+        "location": "",
         "description": "123",
+        "startDate": "",
+        "endDate": "",
         "responsibilities": [
             "1",
             "2",
@@ -15,7 +19,11 @@
     },
     {
         "company": "VF",
-        "description": "234",
+        "position": "Delv",
+        "location": "",
+        "description": "123",
+        "startDate": "",
+        "endDate": "",
         "responsibilities": [
             "1",
             "2",
@@ -28,7 +36,11 @@
     },
     {
         "company": "GSTV",
-        "description": "234",
+        "position": "Delv",
+        "location": "",
+        "description": "123",
+        "startDate": "",
+        "endDate": "",
         "responsibilities": [
             "1",
             "2",

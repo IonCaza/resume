@@ -27,18 +27,15 @@ const styles = theme => ({
 const Experience = props => {
   const { classes } = props;
   return (
-    <div>
-      <div className={classes.root}>Hello</div>
-      <div>
-        {experience.jobs.map((job, i) => (
-          <div>
-            {i}
-            {job.company}
-            {job.description}
-            <br />
-          </div>
-        ))}
-      </div>
+    <div className={classes.root}>
+      {experience.jobs.map((job, i) => (
+        <div>
+          {i}
+          {job.company}
+          {job.description}
+          <br />
+        </div>
+      ))}
     </div>
   );
 };
