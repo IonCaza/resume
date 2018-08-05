@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 07/23/2018
+# My Resume - Ion Caza - 08/04/2018
 
 Can be accessed at <http://let.caza.in/>
 
@@ -8,7 +8,11 @@ Can be accessed at <http://let.caza.in/>
 
 ## To Do
 
-* Recreate resume using react
+* Add print to pdf
+* Add Jenkins for CI to prod
+* Transition local data to mongoDB
+* Style experience
+* Look into enzyme
 * Consider .env
 * Consider adding Service Worker
 * Clean up paths.js
@@ -17,12 +21,17 @@ Can be accessed at <http://let.caza.in/>
 
 * React
 * Webpack
-* SASS
 * Material UI
+* SASS
 * ESLint
 * Jest
 
 ## Change Log
+
+### v2.0.4
+
+* Breaks out components
+* Reads data from .json
 
 ### v2.0.3
 
@@ -42,10 +51,6 @@ Can be accessed at <http://let.caza.in/>
 ### v2.0
 
 * Initial commit
-
-## Requirements
-
-* TBD
 
 ## Install
 

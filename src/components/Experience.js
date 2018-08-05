@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 // import Grid from '@material-ui/core/Grid';
 
 import withRoot from './withRoot';
+import experience from '../data/experience';
 
 const styles = theme => ({
   root: {
@@ -23,7 +24,24 @@ const styles = theme => ({
   },
 });
 
-const Experience = props => <div className={props.classes.root}>Hello</div>; // eslint-disable-line
+const Experience = props => {
+  const { classes } = props;
+  return (
+    <div>
+      <div className={classes.root}>Hello</div>
+      <div>
+        {experience.jobs.map((job, i) => (
+          <div>
+            {i}
+            {job.company}
+            {job.description}
+            <br />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 Experience.propTypes = {
   classes: PropTypes.object.isRequired,

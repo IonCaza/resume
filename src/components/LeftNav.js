@@ -19,8 +19,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
 import withRoot from './withRoot';
+import packageJson from '../../package';
 
 export const mailFolderListItems = (
   <div>
@@ -90,6 +92,10 @@ const styles = () => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: '0 8px',
+    height: '64px',
+  },
+  name: {
+    textAlign: 'left',
   },
 });
 
@@ -127,6 +133,10 @@ class LeftNav extends Component {
         }}
       >
         <div className={classes.drawerHeader}>
+          <Typography variant="title" className={classes.name} align="left">
+            {packageJson.name} {packageJson.version}
+          </Typography>
+          &nbsp;
           <IconButton onClick={this.closeDrawer}>
             <ChevronLeftIcon />
           </IconButton>
