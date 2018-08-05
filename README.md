@@ -8,7 +8,7 @@ Can be accessed at <http://let.caza.in/>
 
 ## To Do
 
-* Add print to pdf
+* Add print to pdf -
 * Add contact component with schema.org
 * Add skills component
 * Add education component
