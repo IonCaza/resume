@@ -88,7 +88,7 @@ class TopBar extends Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            React Application with Material Design
+            Ion Caza&apos;s Resume
           </Typography>
           <IconButton
             className={classes.rightButton}

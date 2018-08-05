@@ -4,42 +4,15 @@
       "company": "Pillar Technology",
       "position": "Delivery Lead",
       "location": "Ann Arbor, Michigan",
-      "description": "Vectorform is a state of the art digital agency, innovation driver, and think tank that caters to clients and end users worldwide.",
+      "description": "Pillar is a digital consulting company that focuses on diversity, people, delivery, and Agile transformational while teaching companies how to bring business value to their customers as fast as possible.",
       "startDate": "October 2017",
       "endDate": "Present",
-      "summary": "Direct hire position within the Project Management Organization at Vectorform in the capacity of product manager and technical project manager in charge of delivering the Mopar.com program.",
+      "summary": "Direct hire position within the Delivery team in the Great Lakes Region serving a delivery and Agile transformation team at Ford Motor Credit Company.",
       "responsibilities": [
-        "Delivering Mopar.com (an FCA brand web application)",
-        "Creating, maintaining, and revising the vision and team's alignment to the vision of mopar.com",
-        "Defining the product roadmap and release schedules",
-        "Deciding the scope of releases based on value added, technical feasibility, stakeholder permission, budget, timing, scope, and vision",
-        "Discovering and creating efficiencies for my team",
-        "Having a holistic understanding of scope, time, cost, risks, status, bugs, shortcomings, resources, communications, goals, internal issues, etc.",
-        "Managing the interests of FCA (the client), Vectorform (the agency), and the end user",
-        "Acting as a primary source of contact for all external and internal stakeholders",
-        "Reviewing all important external communications",
-        "Establishing close working relationships with all stakeholders",
-        "Answering and providing options for technical challenges",
-        "Facilitating estimating meetings and delivery of high level estimates",
-        "Identifying the best resources per task and feature",
-        "Problem solving when critical issues are identified",
-        "Managing crisis situations (when downtime occurs)"
+        "TODO: Add responsibilities"
       ],
       "achievements": [
-        "Launched Mopar.com to consumers on 9/23/16",
-        "Reduced a 1.5 year delivery lag to 0",
-        "Achieved set financial targets for the Mopar.com product",
-        "Managed both off-shore and on-shore development teams to create the Mopar.com backend",
-        "Started the first in-house enterprise-level JAVA development team at Vectorform",
-        "Increased efficiency across all Vectorform project teams by creating standards around the generic use of JIRA project management system",
-        "Defined the Product Owner role at Vectorform",
-        "Defined the Mopar.com Software Development Life cycle (SDLC)",
-        "Implemented standard agile ceremonies in the SDLC",
-        "Optimized all ceremonies (scrum meetings, retrospectives, sprint reviews, grooming sessions)",
-        "Promoted engineering best practices and added accountability to team-members through the use of peer reviews, transitioning team from SVN to GIT, code standards to achieve JAVA best practices, etc.",
-        "Actively participated in all major deployments of the application and provided insight and input to potential solutions for successful promotion to production",
-        "Established requirement writing and collection standards",
-        "Raised awareness of business analysis and quality assurance gaps and helped human resources in filling them"
+        "TODO: Add achievements"
       ]
     },
     {

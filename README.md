@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 08/04/2018
+# My Resume - Ion Caza - 08/05/2018
 
 Can be accessed at <http://let.caza.in/>
 
@@ -33,6 +33,10 @@ Can be accessed at <http://let.caza.in/>
 * Jest
 
 ## Change Log
+
+### v2.1.0
+
+* This is MVP, first thin slice that showcases the resume application with relevant experience
 
 ### v2.0.4
 
