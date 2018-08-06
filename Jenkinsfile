@@ -25,7 +25,7 @@ pipeline {
         sh 'cd build'
         sshCommand remote: remote, command: 'cd /var/www/letcazain-resume;touch testfile;rm -rf *'
         sshPut remote: remote, from: './build/.', into: '/var/www/letcazain-resume'
-        sshCommand remote: remote, command: 'cd /var/www/letcazain-resume;sudo chown 0775 .;ls -al'
+        sshCommand remote: remote, command: 'cd /var/www/letcazain-resume/build;sudo mv * ..;cd ..;sudo chown www-data:www-data .;rm -rf build;ls -al'
       }
     }
   }
