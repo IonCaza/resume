@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'cd dist'
+                sh 'pwd'
                 sh 'ls'
                 // sh 'scp -i ~/.ssh/baubau testfile ubuntu@let.caza.in:/var/www/letcazain-resume'  
             }
