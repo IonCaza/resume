@@ -23,7 +23,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'cd build'
-        sshCommand remote: remote, command: "sudo rm -rf /var/www/letcazain-resume/."
+        sshCommand remote: remote, command: "sudo rm -rf /var/www/letcazain-resume/*"
         sh 'scp -i ~/.ssh/baubau . ubuntu@let.caza.in:/var/www/letcazain-resume'
         sshCommand remote: remote, command: "cd /var/www/letcazain-resume;sudo chown 0775 .;ls -al"
       }
