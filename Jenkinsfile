@@ -3,7 +3,7 @@ remote.name = 'letcazain'
 remote.host = 'let.caza.in'
 remote.user = 'ubuntu'
 remote.identityFile = '~/.ssh/baubau'
-remote.allowAnyHosts = false
+remote.allowAnyHosts = true
 
 pipeline {
   agent {
