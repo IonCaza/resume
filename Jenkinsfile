@@ -15,6 +15,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'rm -rf build'
         sh 'yarn --version'
         sh 'yarn install'
         sh 'yarn build'
