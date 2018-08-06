@@ -13,5 +13,12 @@ pipeline {
                 sh 'yarn build' 
             }
         }
+        stage('Deploy') { 
+            steps {
+                sh 'cd dist'
+                sh 'ls'
+                // sh 'scp -i ~/.ssh/baubau testfile ubuntu@let.caza.in:/var/www/letcazain-resume'  
+            }
+        }
     }
 }

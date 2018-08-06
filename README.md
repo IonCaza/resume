@@ -31,8 +31,13 @@ Can be accessed at <http://let.caza.in/>
 * SASS
 * ESLint
 * Jest
+* Jenkins
 
 ## Change Log
+
+### v2.1.1
+
+* Incremented version for Jenkins, who triggered automatically based on the webhook and built successfully
 
 ### v2.1.0
 
