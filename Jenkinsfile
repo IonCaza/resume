@@ -1,3 +1,10 @@
+def remote = [:]
+remote.name = 'letcazain'
+remote.host = 'let.caza.in'
+remote.user = 'ubuntu'
+remote.identityFile = '~/.ssh/baubau'
+remote.allowAnyHosts = false
+
 pipeline {
   agent {
     docker {
@@ -14,12 +21,6 @@ pipeline {
       }
     }
     stage('Deploy') {
-      def remote = [:]
-      remote.name = 'letcazain'
-      remote.host = 'let.caza.in'
-      remote.user = 'ubuntu'
-      remote.identityFile = '~/.ssh/baubau'
-      remote.allowAnyHosts = false
       steps {
         sh 'cd build'
         sshCommand remote: remote, command: "sudo rm -rf /var/www/letcazain-resume/."
