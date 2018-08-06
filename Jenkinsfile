@@ -15,9 +15,15 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'pwd'
-                sh 'ls'
-                // sh 'scp -i ~/.ssh/baubau testfile ubuntu@let.caza.in:/var/www/letcazain-resume'  
+                sh 'cd build'
+                sh 'ssh -i ~/.ssh/baubau ubuntu@let.caza.in'
+                sh 'sudo rm -rf /var/www/letcazain-resume/.'
+                sh 'exit'
+                sh 'scp -i ~/.ssh/baubau . ubuntu@let.caza.in:/var/www/letcazain-resume'
+                sh 'ssh -i ~/.ssh/baubau ubuntu@let.caza.in'
+                sh 'cd /var/www/letcazain-resume'
+                sh 'sudo chown 0775 .'
+                sh 'exit'
             }
         }
     }
