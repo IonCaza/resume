@@ -23,9 +23,10 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'cd build'
-        sshCommand remote: remote, command: "cd /var/www/letcazain-resume;touch testfile;rm -rf *"
-        sh 'scp -i ~/.ssh/baubau . ubuntu@let.caza.in:/var/www/letcazain-resume'
-        sshCommand remote: remote, command: "cd /var/www/letcazain-resume;sudo chown 0775 .;ls -al"
+        sshCommand remote: remote, command: 'cd /var/www/letcazain-resume;touch testfile;rm -rf *'
+        // sh 'scp -i ~/.ssh/baubau . ubuntu@let.caza.in:/var/www/letcazain-resume'
+        sshPut remote: remote, from: '.', into: '/var/www/letcazain-resume'
+        sshCommand remote: remote, command: 'cd /var/www/letcazain-resume;sudo chown 0775 .;ls -al'
       }
     }
   }
