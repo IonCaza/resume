@@ -1,3 +1,6 @@
 {
-    "topBarTitle": "My App"
+    "topBarTitle": "Ion Caza's Resume",
+    "labelSummary": "Summary",
+    "labelResponsibilities": "Responsibilities",
+    "labelAchievements": "Achievements"
 }

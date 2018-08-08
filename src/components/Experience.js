@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 
 import withRoot from './withRoot';
 import experience from '../data/experience';
+import general from '../data/general';
 
 const styles = theme => ({
   root: {
@@ -42,7 +43,7 @@ const Experience = props => {
       <Grid item xs={8}>
         {experience.jobs.map(job => (
           <Paper className={classes.paper} key={job.id}>
-            <Grid container spacing={24}>
+            <Grid container>
               <Grid item xs={8}>
                 <Typography variant="headline" gutterBottom>
                   {job.position}
@@ -70,14 +71,14 @@ const Experience = props => {
                 {job.summary && (
                   <div>
                     <Typography variant="body2" gutterBottom>
-                      Summary
+                      {general.labelSummary}
                     </Typography>
                     <Typography gutterBottom>{job.summary}</Typography>
                   </div>
                 )}
                 {job.responsibilities && (
                   <Typography variant="body2" gutterBottom>
-                    Responsibilities
+                    {general.labelResponsibilities}
                   </Typography>
                 )}
                 {job.responsibilities &&
@@ -86,7 +87,7 @@ const Experience = props => {
                   ))}
                 {job.achievements && (
                   <Typography variant="body2" gutterBottom>
-                    Achievements
+                    {general.labelAchievements}
                   </Typography>
                 )}
                 {job.achievements &&

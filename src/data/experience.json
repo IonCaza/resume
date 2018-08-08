@@ -1,32 +1,156 @@
 {
   "jobs": [{
       "id": 1,
-      "company": "Love",
-      "position": "Happens for a reason",
-      "location": "In the clouds",
-      "description": "Lovely things are great",
-      "startDate": "When it started",
+      "company": "Pillar Technology",
+      "position": "Delivery Lead",
+      "location": "Ann Arbor, Michigan",
+      "description": "Pillar is a digital consulting company that focuses on diversity, people, delivery, and Agile transformational while teaching companies how to bring business value to their customers as fast as possible.",
+      "startDate": "October 2017",
       "endDate": "Present",
-      "summary": "Amazing times for amazing people"
+      "summary": "Direct hire position within the Delivery team in the Great Lakes Region serving a delivery and Agile transformation team at Ford Motor Credit Company.",
+      "responsibilities": [
+        "TODO: Add responsibilities"
+      ],
+      "achievements": [
+        "TODO: Add achievements"
+      ]
     },
     {
       "id": 2,
-      "company": "Many things",
-      "position": "Happen for a reason",
-      "location": "On Earth and beyond",
-      "description": "We love the state of Michigan",
-      "startDate": "Today",
-      "endDate": "December",
-      "summary": "Deliver the pizza.",
+      "company": "Vectorform",
+      "position": "Technical Product Manager",
+      "location": "Royal Oak, Michigan",
+      "description": "Vectorform is a state of the art digital agency, innovation driver, and think tank that caters to clients and end users worldwide.",
+      "startDate": "May 2016",
+      "endDate": "October 2017",
+      "summary": "Direct hire position within the Project Management Organization at Vectorform in the capacity of product manager and technical project manager in charge of delivering the Mopar.com program.",
       "responsibilities": [
-        "Anchovies",
-        "Green mushrooms",
-        "Appfels"
+        "Delivering Mopar.com (an FCA brand web application)",
+        "Creating, maintaining, and revising the vision and team's alignment to the vision of mopar.com",
+        "Defining the product roadmap and release schedules",
+        "Deciding the scope of releases based on value added, technical feasibility, stakeholder permission, budget, timing, scope, and vision",
+        "Discovering and creating efficiencies for my team",
+        "Having a holistic understanding of scope, time, cost, risks, status, bugs, shortcomings, resources, communications, goals, internal issues, etc.",
+        "Managing the interests of FCA (the client), Vectorform (the agency), and the end user",
+        "Acting as a primary source of contact for all external and internal stakeholders",
+        "Reviewing all important external communications",
+        "Establishing close working relationships with all stakeholders",
+        "Answering and providing options for technical challenges",
+        "Facilitating estimating meetings and delivery of high level estimates",
+        "Identifying the best resources per task and feature",
+        "Problem solving when critical issues are identified",
+        "Managing crisis situations (when downtime occurs)"
       ],
       "achievements": [
-        "Rocket man",
-        "Saw this",
-        "post"
+        "Launched Mopar.com to consumers on 9/23/16",
+        "Reduced a 1.5 year delivery lag to 0",
+        "Achieved set financial targets for the Mopar.com product",
+        "Managed both off-shore and on-shore development teams to create the Mopar.com backend",
+        "Started the first in-house enterprise-level JAVA development team at Vectorform",
+        "Increased efficiency across all Vectorform project teams by creating standards around the generic use of JIRA project management system",
+        "Defined the Product Owner role at Vectorform",
+        "Defined the Mopar.com Software Development Life cycle (SDLC)",
+        "Implemented standard agile ceremonies in the SDLC",
+        "Optimized all ceremonies (scrum meetings, retrospectives, sprint reviews, grooming sessions)",
+        "Promoted engineering best practices and added accountability to team-members through the use of peer reviews, transitioning team from SVN to GIT, code standards to achieve JAVA best practices, etc.",
+        "Actively participated in all major deployments of the application and provided insight and input to potential solutions for successful promotion to production",
+        "Established requirement writing and collection standards",
+        "Raised awareness of business analysis and quality assurance gaps and helped human resources in filling them"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Gas Station TV",
+      "position": "Technical Project Manager",
+      "location": "Birmingham & Detroit, Michigan",
+      "description": "GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.",
+      "startDate": "August 2014",
+      "endDate": "May 2016",
+      "summary": "Consulting position for facilitating the project management and business analysis for an in-house built Enterprise Resource Planning system.",
+      "achievements": [
+        "Defined the company's Scrum Agile Software Development Life cycle (SDLC)",
+        "Introduced checks and balances in SDLC that led to a significant increase in the team’s performance",
+        "Implemented JIRA and Confluence and designed workflows to integrate these tools in the SDLC",
+        "Estimated, planned, and tracked time, scope, and cost for Gbase – a custom ERP built in-house that will be used by all the departments of the company",
+        "Managed projects that revolved around production applications and processes",
+        "Gathered requirements from internal and external stakeholders while interacting with all levels of management",
+        "Developed full stack technical specifications for the development of Gbase",
+        "Architected an extensible data model based on Gbase’s data requirements",
+        "Architected interim applications used to automate functions of Gbase and transition several departments to Gbase",
+        "Developed processes and scripts to facilitate Extracting, Transforming, and Loading (ETL) data from legacy data sources into the Gbase database",
+        "Maintained legacy applications and databases that were critical to the company",
+        "Managed relationships with third party resources that augmented the main development team",
+        "Trained QA personnel and supervised the creation of test cases and test plans for all internal projects",
+        "Actively participated in UX/UI improvement and design discussions",
+        "Performed UAT validation testing with business stakeholders",
+        "Improved the accuracy of inventory reports for the executive team by 60% - this increased their understanding of when GSTV is oversold and undersold as a network, with the help of data gathered from previous projects"
+      ]
+    },
+    {
+      "id": 4,
+      "company": "MOTOR Information Systems",
+      "position": "Senior Technical Business Analyst",
+      "location": "Troy, Michigan",
+      "description": "MOTOR is the largest provider of aftermarket automotive information in the world; it is a big data company with hundreds of databases and monthly transactional throughput exceeding 30petabytes.",
+      "startDate": "October 2013",
+      "endDate": "August 2014",
+      "summary": "Consulting position for facilitating requirements and overcoming the technical challenges of an application with data sources that have in the range of 10-100 million records.",
+      "achievements": [
+        "Defined a hybrid-agile SDLC process at MOTOR",
+        "Improved the role of Business Analysts in the company and defined the SDLC process for both Agile and Waterfall projects",
+        "Introduced the usage of Sharepoint for document management within the Selectline Estimating Application (for BA and QA)",
+        "Crafted BA Approach Documents for both Agile and Waterfall projects revolving around ETL-ing data",
+        "Streamlined communication between Application Development stakeholders",
+        "Gathered, clarified, and approved requirements with product managers weekly",
+        "Implemented CTO's vision of the application development process",
+        "Translated requirements into detailed technical specifications",
+        "Created use cases for business requirements",
+        "Helped the UX/UI and WebServices team get a thorough comprehension of the data and the structure of the data that they handle by providing samples",
+        "Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA",
+        "Created and executed formal test cases using MSTM",
+        "Organized Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders",
+        "Trained stakeholders in the usage of Team Foundation Server",
+        "Created various advanced queries, stored procedures, and table valued functions in SQL Server 2012 to help data team and retrieve samples for development team"
+      ]
+    },
+    {
+      "id": 5,
+      "company": "ATEX Appraisal",
+      "position": "Technical Business Analyst",
+      "location": "Troy & Westland, Michigan",
+      "description": "ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.",
+      "startDate": "December 2005",
+      "endDate": "October 2013",
+      "summary": "Direct hire position within the Project Management Organization at Vectorform in the capacity of product manager and technical project manager in charge of delivering the Mopar.com program.Longterm engagement where I accumulated experience in the entire product life cycle by creating products that help internal and external end-users in the fulfillment of the residential appraising process.",
+      "achievements": [
+        "Managed Information Systems",
+        "Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market",
+        "Expanded company horizons to new markets shifting focus from residential appraising to servicing the industry with new solutions developed internally",
+        "Determined goals and requirements for various IT projects",
+        "Created business requirement documents for process automation",
+        "Acted as cross-functional liaison establishing proper communication channels between PM, development team, QA and other stakeholders",
+        "Conducted product feasibility, market and profitability studies",
+        "Implemented SDLC and DSDM agile methodologies in company’s project management framework",
+        "Coordinated with QA for thorough front-end to back-end testing of developed .NET 4.0 applications and interactions with SQL databases",
+        "Constructed complex SQL queries to help development team with reporting",
+        "Built stored procedures and functions in SQL to help development team optimize database transactions",
+        "Provided hands-on support of application front-end development in HTML5, Javascript"
+      ]
+    },
+    {
+      "id": 6,
+      "company": "Enertia Solutions",
+      "position": "Web Developer",
+      "location": "Ann Arbor, Michigan",
+      "description": "Enertia is a web design company with clients all over the nation; its solutions span from simple websites to full-fledged web-based applications.",
+      "startDate": "June 2008",
+      "endDate": "August 2008",
+      "summary": "Summer contract position that involved LAMP stack development.",
+      "achievements": [
+        "Developed web applications, websites and various projects from start to finish",
+        "Communicated with stakeholders to identify project requirements",
+        "Managed relationship between Enertia and clients during and post development",
+        "Provided customer support to clients on previously developed projects"
       ]
     }
   ]
