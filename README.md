@@ -9,6 +9,7 @@ Can be accessed at <http://let.caza.in/>
 ## To Do
 
 * Add print to pdf
+* Extract all labels and text into .json for future internationalization
 * Add contact component with schema.org
 * Add skills component
 * Add education component

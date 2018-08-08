@@ -42,7 +42,7 @@ const Experience = props => {
       <Grid item xs={8}>
         {experience.jobs.map(job => (
           <Paper className={classes.paper} key={job.id}>
-            <Grid container spacing={12}>
+            <Grid container spacing={24}>
               <Grid item xs={8}>
                 <Typography variant="headline" gutterBottom>
                   {job.position}
@@ -64,9 +64,7 @@ const Experience = props => {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography gutterBottom wrap>
-                  {job.description}
-                </Typography>
+                <Typography gutterBottom>{job.description}</Typography>
               </Grid>
               <Grid item xs={12} className={classes.indent1}>
                 {job.summary && (
@@ -74,9 +72,7 @@ const Experience = props => {
                     <Typography variant="body2" gutterBottom>
                       Summary
                     </Typography>
-                    <Typography gutterBottom wrap>
-                      {job.summary}
-                    </Typography>
+                    <Typography gutterBottom>{job.summary}</Typography>
                   </div>
                 )}
                 {job.responsibilities && (
@@ -86,9 +82,7 @@ const Experience = props => {
                 )}
                 {job.responsibilities &&
                   job.responsibilities.map(responsibility => (
-                    <Typography gutterBottom wrap>
-                      &bull; {responsibility}
-                    </Typography>
+                    <Typography gutterBottom>&bull; {responsibility}</Typography>
                   ))}
                 {job.achievements && (
                   <Typography variant="body2" gutterBottom>
@@ -97,9 +91,7 @@ const Experience = props => {
                 )}
                 {job.achievements &&
                   job.achievements.map(achievement => (
-                    <Typography gutterBottom wrap>
-                      &bull; {achievement}
-                    </Typography>
+                    <Typography gutterBottom>&bull; {achievement}</Typography>
                   ))}
               </Grid>
             </Grid>

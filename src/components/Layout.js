@@ -107,7 +107,11 @@ class Layout extends Component {
       <BrowserRouter>
         <div className={classes.root}>
           <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-          <LeftNav toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
+          <LeftNav
+            toggleDrawer={this.toggleDrawer}
+            drawerIsOpen={drawerIsOpen}
+            variant="asdfghjasdasd"
+          />
           <main
             className={classNames(classes.content, classes['content-left'], {
               [classes.contentShift]: drawerIsOpen,

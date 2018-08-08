@@ -11,6 +11,7 @@ import PrintIcon from '@material-ui/icons/PrintSharp';
 import SaveIcon from '@material-ui/icons/SaveAltSharp';
 
 import withRoot from './withRoot';
+import general from '../data/general';
 
 const drawerWidth = 240;
 
@@ -88,21 +89,16 @@ class TopBar extends Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Ion Caza&apos;s Resume
+            {general.topBarTitle}
           </Typography>
-          <IconButton
-            className={classes.rightButton}
-            color="inherit"
-            aria-label="Print"
-            disabled="true"
-          >
+          <IconButton className={classes.rightButton} color="inherit" aria-label="Print" disabled>
             <PrintIcon />
           </IconButton>
           <IconButton
             className={classes.rightButton}
             color="inherit"
             aria-label="Download PDF"
-            disabled="true"
+            disabled
           >
             <SaveIcon />
           </IconButton>
