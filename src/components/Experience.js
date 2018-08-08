@@ -81,8 +81,8 @@ const Experience = props => {
                   </Typography>
                 )}
                 {job.responsibilities &&
-                  job.responsibilities.map(responsibility => (
-                    <Typography gutterBottom>&bull; {responsibility}</Typography>
+                  job.responsibilities.map((responsibility, index) => (
+                    <Typography gutterBottom key={index}>&bull; {responsibility}</Typography> /* eslint-disable-line */
                   ))}
                 {job.achievements && (
                   <Typography variant="body2" gutterBottom>
@@ -90,8 +90,8 @@ const Experience = props => {
                   </Typography>
                 )}
                 {job.achievements &&
-                  job.achievements.map(achievement => (
-                    <Typography gutterBottom>&bull; {achievement}</Typography>
+                  job.achievements.map((achievement, index) => (
+                    <Typography gutterBottom key={index}>&bull; {achievement}</Typography> /* eslint-disable-line */
                   ))}
               </Grid>
             </Grid>

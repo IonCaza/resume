@@ -18,6 +18,7 @@ import Typography from '@material-ui/core/Typography';
 
 import withRoot from './withRoot';
 import packageJson from '../../package';
+import links from '../data/links';
 
 const mainItems = (
   <div>
@@ -30,39 +31,18 @@ const mainItems = (
   </div>
 );
 
-const links = [
-  {
-    title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/ioncaza/',
-  },
-  {
-    title: 'Github',
-    url: 'https://github.com/IonCaza/',
-  },
-  {
-    title: 'MOPAR',
-    url: 'https://www.mopar.com/',
-  },
-  {
-    title: 'Selectline',
-    url: 'https://www.motor.com/products/selectline/',
-  },
-  {
-    title: 'ATEX Appraisal',
-    url: 'https://www.atexappraisal.com/',
-  },
-  {
-    title: 'Soundcloud',
-    url: 'http://www.johncaza.com/',
-  },
-];
-
 const linkItems = props => {
   const { classes } = props;
   return (
     <div>
       {links.map(link => (
-        <a href={link.url} target="_blank" rel="noopener noreferrer" className={classes.a}>
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.a}
+          key={link.id}
+        >
           <ListItem button>
             <ListItemIcon>
               <LinkIcon />
