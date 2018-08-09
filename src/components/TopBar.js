@@ -18,7 +18,6 @@ const drawerWidth = 240;
 const styles = theme => ({
   flex: {
     flexGrow: 1,
-    // textAlign: 'center',
   },
   appBar: {
     position: 'fixed',
@@ -28,14 +27,18 @@ const styles = theme => ({
     }),
   },
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+    [theme.breakpoints.up('md')]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    },
   },
   'appBarShift-left': {
-    marginLeft: drawerWidth,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: drawerWidth,
+    },
   },
   leftButton: {
     marginLeft: 8,
@@ -46,7 +49,9 @@ const styles = theme => ({
     marginRight: 8,
   },
   hide: {
-    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
 });
 

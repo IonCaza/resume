@@ -3,6 +3,7 @@ import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
+import Hidden from '@material-ui/core/Hidden';
 import '../styles/Layout.scss';
 
 // import Main from './Main';
@@ -73,13 +74,17 @@ const styles = theme => ({
     marginLeft: 0,
   },
   contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+    [theme.breakpoints.up('md')]: {
+      transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    },
   },
   'contentShift-left': {
-    marginLeft: drawerWidth,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: drawerWidth,
+    },
   },
 });
 
@@ -107,11 +112,20 @@ class Layout extends Component {
       <BrowserRouter>
         <div className={classes.root}>
           <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-          <LeftNav
-            toggleDrawer={this.toggleDrawer}
-            drawerIsOpen={drawerIsOpen}
-            variant="asdfghjasdasd"
-          />
+          <Hidden mdUp>
+            <LeftNav
+              toggleDrawer={this.toggleDrawer}
+              drawerIsOpen={drawerIsOpen}
+              variant="temporary"
+            />
+          </Hidden>
+          <Hidden smDown implementation="css">
+            <LeftNav
+              toggleDrawer={this.toggleDrawer}
+              drawerIsOpen={drawerIsOpen}
+              variant="persistent"
+            />
+          </Hidden>
           <main
             className={classNames(classes.content, classes['content-left'], {
               [classes.contentShift]: drawerIsOpen,

@@ -88,6 +88,7 @@ class LeftNav extends Component {
     super(props);
     this.state = {
       drawerIsOpen: props.drawerIsOpen,
+      variant: props.variant,
     };
     this.closeDrawer = this.toggleLocal.bind(this, false);
   }
@@ -103,18 +104,25 @@ class LeftNav extends Component {
   };
 
   render() {
-    const { drawerIsOpen } = this.state;
+    const { drawerIsOpen, variant } = this.state;
     const { classes } = this.props;
 
     const drawer = (
       <Drawer
-        variant="persistent"
-        anchor="left"
+        variant={variant}
+        anchor={variant === 'temporary' ? 'left' : undefined}
         open={drawerIsOpen}
         className={classes.drawer}
         classes={{
           paper: classes.drawerPaper,
         }}
+        ModalProps={
+          variant === 'temporary'
+            ? {
+                keepMounted: true, // Better open performance on mobile.
+              }
+            : undefined
+        }
       >
         <div className={classes.drawerHeader}>
           <Typography variant="title" className={classes.name} align="left">
@@ -140,6 +148,7 @@ LeftNav.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   drawerIsOpen: PropTypes.bool.isRequired,
+  variant: PropTypes.string.isRequired,
 };
 
 linkItems.propTypes = {
