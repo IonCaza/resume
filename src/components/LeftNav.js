@@ -136,7 +136,6 @@ class LeftNav extends Component {
         <List>{mainItems}</List>
         <Divider />
         <List>{linkItems(this.props)}</List>
-        {variant}
       </Drawer>
     );
 
