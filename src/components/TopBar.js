@@ -58,25 +58,21 @@ const styles = theme => ({
 class TopBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      drawerIsOpen: props.drawerIsOpen,
-    };
     this.openDrawer = this.toggleLocal.bind(this, true);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ drawerIsOpen: nextProps.drawerIsOpen });
+  shouldComponentUpdate(nextProps) {
+    const { drawerIsOpen } = this.props;
+    return nextProps.drawerIsOpen !== drawerIsOpen;
   }
 
   toggleLocal = tf => {
-    this.setState({ drawerIsOpen: tf });
     const { toggleDrawer } = this.props;
     toggleDrawer(tf);
   };
 
   render() {
-    const { drawerIsOpen } = this.state;
-    const { classes } = this.props;
+    const { drawerIsOpen, classes } = this.props;
     return (
       <AppBar
         className={classNames(classes.appBar, {

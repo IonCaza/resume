@@ -119,7 +119,7 @@ class Layout extends Component {
               variant="temporary"
             />
           </Hidden>
-          <Hidden smDown implementation="css">
+          <Hidden smDown>
             <LeftNav
               toggleDrawer={this.toggleDrawer}
               drawerIsOpen={drawerIsOpen}

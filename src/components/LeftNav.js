@@ -87,25 +87,24 @@ class LeftNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      drawerIsOpen: props.drawerIsOpen,
       variant: props.variant,
     };
     this.closeDrawer = this.toggleLocal.bind(this, false);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ drawerIsOpen: nextProps.drawerIsOpen });
+  shouldComponentUpdate(nextProps) {
+    const { drawerIsOpen } = this.props;
+    return nextProps.drawerIsOpen !== drawerIsOpen;
   }
 
   toggleLocal = tf => {
-    this.setState({ drawerIsOpen: tf });
     const { toggleDrawer } = this.props;
     toggleDrawer(tf);
   };
 
   render() {
-    const { drawerIsOpen, variant } = this.state;
-    const { classes } = this.props;
+    const { variant } = this.state;
+    const { drawerIsOpen, classes } = this.props;
 
     const drawer = (
       <Drawer
@@ -137,6 +136,7 @@ class LeftNav extends Component {
         <List>{mainItems}</List>
         <Divider />
         <List>{linkItems(this.props)}</List>
+        {variant}
       </Drawer>
     );
 
