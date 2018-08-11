@@ -11,9 +11,9 @@ import PrintIcon from '@material-ui/icons/PrintSharp';
 import SaveIcon from '@material-ui/icons/SaveAltSharp';
 
 import withRoot from './withRoot';
-import general from '../data/general';
+import vars from '../data/general';
 
-const drawerWidth = 240;
+const { drawerWidth } = vars.app;
 
 const styles = theme => ({
   flex: {
@@ -95,7 +95,7 @@ class TopBar extends Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            {general.topBarTitle}
+            {vars.app.topBarTitle}
           </Typography>
           <IconButton className={classes.rightButton} color="inherit" aria-label="Print" disabled>
             <PrintIcon />

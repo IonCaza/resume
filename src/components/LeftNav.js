@@ -19,6 +19,9 @@ import Typography from '@material-ui/core/Typography';
 import withRoot from './withRoot';
 import packageJson from '../../package';
 import links from '../data/links';
+import vars from '../data/general';
+
+const { drawerWidth } = vars.app;
 
 const mainItems = (
   <div>
@@ -54,8 +57,6 @@ const linkItems = props => {
     </div>
   );
 };
-
-const drawerWidth = 240;
 
 const styles = () => ({
   drawer: {

@@ -1,6 +1,15 @@
 {
+  "app": {
     "topBarTitle": "Ion Caza's Resume",
+    "drawerWidth": 240
+  },
+  "experience": {
     "labelSummary": "Summary",
     "labelResponsibilities": "Responsibilities",
     "labelAchievements": "Achievements"
+  },
+  "content": {
+      "labelExperience": "Experience",
+      "labelSkills": "Skills"
+  }
 }

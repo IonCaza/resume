@@ -8,14 +8,12 @@ import Grid from '@material-ui/core/Grid';
 
 import withRoot from './withRoot';
 import experience from '../data/experience';
-import general from '../data/general';
+import vars from '../data/general';
 
 const styles = theme => ({
   experience: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 10,
-    marginLeft: theme.spacing.unit * 2,
-    marginRight: theme.spacing.unit * 2,
+    padding: theme.spacing.unit,
     flexGrow: 1,
   },
   paper: {
@@ -65,34 +63,38 @@ const Experience = props => {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography gutterBottom>{job.description}</Typography>
+                <Typography gutterBottom className={classes.indent1}>
+                  {job.description}
+                </Typography>
               </Grid>
-              <Grid item xs={12} className={classes.indent1}>
+              <Grid item xs={12}>
                 {job.summary && (
                   <div>
-                    <Typography variant="body2" gutterBottom>
-                      {general.labelSummary}
+                    <Typography variant="subheading" gutterBottom>
+                      {vars.experience.labelSummary}
                     </Typography>
-                    <Typography gutterBottom>{job.summary}</Typography>
+                    <Typography gutterBottom className={classes.indent1}>
+                      {job.summary}
+                    </Typography>
                   </div>
                 )}
                 {job.responsibilities && (
-                  <Typography variant="body2" gutterBottom>
-                    {general.labelResponsibilities}
+                  <Typography variant="subheading" gutterBottom>
+                    {vars.experience.labelResponsibilities}
                   </Typography>
                 )}
                 {job.responsibilities &&
                   job.responsibilities.map((responsibility, index) => (
-                    <Typography gutterBottom key={index}>&bull; {responsibility}</Typography> /* eslint-disable-line */
+                    <Typography gutterBottom key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
                   ))}
                 {job.achievements && (
-                  <Typography variant="body2" gutterBottom>
-                    {general.labelAchievements}
+                  <Typography variant="subheading" gutterBottom>
+                    {vars.experience.labelAchievements}
                   </Typography>
                 )}
                 {job.achievements &&
                   job.achievements.map((achievement, index) => (
-                    <Typography gutterBottom key={index}>&bull; {achievement}</Typography> /* eslint-disable-line */
+                    <Typography gutterBottom key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
                   ))}
               </Grid>
             </Grid>

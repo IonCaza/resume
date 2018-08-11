@@ -21,9 +21,10 @@ import skills from '../data/skills';
 const styles = theme => ({
   skills: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 12,
-    marginLeft: theme.spacing.unit * 2,
-    marginRight: theme.spacing.unit * 2,
+    paddingTop: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit,
+    paddingRight: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
     flexGrow: 1,
   },
   heading: {
@@ -36,6 +37,9 @@ const styles = theme => ({
   skillNames: {
     textAlign: 'left',
   },
+  panelDetails: {
+    padding: '8px 0px 0px',
+  },
 });
 
 const Skills = props => {
@@ -47,7 +51,7 @@ const Skills = props => {
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
+          <ExpansionPanelDetails className={classes.panelDetails}>
             <Table>
               <TableBody>
                 {category.skills.map(skill => (
