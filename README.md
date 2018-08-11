@@ -4,23 +4,7 @@ Can be accessed at <http://let.caza.in/>
 
 ## Purpose
 
-* To gain exposure and job opportunities in IT and Tech
-
-## To Do
-
-* Add print to pdf
-* Extract all labels and text into .json for future internationalization
-* Add contact component with schema.org
-* Add skills component
-* Add education component
-* Create tracking viewer NavBar on Experience
-* Integrate recommendations from LinkedIn
-* Transition local data to mongoDB
-* Look into enzyme
-* Consider .env
-* Consider adding Service Worker
-* Clean up paths.js
-* Fix overlap in Appbar over LeftNav when resizing
+* To gain exposure and job opportunities in Technology and Management.
 
 ## Stack
 
@@ -31,6 +15,25 @@ Can be accessed at <http://let.caza.in/>
 * ESLint
 * Jest
 * Jenkins
+
+## To Do
+
+* Add print to pdf
+* Extract all labels and text into .json for future internationalization
+* Add contact component with schema.org
+* Add education component
+* Add About Me page as index and move experience
+* Create tracking viewer NavBar on Experience
+* Add more gfx to skills component
+* Add Map tooltips in Experience
+* Integrate recommendations from LinkedIn
+* Consider different experiences based on who comes in
+* Transition local data to mongoDB
+* Look into enzyme
+* Consider .env
+* Consider adding Service Worker
+* Clean up paths.js
+* Fix overlap in Appbar over LeftNav when resizing
 
 ## Change Log
 

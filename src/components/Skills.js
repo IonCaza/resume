@@ -74,7 +74,7 @@ const Skills = props => {
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
+          <ExpansionPanelDetails className={classes.panelDetails}>
             <Table>
               <TableBody>
                 {category.knowledges.map((skill, index) => (
