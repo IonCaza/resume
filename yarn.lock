@@ -6006,6 +6006,10 @@ pretty-format@^23.2.0:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
+print-js@^1.0.47:
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/print-js/-/print-js-1.0.47.tgz#9bf1d6cf4321522e54c7299f38efda9c597e73a7"
+
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"

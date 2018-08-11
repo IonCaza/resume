@@ -61,6 +61,9 @@ const styles = () => ({
   drawer: {
     position: 'fixed',
     top: 0,
+    // [theme.breakpoints.up('md')]: {
+    zIndex: `1 !important`,
+    // },
   },
   drawerPaper: {
     position: 'relative',

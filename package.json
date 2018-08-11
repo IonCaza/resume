@@ -1,11 +1,12 @@
 {
   "name": "resume",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Ion Caza's resume",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.4.2",
     "@material-ui/icons": "^2.0.0",
+    "print-js": "^1.0.47",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dev-utils": "^5.0.1",

@@ -13,16 +13,14 @@ Can be accessed at <http://let.caza.in/>
 * Add contact component with schema.org
 * Add skills component
 * Add education component
-* Breakout links component in LeftNav
 * Create tracking viewer NavBar on Experience
 * Integrate recommendations from LinkedIn
-* Add Jenkins for CI to prod
 * Transition local data to mongoDB
-* Style experience
 * Look into enzyme
 * Consider .env
 * Consider adding Service Worker
 * Clean up paths.js
+* Fix overlap in Appbar over LeftNav when resizing
 
 ## Stack
 
@@ -35,6 +33,11 @@ Can be accessed at <http://let.caza.in/>
 * Jenkins
 
 ## Change Log
+
+### v2.1.2
+
+* Adds print-js (not implemented yet)
+* Adds Skills component
 
 ### v2.1.1
 

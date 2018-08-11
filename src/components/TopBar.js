@@ -25,6 +25,9 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    // [theme.breakpoints.up('md')]: {
+    zIndex: '0 !important',
+    // },
   },
   appBarShift: {
     [theme.breakpoints.up('md')]: {
@@ -43,10 +46,12 @@ const styles = theme => ({
   leftButton: {
     marginLeft: 8,
     marginRight: 12,
+    zIndex: '1100 !important',
   },
   rightButton: {
     marginLeft: 0,
     marginRight: 8,
+    zIndex: '1100 !important',
   },
   hide: {
     [theme.breakpoints.up('md')]: {
