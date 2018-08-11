@@ -26,7 +26,7 @@ const styles = theme => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     // [theme.breakpoints.up('md')]: {
-    zIndex: '0 !important',
+    // zIndex: '0 !important',
     // },
   },
   appBarShift: {

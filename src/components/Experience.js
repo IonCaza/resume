@@ -11,7 +11,7 @@ import experience from '../data/experience';
 import general from '../data/general';
 
 const styles = theme => ({
-  root: {
+  experience: {
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 10,
     marginLeft: theme.spacing.unit * 2,
@@ -21,7 +21,7 @@ const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 2,
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 4,
+    marginBottom: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary,
   },
@@ -39,8 +39,8 @@ const styles = theme => ({
 const Experience = props => {
   const { classes } = props;
   return (
-    <Grid container spacing={24} className={classes.root}>
-      <Grid item xs={8}>
+    <Grid container spacing={24} className={classes.experience}>
+      <Grid item xs={12}>
         {experience.jobs.map(job => (
           <Paper className={classes.paper} key={job.id}>
             <Grid container>

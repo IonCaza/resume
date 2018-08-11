@@ -3,26 +3,18 @@ import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
-import Hidden from '@material-ui/core/Hidden';
-import '../styles/Layout.scss';
 
-// import Main from './Main';
+import Hidden from '@material-ui/core/Hidden';
+
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
-import Experience from './Experience';
+import Content from './Content';
+import '../styles/Layout.scss';
 
 const drawerWidth = 240;
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-  },
   drawer: {
     position: 'fixed',
     top: 0,
@@ -133,8 +125,8 @@ class Layout extends Component {
             })}
           >
             <Switch>
-              <Route path="/exp" component={Experience} />
-              <Redirect to="/exp" />
+              <Route path="/" component={Content} />
+              <Redirect to="/" />
             </Switch>
           </main>
         </div>
