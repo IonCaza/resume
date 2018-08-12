@@ -1,6 +1,16 @@
 {
-    "label": {
-        "header": "Let's get in touch",
-        "location": "My whereabouts"
-    }
+  "label": {
+    "header": "Let's get in touch",
+    "location": "My whereabouts",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "content": {
+    "introMessage": "I would love to hear from you. Please select one of the methods below in order to get in touch. I'm always interested in connecting with people, learning about new opportunities, understanding problems, and finding solutions."
+  },
+  "info": {
+    "phone": "+1 (248) 250-4056",
+    "email": "let@caza.in",
+    "location": "Farmington Hills, MI"
+  }
 }

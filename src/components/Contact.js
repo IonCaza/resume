@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Obfuscate from 'react-obfuscate';
 
 import withRoot from './withRoot';
 import contact from '../data/contact';
@@ -16,13 +18,33 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    paddingTop: theme.spacing.unit * 10,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 9,
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing.unit * 10,
+    },
   },
   mainHeadline: {
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 4,
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing.unit * 2,
+    },
     paddingLeft: theme.spacing.unit * 3,
   },
   secondaryItems: {
-    paddingTop: theme.spacing.unit * 4,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 4,
+    },
+
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing.unit,
+    },
+  },
+  contactItems: {
+    textAlign: 'center',
   },
 });
 
@@ -35,11 +57,44 @@ const Contact = props => {
         <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
           {contact.label.header}
         </Typography>
+        <Typography variant="subheading" gutterBottom className={classes.mainHeadline}>
+          {contact.content.introMessage}
+        </Typography>
+        <Grid container spacing={0} className={classes.contactItems}>
+          <Grid item md={6}>
+            <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+              {contact.label.phone}: &nbsp;
+              <Obfuscate tel={contact.info.phone}>
+                <Button variant="contained" color="primary" className={classes.button}>
+                  {contact.info.phone}
+                </Button>
+              </Obfuscate>
+            </Typography>
+          </Grid>
+          <Grid item md={6}>
+            <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+              {contact.label.email}: &nbsp;
+              <Obfuscate
+                email={contact.info.email}
+                headers={{
+                  subject: "Let's get in touch",
+                }}
+              >
+                <Button variant="contained" color="primary" className={classes.button}>
+                  {contact.info.email}
+                </Button>
+              </Obfuscate>
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid item md={4}>
         <Grid container spacing={0}>
           <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
             {contact.label.location}
+          </Typography>
+          <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+            {contact.info.location}
           </Typography>
         </Grid>
       </Grid>

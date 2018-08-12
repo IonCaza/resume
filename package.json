@@ -11,6 +11,7 @@
     "react": "^16.4.1",
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.1",
+    "react-obfuscate": "^2.1.4",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
   },
