@@ -47,7 +47,7 @@ const Skills = props => {
   const skillsObject = (
     <div className={classes.skills}>
       {skills.skillCategories.map(category => (
-        <ExpansionPanel key={category.id}>
+        <ExpansionPanel key={category.id} defaultExpanded={category.open}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>
@@ -70,7 +70,7 @@ const Skills = props => {
         </ExpansionPanel>
       ))}
       {skills.knowledgeCategories.map(category => (
-        <ExpansionPanel key={category.id}>
+        <ExpansionPanel key={category.id} defaultExpanded={category.open}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>

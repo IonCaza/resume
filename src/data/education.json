@@ -1,0 +1,36 @@
+{
+    "degrees": [
+        {
+            "id": 1,
+            "school": "University of Michigan",
+            "name": "Master of Business Administration",
+            "sub": "Concentration: MIS",
+            "startDate": "September 2011",
+            "endDate": "March 2013"
+        },
+        {
+            "id": 2,
+            "school": "University of Michigan",
+            "name": "Bachelor of Business Administration",
+            "sub": "Majors: ITM, SCM",
+            "startDate": "September 2007",
+            "endDate": "August 2011"
+        }
+    ],
+    "certifications": [
+        {
+            "id": 1,
+            "name": "PMI-ACP",
+            "number": "2179841",
+            "startDate": "March 2018",
+            "endDate": "March 2021"
+        },
+        {
+            "id": 2,
+            "name": "Licensed Real Estate Appraiser",
+            "number": "Michigan 1201074445",
+            "startDate": "September 2012",
+            "endDate": "July 2019"
+        }
+    ]
+}

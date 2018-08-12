@@ -2,6 +2,7 @@
   "skillCategories": [{
       "id": 1,
       "name": "Management",
+      "open": true,
       "skills": [{
           "id": 1,
           "name": "Product Ownership",
@@ -52,6 +53,7 @@
     {
       "id": 2,
       "name": "Technology",
+      "open": false,
       "skills": [{
           "id": 1,
           "name": "Automation",
@@ -127,6 +129,7 @@
     {
       "id": 3,
       "name": "Languages",
+      "open": false,
       "skills": [{
           "id": 1,
           "name": "English",
@@ -153,6 +156,7 @@
   "knowledgeCategories": [{
       "id": 1,
       "name": "Collaboration",
+      "open": false,
       "knowledges": [
         "JIRA",
         "Confluence",
@@ -168,6 +172,7 @@
     {
       "id": 2,
       "name": "Visual",
+      "open": false,
       "knowledges": [
         "Axure",
         "Photoshop",
@@ -180,6 +185,7 @@
     {
       "id": 3,
       "name": "Development",
+      "open": false,
       "knowledges": [
         "Visual Studio 2018",
         ".NET 4.5",
@@ -192,6 +198,7 @@
     {
       "id": 4,
       "name": "Web Development",
+      "open": false,
       "knowledges": [
         "Amazon Web Services",
         "Apache",
