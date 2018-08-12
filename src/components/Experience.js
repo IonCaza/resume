@@ -22,6 +22,7 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary,
+    borderRadius: '2px',
   },
   leftAlign: {
     textAlign: 'left',

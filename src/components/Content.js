@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Experience from './Experience';
 import Skills from './Skills';
+import Education from './Education';
 import withRoot from './withRoot';
 import vars from '../data/general';
 
@@ -23,6 +24,9 @@ const styles = theme => ({
   mainHeadline: {
     paddingLeft: theme.spacing.unit * 3,
   },
+  secondaryItems: {
+    paddingTop: theme.spacing.unit * 4,
+  },
 });
 
 const Content = props => {
@@ -37,10 +41,20 @@ const Content = props => {
         <Experience />
       </Grid>
       <Grid item xs={4}>
-        <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-          {vars.content.labelSkills}
-        </Typography>
-        <Skills />
+        <Grid container spacing={0}>
+          <Grid item xs={12}>
+            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+              {vars.content.labelSkills}
+            </Typography>
+            <Skills />
+          </Grid>
+          <Grid item xs={12} className={classes.secondaryItems}>
+            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+              {vars.content.labelEducation}
+            </Typography>
+            <Education />
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
