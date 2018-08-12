@@ -34,6 +34,7 @@ Can be accessed at <http://let.caza.in/>
 * Consider adding Service Worker
 * Clean up paths.js
 * Fix overlap in Appbar over LeftNav when resizing
+* Optimize to `renderToStaticMarkup`
 
 ## Change Log
 

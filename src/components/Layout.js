@@ -10,6 +10,7 @@ import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
 import Content from './Content';
+import Contact from './Contact';
 import '../styles/Layout.scss';
 
 const drawerWidth = 240;
@@ -56,7 +57,10 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: theme.spacing.unit * 2,
+      paddingRight: theme.spacing.unit * 2,
+    },
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -125,7 +129,8 @@ class Layout extends Component {
             })}
           >
             <Switch>
-              <Route path="/" component={Content} />
+              <Route path="/" exact component={Content} />
+              <Route path="/contact" component={Contact} />
               <Redirect to="/" />
             </Switch>
           </main>

@@ -6,7 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import StarIcon from '@material-ui/icons/Star';
+import ContactIcon from '@material-ui/icons/Message';
+import ExperienceIcon from '@material-ui/icons/AssignmentInd';
 import LinkIcon from '@material-ui/icons/Link';
 
 import IconButton from '@material-ui/core/IconButton';
@@ -25,11 +26,17 @@ const { drawerWidth } = vars.app;
 
 const mainItems = (
   <div>
-    <ListItem button component={Link} to="/exp">
+    <ListItem button component={Link} to="/">
       <ListItemIcon>
-        <StarIcon />
+        <ExperienceIcon />
       </ListItemIcon>
       <ListItemText primary="Experience" />
+    </ListItem>
+    <ListItem button component={Link} to="/contact">
+      <ListItemIcon>
+        <ContactIcon />
+      </ListItemIcon>
+      <ListItemText primary="Contact" />
     </ListItem>
   </div>
 );

@@ -19,13 +19,30 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    paddingTop: theme.spacing.unit * 10,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 9,
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing.unit * 10,
+    },
   },
   mainHeadline: {
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 4,
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing.unit * 2,
+    },
     paddingLeft: theme.spacing.unit * 3,
   },
   secondaryItems: {
-    paddingTop: theme.spacing.unit * 4,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: theme.spacing.unit * 4,
+    },
+
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing.unit,
+    },
   },
 });
 
@@ -34,21 +51,21 @@ const Content = props => {
 
   const content = (
     <Grid container spacing={0} className={classes.root}>
-      <Grid item xs={8}>
+      <Grid item xs={12} md={8}>
         <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
           {vars.content.labelExperience}
         </Typography>
         <Experience />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <Grid container spacing={0}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6} md={12}>
             <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
               {vars.content.labelSkills}
             </Typography>
             <Skills />
           </Grid>
-          <Grid item xs={12} className={classes.secondaryItems}>
+          <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
             <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
               {vars.content.labelEducation}
             </Typography>
