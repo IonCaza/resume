@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -8,13 +8,12 @@ import Typography from '@material-ui/core/Typography';
 import Experience from './Experience';
 import Skills from './Skills';
 import Education from './Education';
-import withRoot from './withRoot';
+import Layout from './Layout';
 import vars from '../data/general';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
@@ -34,53 +33,61 @@ const styles = theme => ({
       paddingTop: theme.spacing.unit * 2,
     },
     paddingLeft: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit,
   },
   secondaryItems: {
     [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing.unit * 4,
+      paddingTop: theme.spacing.unit * 1,
     },
-
     [theme.breakpoints.down('xs')]: {
       paddingTop: theme.spacing.unit,
     },
   },
+  component: {
+    paddingLeft: theme.spacing.unit * 1,
+    paddingRight: theme.spacing.unit * 1,
+  },
 });
 
-const Content = props => {
-  const { classes } = props;
+class Content extends Component {
+  render() {
+    const { classes } = this.props;
 
-  const content = (
-    <Grid container spacing={0} className={classes.root}>
-      <Grid item xs={12} md={8}>
-        <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-          {vars.content.labelExperience}
-        </Typography>
-        <Experience />
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={6} md={12}>
+    const contentObject = (
+      <Layout>
+        <Grid container spacing={0} className={classes.root}>
+          <Grid item xs={12} md={8} className={classes.component}>
             <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-              {vars.content.labelSkills}
+              {vars.content.labelExperience}
             </Typography>
-            <Skills />
+            <Experience />
           </Grid>
-          <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
-            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-              {vars.content.labelEducation}
-            </Typography>
-            <Education />
+          <Grid item xs={12} md={4} className={classes.component}>
+            <Grid container spacing={0}>
+              <Grid item xs={12} sm={6} md={12}>
+                <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+                  {vars.content.labelSkills}
+                </Typography>
+                <Skills className={classes.component} />
+              </Grid>
+              <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
+                <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+                  {vars.content.labelEducation}
+                </Typography>
+                <Education className={classes.component} />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    </Grid>
-  );
+      </Layout>
+    );
 
-  return content;
-};
+    return contentObject;
+  }
+}
 
 Content.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Content));
+export default withStyles(styles)(Content);

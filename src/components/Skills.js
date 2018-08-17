@@ -15,16 +15,12 @@ import TableCell from '@material-ui/core/TableCell';
 // import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-import withRoot from './withRoot';
 import skills from '../data/skills';
 
 const styles = theme => ({
   skills: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 3,
-    paddingLeft: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
+    paddingTop: theme.spacing.unit * 2,
     flexGrow: 1,
   },
   heading: {
@@ -98,4 +94,4 @@ Skills.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Skills));
+export default withStyles(styles)(Skills);

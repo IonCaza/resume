@@ -6,14 +6,12 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import withRoot from './withRoot';
 import experience from '../data/experience';
 import vars from '../data/general';
 
 const styles = theme => ({
   experience: {
     textAlign: 'center',
-    padding: theme.spacing.unit,
     flexGrow: 1,
   },
   paper: {
@@ -37,7 +35,8 @@ const styles = theme => ({
 
 const Experience = props => {
   const { classes } = props;
-  return (
+
+  const experienceObject = (
     <Grid container spacing={24} className={classes.experience}>
       <Grid item xs={12}>
         {experience.jobs.map(job => (
@@ -86,7 +85,7 @@ const Experience = props => {
                 )}
                 {job.responsibilities &&
                   job.responsibilities.map((responsibility, index) => (
-                    <Typography gutterBottom key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
+                  <Typography gutterBottom key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
                   ))}
                 {job.achievements && (
                   <Typography variant="subheading" gutterBottom>
@@ -95,7 +94,7 @@ const Experience = props => {
                 )}
                 {job.achievements &&
                   job.achievements.map((achievement, index) => (
-                    <Typography gutterBottom key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
+                  <Typography gutterBottom key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
                   ))}
               </Grid>
             </Grid>
@@ -104,10 +103,11 @@ const Experience = props => {
       </Grid>
     </Grid>
   );
+  return experienceObject;
 };
 
 Experience.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Experience));
+export default withStyles(styles)(Experience);

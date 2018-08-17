@@ -1,6 +1,16 @@
 {
+  "app": {
     "topBarTitle": "My App",
+    "drawerWidth": 240
+  },
+  "experience": {
     "labelSummary": "Many moons ago",
     "labelResponsibilities": "A fellow participant",
     "labelAchievements": "Saw the light"
+  },
+  "content": {
+      "labelExperience": "Experience",
+      "labelSkills": "Skills",
+      "labelEducation": "Education"
+  }
 }

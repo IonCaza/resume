@@ -17,7 +17,6 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 
-import withRoot from './withRoot';
 import packageJson from '../../package';
 import links from '../data/links';
 import vars from '../data/general';
@@ -165,4 +164,4 @@ linkItems.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(LeftNav));
+export default withStyles(styles)(LeftNav);

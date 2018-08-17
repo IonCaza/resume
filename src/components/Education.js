@@ -6,13 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import withRoot from './withRoot';
 import education from '../data/education';
 
 const styles = theme => ({
   experience: {
     textAlign: 'center',
-    padding: theme.spacing.unit,
     flexGrow: 1,
   },
   paper: {
@@ -98,4 +96,4 @@ Education.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Education));
+export default withStyles(styles)(Education);

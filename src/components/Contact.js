@@ -7,13 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Obfuscate from 'react-obfuscate';
 
-import withRoot from './withRoot';
 import contact from '../data/contact';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
@@ -26,13 +24,15 @@ const styles = theme => ({
     },
   },
   mainHeadline: {
+    flexGrow: 1,
+    display: 'flex',
+    width: '100%',
     [theme.breakpoints.up('md')]: {
       paddingTop: theme.spacing.unit * 4,
     },
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing.unit * 2,
     },
-    paddingLeft: theme.spacing.unit * 3,
   },
   secondaryItems: {
     [theme.breakpoints.up('md')]: {
@@ -108,4 +108,4 @@ Contact.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Contact));
+export default withStyles(styles)(Contact);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
@@ -9,8 +8,6 @@ import Hidden from '@material-ui/core/Hidden';
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
-import Content from './Content';
-import Contact from './Contact';
 import '../styles/Layout.scss';
 
 const drawerWidth = 240;
@@ -90,6 +87,7 @@ class Layout extends Component {
     this.state = {
       drawerIsOpen: false,
     };
+
     this.closeDrawer = this.toggleDrawer.bind(this, false);
     this.openDrawer = this.toggleDrawer.bind(this, true);
   }
@@ -101,47 +99,43 @@ class Layout extends Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, children } = this.props;
     const { drawerIsOpen } = this.state;
 
+    //    console.log(`in Layout.render ${this.match.path}`); // eslint-disable-line
     return (
-      <BrowserRouter>
-        <div className={classes.root}>
-          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-          <Hidden mdUp>
-            <LeftNav
-              toggleDrawer={this.toggleDrawer}
-              drawerIsOpen={drawerIsOpen}
-              variant="temporary"
-            />
-          </Hidden>
-          <Hidden smDown>
-            <LeftNav
-              toggleDrawer={this.toggleDrawer}
-              drawerIsOpen={drawerIsOpen}
-              variant="persistent"
-            />
-          </Hidden>
-          <main
-            className={classNames(classes.content, classes['content-left'], {
-              [classes.contentShift]: drawerIsOpen,
-              [classes['contentShift-left']]: drawerIsOpen,
-            })}
-          >
-            <Switch>
-              <Route path="/" exact component={Content} />
-              <Route path="/contact" component={Contact} />
-              <Redirect to="/" />
-            </Switch>
-          </main>
-        </div>
-      </BrowserRouter>
+      <div className={classes.root}>
+        <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
+        <Hidden mdUp>
+          <LeftNav
+            toggleDrawer={this.toggleDrawer}
+            drawerIsOpen={drawerIsOpen}
+            variant="temporary"
+          />
+        </Hidden>
+        <Hidden smDown>
+          <LeftNav
+            toggleDrawer={this.toggleDrawer}
+            drawerIsOpen={drawerIsOpen}
+            variant="persistent"
+          />
+        </Hidden>
+        <main
+          className={classNames(classes.content, classes['content-left'], {
+            [classes.contentShift]: drawerIsOpen,
+            [classes['contentShift-left']]: drawerIsOpen,
+          })}
+        >
+          {children}
+        </main>
+      </div>
     );
   }
 }
 
 Layout.propTypes = {
   classes: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 export default withRoot(withStyles(styles)(Layout));

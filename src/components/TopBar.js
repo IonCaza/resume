@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+
+// import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,7 +13,6 @@ import MenuIcon from '@material-ui/icons/MenuSharp';
 import PrintIcon from '@material-ui/icons/PrintSharp';
 import SaveIcon from '@material-ui/icons/SaveAltSharp';
 
-import withRoot from './withRoot';
 import vars from '../data/general';
 
 const { drawerWidth } = vars.app;
@@ -46,12 +48,12 @@ const styles = theme => ({
   leftButton: {
     marginLeft: 8,
     marginRight: 12,
-    zIndex: '1100 !important',
+    // zIndex: '1100 !important',
   },
   rightButton: {
     marginLeft: 0,
     marginRight: 8,
-    zIndex: '1100 !important',
+    // zIndex: '1100 !important',
   },
   hide: {
     [theme.breakpoints.up('md')]: {
@@ -70,6 +72,14 @@ class TopBar extends Component {
     const { drawerIsOpen } = this.props;
     return nextProps.drawerIsOpen !== drawerIsOpen;
   }
+
+  /* printComp() {
+    return (
+      <Hidden xsUp>
+        <Print />
+      </Hidden>
+    ); // ref={el => (this.componentRef = el)}
+  } */
 
   toggleLocal = tf => {
     const { toggleDrawer } = this.props;
@@ -97,8 +107,10 @@ class TopBar extends Component {
           <Typography variant="title" color="inherit" className={classes.flex}>
             {vars.app.topBarTitle}
           </Typography>
-          <IconButton className={classes.rightButton} color="inherit" aria-label="Print" disabled>
-            <PrintIcon />
+          <IconButton className={classes.rightButton} color="inherit" aria-label="Print">
+            <Link to="/print">
+              <PrintIcon />
+            </Link>
           </IconButton>
           <IconButton
             className={classes.rightButton}
@@ -120,4 +132,4 @@ TopBar.propTypes = {
   drawerIsOpen: PropTypes.bool.isRequired,
 };
 
-export default withRoot(withStyles(styles)(TopBar));
+export default withStyles(styles)(TopBar);
