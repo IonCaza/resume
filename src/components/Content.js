@@ -54,35 +54,33 @@ class Content extends Component {
     const { classes } = this.props;
 
     const contentObject = (
-      <Layout>
-        <Grid container spacing={0} className={classes.root}>
-          <Grid item xs={12} md={8} className={classes.component}>
-            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-              {vars.content.labelExperience}
-            </Typography>
-            <Experience />
-          </Grid>
-          <Grid item xs={12} md={4} className={classes.component}>
-            <Grid container spacing={0}>
-              <Grid item xs={12} sm={6} md={12}>
-                <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-                  {vars.content.labelSkills}
-                </Typography>
-                <Skills className={classes.component} />
-              </Grid>
-              <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
-                <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-                  {vars.content.labelEducation}
-                </Typography>
-                <Education className={classes.component} />
-              </Grid>
+      <Grid container spacing={0} className={classes.root}>
+        <Grid item xs={12} md={8} className={classes.component}>
+          <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+            {vars.content.labelExperience}
+          </Typography>
+          <Experience />
+        </Grid>
+        <Grid item xs={12} md={4} className={classes.component}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={6} md={12}>
+              <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+                {vars.content.labelSkills}
+              </Typography>
+              <Skills className={classes.component} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
+              <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+                {vars.content.labelEducation}
+              </Typography>
+              <Education className={classes.component} />
             </Grid>
           </Grid>
         </Grid>
-      </Layout>
+      </Grid>
     );
 
-    return contentObject;
+    return <Layout>{contentObject}</Layout>;
   }
 }
 

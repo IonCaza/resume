@@ -102,7 +102,8 @@ class Layout extends Component {
     const { classes, children } = this.props;
     const { drawerIsOpen } = this.state;
 
-    //    console.log(`in Layout.render ${this.match.path}`); // eslint-disable-line
+    console.log(children);
+
     return (
       <div className={classes.root}>
         <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
