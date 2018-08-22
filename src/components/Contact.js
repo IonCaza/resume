@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Obfuscate from 'react-obfuscate';
 
 import contact from '../data/contact';
+import Layout from './Layout';
 
 const styles = theme => ({
   root: {
@@ -101,7 +102,7 @@ const Contact = props => {
     </Grid>
   );
 
-  return contactObject;
+  return <Layout>{contactObject}</Layout>;
 };
 
 Contact.propTypes = {

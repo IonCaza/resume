@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
@@ -13,18 +14,21 @@ const theme = createMuiTheme({
   },
 });
 
-function withRoot(Component) {
-  return class extends React.Component { /* eslint-disable-line */
-    // component has to be stateful for react-to-print
-    render() {
-      return (
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component />
-        </MuiThemeProvider>
-      );
-    }
-  };
+class withRoot extends Component { /* eslint-disable-line */
+  // component has to be stateful for react-to-print
+  render() {
+    const { children } = this.props;
+    return (
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
+    );
+  }
 }
+
+withRoot.propTypes = {
+  children: PropTypes.object.isRequired,
+};
 
 export default withRoot;

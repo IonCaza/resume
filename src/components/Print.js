@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactToPrint from 'react-to-print';
-import Content from './Content';
+import Experience from './Experience';
 
 class PrintDocument extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class PrintDocument extends React.Component {
           trigger={() => <a href="#">Print this out!</a>}
           content={() => this.componentRef}
         />
-        <Content ref={el => (this.componentRef = el)} />
+        <Experience ref={el => (this.componentRef = el)} />
       </div>
     );
   }

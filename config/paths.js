@@ -7,7 +7,7 @@ module.exports = () => {
   const publicBuildPath = path.join(buildPath, 'public');
   const configPath = path.join(userRootPath, 'config');
   const assetPath = path.join(srcPath, 'assets');
-  const webpackConfigPath = path.join(configPath, 'webpack.config.js');
+  const webpackConfigPath = path.join(configPath, 'webpack.js');
 
   return {
     userRootPath,

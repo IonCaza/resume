@@ -8,7 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import withRoot from './withRoot';
-import '../styles/Layout.scss';
+// import '../styles/Layout.scss';
 
 const drawerWidth = 240;
 
@@ -102,33 +102,34 @@ class Layout extends Component {
     const { classes, children } = this.props;
     const { drawerIsOpen } = this.state;
 
-    //    console.log(`in Layout.render ${this.match.path}`); // eslint-disable-line
     return (
-      <div className={classes.root}>
-        <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-        <Hidden mdUp>
-          <LeftNav
-            toggleDrawer={this.toggleDrawer}
-            drawerIsOpen={drawerIsOpen}
-            variant="temporary"
-          />
-        </Hidden>
-        <Hidden smDown>
-          <LeftNav
-            toggleDrawer={this.toggleDrawer}
-            drawerIsOpen={drawerIsOpen}
-            variant="persistent"
-          />
-        </Hidden>
-        <main
-          className={classNames(classes.content, classes['content-left'], {
-            [classes.contentShift]: drawerIsOpen,
-            [classes['contentShift-left']]: drawerIsOpen,
-          })}
-        >
-          {children}
-        </main>
-      </div>
+      <withRoot>
+        <div className={classes.root}>
+          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
+          <Hidden mdUp>
+            <LeftNav
+              toggleDrawer={this.toggleDrawer}
+              drawerIsOpen={drawerIsOpen}
+              variant="temporary"
+            />
+          </Hidden>
+          <Hidden smDown>
+            <LeftNav
+              toggleDrawer={this.toggleDrawer}
+              drawerIsOpen={drawerIsOpen}
+              variant="persistent"
+            />
+          </Hidden>
+          <main
+            className={classNames(classes.content, classes['content-left'], {
+              [classes.contentShift]: drawerIsOpen,
+              [classes['contentShift-left']]: drawerIsOpen,
+            })}
+          >
+            {children}
+          </main>
+        </div>
+      </withRoot>
     );
   }
 }
@@ -138,4 +139,4 @@ Layout.propTypes = {
   children: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Layout));
+export default withStyles(styles)(Layout);
