@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import Experience from './Experience';
 import Skills from './Skills';
 import Education from './Education';
-import Layout from './Layout';
 import vars from '../data/general';
 
 const styles = theme => ({
@@ -80,7 +79,7 @@ class Content extends Component {
       </Grid>
     );
 
-    return <Layout>{contentObject}</Layout>;
+    return contentObject;
   }
 }
 

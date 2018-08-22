@@ -7,7 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
-import withRoot from './withRoot';
+import WithRoot from './WithRoot';
 // import '../styles/Layout.scss';
 
 const drawerWidth = 240;
@@ -103,7 +103,7 @@ class Layout extends Component {
     const { drawerIsOpen } = this.state;
 
     return (
-      <withRoot>
+      <WithRoot>
         <div className={classes.root}>
           <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
           <Hidden mdUp>
@@ -129,7 +129,7 @@ class Layout extends Component {
             {children}
           </main>
         </div>
-      </withRoot>
+      </WithRoot>
     );
   }
 }

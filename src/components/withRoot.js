@@ -14,7 +14,7 @@ const theme = createMuiTheme({
   },
 });
 
-class withRoot extends Component { /* eslint-disable-line */
+class WithRoot extends Component { /* eslint-disable-line */
   // component has to be stateful for react-to-print
   render() {
     const { children } = this.props;
@@ -27,8 +27,8 @@ class withRoot extends Component { /* eslint-disable-line */
   }
 }
 
-withRoot.propTypes = {
+WithRoot.propTypes = {
   children: PropTypes.object.isRequired,
 };
 
-export default withRoot;
+export default WithRoot;
