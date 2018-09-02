@@ -1,0 +1,19 @@
+.test {
+    color: red;
+}
+
+@media print {
+    .no-break {
+        display:inline-block;
+    }
+    .no-break:after {
+        content: '';
+        display:block;
+        height:0px;
+        visibility: hidden;
+    }
+    @page {
+        margin-top: 14mm;
+        margin-bottom: 20mm;
+       }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
@@ -8,11 +9,12 @@ import Grid from '@material-ui/core/Grid';
 
 import experience from '../data/experience';
 import vars from '../data/general';
+import '../styles/Print.scss';
 
 const styles = theme => ({
   experience: {
     textAlign: 'center',
-    flexGrow: 1,
+    flexGrow: 0,
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -40,7 +42,7 @@ const Experience = props => {
     <Grid container spacing={24} className={classes.experience}>
       <Grid item xs={12}>
         {experience.jobs.map(job => (
-          <Paper className={classes.paper} key={job.id}>
+          <Paper className={classNames(classes.paper, 'no-break')} key={job.id}>
             <Grid container>
               <Grid item xs={8}>
                 <Typography variant="headline" gutterBottom>
@@ -48,19 +50,15 @@ const Experience = props => {
                 </Typography>
               </Grid>
               <Grid item xs={4} className={classes.rightAlign}>
-                <Typography variant="subheading" gutterBottom>
+                <Typography variant="subheading">
                   {job.startDate} - {job.endDate}
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="title" gutterBottom>
-                  {job.company}
-                </Typography>
+                <Typography variant="title">{job.company}</Typography>
               </Grid>
               <Grid item xs={6} className={classes.rightAlign}>
-                <Typography variant="subheading" gutterBottom>
-                  {job.location}
-                </Typography>
+                <Typography variant="subheading">{job.location}</Typography>
               </Grid>
               <Grid item xs={12}>
                 <Typography gutterBottom className={classes.indent1}>
@@ -68,34 +66,40 @@ const Experience = props => {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                {job.summary && (
-                  <div>
-                    <Typography variant="subheading" gutterBottom>
-                      {vars.experience.labelSummary}
-                    </Typography>
-                    <Typography gutterBottom className={classes.indent1}>
-                      {job.summary}
-                    </Typography>
-                  </div>
-                )}
-                {job.responsibilities && (
-                  <Typography variant="subheading" gutterBottom>
-                    {vars.experience.labelResponsibilities}
-                  </Typography>
-                )}
-                {job.responsibilities &&
-                  job.responsibilities.map((responsibility, index) => (
-                  <Typography gutterBottom key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
-                  ))}
-                {job.achievements && (
-                  <Typography variant="subheading" gutterBottom>
-                    {vars.experience.labelAchievements}
-                  </Typography>
-                )}
-                {job.achievements &&
-                  job.achievements.map((achievement, index) => (
-                  <Typography gutterBottom key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
-                  ))}
+                <Grid container spacing={0} className="no-break">
+                  <Grid item xs={12} className="no-break">
+                    {job.summary && (
+                      <div>
+                        <Typography variant="subheading">{vars.experience.labelSummary}</Typography>
+                        <Typography gutterBottom className={classes.indent1}>
+                          {job.summary}
+                        </Typography>
+                      </div>
+                    )}
+                  </Grid>
+                  <Grid item xs={12} className="no-break">
+                    {job.responsibilities && (
+                      <Typography variant="subheading">
+                        {vars.experience.labelResponsibilities}
+                      </Typography>
+                    )}
+                    {job.responsibilities &&
+                      job.responsibilities.map((responsibility, index) => (
+                  <Typography key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
+                      ))}
+                  </Grid>
+                  <Grid item xs={12} className="no-break">
+                    {job.achievements && (
+                      <Typography variant="subheading">
+                        {vars.experience.labelAchievements}
+                      </Typography>
+                    )}
+                    {job.achievements &&
+                      job.achievements.map((achievement, index) => (
+                  <Typography key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
+                      ))}
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
           </Paper>

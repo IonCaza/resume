@@ -6,7 +6,7 @@ const styles = () => ({
   // insert styles here
 });
 
-class Skills extends Component {
+class ComponentName extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,16 +14,16 @@ class Skills extends Component {
   render() {
     const { classes } = this.props;
 
-    const skills = (
+    const componentNameObject = (
       // insert component here
     );
 
-    return skills;
+    return componentNameObject;
   }
 }
 
-Skills.propTypes = {
+ComponentName.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Skills);
+export default withStyles(styles)(ComponentName);

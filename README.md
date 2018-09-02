@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 08/05/2018
+# My Resume - Ion Caza - 08/22/2018
 
 Can be accessed at <http://let.caza.in/>
 
@@ -18,13 +18,11 @@ Can be accessed at <http://let.caza.in/>
 
 ## To Do
 
-* Add print to pdf
-* Extract all labels and text into .json for future internationalization
-* Add contact component with schema.org
-* Add education component
-* Add About Me page as index and move experience
+* Finish print to pdf
+* Add schema.org to Contact component
+* Add About Me page as index and move Experience
 * Create tracking viewer NavBar on Experience
-* Add more gfx to skills component
+* Add more gfx to Skills component
 * Add Map tooltips in Experience
 * Integrate recommendations from LinkedIn
 * Consider different experiences based on who comes in
