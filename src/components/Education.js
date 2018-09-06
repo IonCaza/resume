@@ -29,12 +29,12 @@ const styles = theme => ({
 });
 
 const Education = props => {
-  const { classes } = props;
+  const { classes, elevation } = props;
 
   const educationObject = (
     <Grid container spacing={16} className={classes.experience}>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} elevation={elevation}>
           {education.degrees.map((degree, index) => (
             <Grid container key={degree.id}>
               <Grid item xs={12}>
@@ -63,7 +63,7 @@ const Education = props => {
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper2}>
+        <Paper className={classes.paper2} elevation={elevation}>
           {education.certifications.map((certification, index) => (
             <Grid container key={certification.id}>
               <Grid item xs={12}>
@@ -94,6 +94,10 @@ const Education = props => {
 
 Education.propTypes = {
   classes: PropTypes.object.isRequired,
+};
+
+Education.defaultProps = {
+  elevation: 2,
 };
 
 export default withStyles(styles)(Education);

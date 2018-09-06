@@ -39,11 +39,11 @@ const styles = theme => ({
 });
 
 const Skills = props => {
-  const { classes } = props;
+  const { classes, elevation } = props;
   const skillsObject = (
     <div className={classes.skills}>
       {skills.skillCategories.map(category => (
-        <ExpansionPanel key={category.id} defaultExpanded={category.open}>
+        <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>
@@ -66,7 +66,7 @@ const Skills = props => {
         </ExpansionPanel>
       ))}
       {skills.knowledgeCategories.map(category => (
-        <ExpansionPanel key={category.id} defaultExpanded={category.open}>
+        <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>{category.name}</Typography>
           </ExpansionPanelSummary>
@@ -92,6 +92,10 @@ const Skills = props => {
 
 Skills.propTypes = {
   classes: PropTypes.object.isRequired,
+};
+
+Skills.defaultProps = {
+  elevation: 2,
 };
 
 export default withStyles(styles)(Skills);

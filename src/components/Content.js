@@ -51,6 +51,16 @@ const styles = theme => ({
 });
 
 const Content = props => {
+  const mediaQueryList = window.matchMedia('print');
+  mediaQueryList.addListener(mql => {
+    if (mql.matches) {
+      console.log('onbeforeprint equivalent');
+      this.props.history.push('/print');
+    } else {
+      console.log('onafterprint equivalent');
+    }
+  });
+
   const { classes } = props;
 
   const contentObject = (

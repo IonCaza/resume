@@ -36,13 +36,13 @@ const styles = theme => ({
 });
 
 const Experience = props => {
-  const { classes } = props;
+  const { classes, elevation } = props;
 
   const experienceObject = (
     <Grid container spacing={24} className={classes.experience}>
       <Grid item xs={12}>
         {experience.jobs.map(job => (
-          <Paper className={classNames(classes.paper, 'no-break')} key={job.id}>
+          <Paper className={classNames(classes.paper)} elevation={elevation} key={job.id}>
             <Grid container>
               <Grid item xs={8}>
                 <Typography variant="headline" gutterBottom>
@@ -112,6 +112,10 @@ const Experience = props => {
 
 Experience.propTypes = {
   classes: PropTypes.object.isRequired,
+};
+
+Experience.defaultProps = {
+  elevation: 2,
 };
 
 export default withStyles(styles)(Experience);

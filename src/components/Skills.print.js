@@ -40,11 +40,11 @@ const styles = theme => ({
 });
 
 const Skills = props => {
-  const { classes } = props;
+  const { classes, elevation } = props;
   const skillsObject = (
     <Grid container spacing={16} className={classes.skills}>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} elevation={elevation}>
           {skills.skillCategories.map(category => (
             <Table key={category.id}>
               <TableBody>
@@ -72,7 +72,6 @@ const Skills = props => {
                     <Typography variant="body2" gutterBottom className={classes.mainHeadline}>
                       {category.name}
                     </Typography>
-                    {console.log(category.knowledges)}
                     {category.knowledges.map((knowledge, index) => (
                       <span key={index}>
                         {knowledge}
@@ -93,6 +92,10 @@ const Skills = props => {
 
 Skills.propTypes = {
   classes: PropTypes.object.isRequired,
+};
+
+Skills.defaultProps = {
+  elevation: 2,
 };
 
 export default withStyles(styles)(Skills);
