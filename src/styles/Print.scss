@@ -2,7 +2,23 @@
     color: red;
 }
 
+.onlyprint {
+    display: none;
+}
+
 @media print {
+    .rootprint {
+        padding-top: 0px !important;
+    }
+
+    .noprint {
+        display: none;
+    }
+
+    .onlyprint {
+        display: inline-block;
+    }
+
     .no-break {
         display:inline-block;
     }

@@ -33,6 +33,7 @@ Can be accessed at <http://let.caza.in/>
 * Clean up paths.js
 * Fix overlap in Appbar over LeftNav when resizing
 * Optimize to `renderToStaticMarkup`
+* Refactor to use `withRouter` instead of passing prop to TopBar manually
 
 ## Change Log
 

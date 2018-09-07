@@ -12,5 +12,6 @@
       "labelExperience": "Experience",
       "labelSkills": "Skills",
       "labelEducation": "Education"
-  }
+  },
+  "printablePaths": ["/"]
 }

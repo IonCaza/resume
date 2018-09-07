@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 // import Hidden from '@material-ui/core/Hidden';
@@ -11,9 +10,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/MenuSharp';
 import PrintIcon from '@material-ui/icons/PrintSharp';
-import SaveIcon from '@material-ui/icons/SaveAltSharp';
 
 import vars from '../data/general';
+import '../styles/Print.scss';
 
 const { drawerWidth } = vars.app;
 
@@ -87,7 +86,19 @@ class TopBar extends Component {
   };
 
   render() {
-    const { drawerIsOpen, classes } = this.props;
+    const { drawerIsOpen, classes, path } = this.props;
+
+    const PrintButton = () => {
+      if (vars.printablePaths.indexOf(path) > -1) {
+        return (
+          <IconButton className={classes.rightButton} color="inherit" aria-label="Print">
+            <PrintIcon />
+          </IconButton>
+        );
+      }
+      return '';
+    };
+
     return (
       <AppBar
         className={classNames(classes.appBar, {
@@ -107,19 +118,14 @@ class TopBar extends Component {
           <Typography variant="title" color="inherit" className={classes.flex}>
             {vars.app.topBarTitle}
           </Typography>
-          <IconButton className={classes.rightButton} color="inherit" aria-label="Print">
-            <Link to="/print">
-              <PrintIcon />
-            </Link>
-          </IconButton>
-          <IconButton
-            className={classes.rightButton}
-            color="inherit"
-            aria-label="Download PDF"
-            disabled
+          <div
+            onClick={() => window.print()}
+            onKeyPress={() => window.print()}
+            role="button"
+            tabIndex={0}
           >
-            <SaveIcon />
-          </IconButton>
+            <PrintButton />
+          </div>
         </Toolbar>
       </AppBar>
     );
@@ -130,6 +136,7 @@ TopBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   drawerIsOpen: PropTypes.bool.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(TopBar);

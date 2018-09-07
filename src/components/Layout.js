@@ -8,7 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import TopBar from './TopBar';
 import LeftNav from './LeftNav';
 import WithRoot from './WithRoot';
-// import '../styles/Layout.scss';
+import '../styles/Print.scss';
 
 const drawerWidth = 240;
 
@@ -99,27 +99,29 @@ class Layout extends Component {
   };
 
   render() {
-    const { classes, children } = this.props;
+    const { classes, children, path } = this.props;
     const { drawerIsOpen } = this.state;
 
     return (
       <WithRoot>
         <div className={classes.root}>
-          <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-          <Hidden mdUp>
-            <LeftNav
-              toggleDrawer={this.toggleDrawer}
-              drawerIsOpen={drawerIsOpen}
-              variant="temporary"
-            />
-          </Hidden>
-          <Hidden smDown>
-            <LeftNav
-              toggleDrawer={this.toggleDrawer}
-              drawerIsOpen={drawerIsOpen}
-              variant="persistent"
-            />
-          </Hidden>
+          <div className="noprint">
+            <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} path={path} />
+            <Hidden mdUp>
+              <LeftNav
+                toggleDrawer={this.toggleDrawer}
+                drawerIsOpen={drawerIsOpen}
+                variant="temporary"
+              />
+            </Hidden>
+            <Hidden smDown>
+              <LeftNav
+                toggleDrawer={this.toggleDrawer}
+                drawerIsOpen={drawerIsOpen}
+                variant="persistent"
+              />
+            </Hidden>
+          </div>
           <main
             className={classNames(classes.content, classes['content-left'], {
               [classes.contentShift]: drawerIsOpen,
@@ -137,6 +139,11 @@ class Layout extends Component {
 Layout.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.object.isRequired,
+  path: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  path: '',
 };
 
 export default withStyles(styles)(Layout);
