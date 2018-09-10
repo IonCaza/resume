@@ -36,7 +36,7 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing.unit * 2,
     },
-    paddingLeft: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit,
   },
   secondaryItems: {
@@ -69,7 +69,7 @@ const Content = props => {
 
   const contentObject = (
     <Grid container spacing={0}>
-      <Grid item xs={12} className="noprint">
+      <Grid item xs={12} className={classNames('noprint' /* , 'dontdisplaytest' */)}>
         <Grid container spacing={0} className={classes.root}>
           <Grid item xs={12} md={8} className={classes.component}>
             <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
@@ -98,19 +98,19 @@ const Content = props => {
       <Grid item xs={12} className="onlyprint">
         <Grid container spacing={0} className={classNames(classes.root, 'rootprint')}>
           <Grid item xs={12} className={classes.component}>
-            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+            <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelExperience}
             </Typography>
-            <Experience elevation={0} />
+            <Experience elevation={0} print={1} />
           </Grid>
           <Grid item xs={6} className={classes.component}>
-            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+            <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelSkills}
             </Typography>
             <SkillsPrint elevation={0} />
           </Grid>
           <Grid item xs={6} className={classes.component}>
-            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+            <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelEducation}
             </Typography>
             <Education elevation={0} />

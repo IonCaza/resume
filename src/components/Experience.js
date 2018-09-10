@@ -36,72 +36,82 @@ const styles = theme => ({
 });
 
 const Experience = props => {
-  const { classes, elevation } = props;
+  const { classes, elevation, print } = props;
 
   const experienceObject = (
-    <Grid container spacing={24} className={classes.experience}>
-      <Grid item xs={12}>
+    <Grid
+      container
+      spacing={24}
+      className={classNames(classes.experience, print ? 'displayblock' : '')}
+    >
+      <Grid item xs={12} className={print ? 'displayblock' : ''}>
         {experience.jobs.map(job => (
-          <Paper className={classNames(classes.paper)} elevation={elevation} key={job.id}>
-            <Grid container>
-              <Grid item xs={8}>
-                <Typography variant="headline" gutterBottom>
-                  {job.position}
-                </Typography>
-              </Grid>
-              <Grid item xs={4} className={classes.rightAlign}>
-                <Typography variant="subheading">
-                  {job.startDate} - {job.endDate}
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography variant="title">{job.company}</Typography>
-              </Grid>
-              <Grid item xs={6} className={classes.rightAlign}>
-                <Typography variant="subheading">{job.location}</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography gutterBottom className={classes.indent1}>
-                  {job.description}
-                </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Grid container spacing={0} className="no-break">
-                  <Grid item xs={12} className="no-break">
-                    {job.summary && (
-                      <div>
-                        <Typography variant="subheading">{vars.experience.labelSummary}</Typography>
-                        <Typography gutterBottom className={classes.indent1}>
-                          {job.summary}
-                        </Typography>
-                      </div>
-                    )}
-                  </Grid>
-                  <Grid item xs={12} className="no-break">
-                    {job.responsibilities && (
-                      <Typography variant="subheading">
-                        {vars.experience.labelResponsibilities}
-                      </Typography>
-                    )}
-                    {job.responsibilities &&
-                      job.responsibilities.map((responsibility, index) => (
-                  <Typography key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
-                      ))}
-                  </Grid>
-                  <Grid item xs={12} className="no-break">
-                    {job.achievements && (
-                      <Typography variant="subheading">
-                        {vars.experience.labelAchievements}
-                      </Typography>
-                    )}
-                    {job.achievements &&
-                      job.achievements.map((achievement, index) => (
-                  <Typography key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
-                      ))}
-                  </Grid>
+          <Paper
+            className={classNames(classes.paper, print ? 'displayblock' : '')}
+            elevation={elevation}
+            key={job.id}
+          >
+            {print ? (
+              <Grid container className="displayblock">
+                <Grid item xs={12}>
+                  <Typography variant="title">
+                    {job.position} for {job.company}
+                  </Typography>
+                  <Typography variant="subheading">
+                    Between {job.startDate} and {job.endDate} in {job.location}
+                  </Typography>
+                  <Typography className={classes.indent1}>{job.description}</Typography>
                 </Grid>
               </Grid>
-            </Grid>
+            ) : (
+              <Grid container>
+                <Grid item xs={8}>
+                  <Typography variant="headline" gutterBottom>
+                    {job.position}
+                  </Typography>
+                </Grid>
+                <Grid item xs={4} className={classes.rightAlign}>
+                  <Typography variant="subheading">
+                    {job.startDate} - {job.endDate}
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="title">{job.company}</Typography>
+                </Grid>
+                <Grid item xs={6} className={classes.rightAlign}>
+                  <Typography variant="subheading">{job.location}</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography gutterBottom className={classes.indent1}>
+                    {job.description}
+                  </Typography>
+                </Grid>
+              </Grid>
+            )}
+            {job.summary && (
+              <Grid item xs={12}>
+                <Typography variant="subheading">{vars.experience.labelSummary}</Typography>
+                <Typography className={classes.indent1}>{job.summary}</Typography>
+              </Grid>
+            )}
+            {job.responsibilities && (
+              <Grid item xs={12}>
+                <Typography variant="subheading">
+                  {vars.experience.labelResponsibilities}
+                </Typography>
+                {job.responsibilities.map((responsibility, index) => (
+                        <Typography key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
+                ))}
+              </Grid>
+            )}
+            {job.achievements && (
+              <Grid item xs={12}>
+                <Typography variant="subheading">{vars.experience.labelAchievements}</Typography>
+                {job.achievements.map((achievement, index) => (
+                        <Typography key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
+                ))}
+              </Grid>
+            )}
           </Paper>
         ))}
       </Grid>
@@ -116,6 +126,7 @@ Experience.propTypes = {
 
 Experience.defaultProps = {
   elevation: 2,
+  print: 0,
 };
 
 export default withStyles(styles)(Experience);

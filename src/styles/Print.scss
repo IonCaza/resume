@@ -6,6 +6,26 @@
     display: none;
 }
 
+.whynot {
+    display: inline-block;
+}
+
+.sideLeft {
+    width: 60%;
+}
+
+.sideRight {
+    width: 40%;
+}
+
+.tablewidth {
+    width: 100%;
+}
+
+.dontdisplaytest {
+    display: none;
+}
+
 @media print {
     .rootprint {
         padding-top: 0px !important;
@@ -16,20 +36,16 @@
     }
 
     .onlyprint {
-        display: inline-block;
+        display: block;
     }
 
-    .no-break {
-        display:inline-block;
+    .displayblock {
+        display: block !important;
+        orphans: 5;
     }
-    .no-break:after {
-        content: '';
-        display:block;
-        height:0px;
-        visibility: hidden;
-    }
+
     @page {
-        margin-top: 14mm;
-        margin-bottom: 20mm;
+        margin-top: 15mm;
+        margin-bottom: 15mm;
        }
 }
