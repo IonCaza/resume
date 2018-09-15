@@ -53,7 +53,7 @@ const Experience = props => {
           >
             {print ? (
               <Grid container className="displayblock">
-                <Grid item xs={12}>
+                <Grid item xs={12} className="nobreak">
                   <Typography variant="title">
                     {job.position} for {job.company}
                   </Typography>

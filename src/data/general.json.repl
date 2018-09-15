@@ -11,6 +11,9 @@
   "content": {
       "labelExperience": "Experience",
       "labelSkills": "Skills",
-      "labelEducation": "Education"
-  }
+      "labelEducation": "Education",
+      "labelAbout": "About Me",
+      "labelContact": "Contact"
+  },
+  "printablePaths": ["/"]
 }

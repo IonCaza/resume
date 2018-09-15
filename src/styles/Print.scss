@@ -1,51 +1,63 @@
 .test {
-    color: red;
+  color: red;
 }
 
 .onlyprint {
-    display: none;
+  display: block;
+}
+
+.onlyprintafterinject {
+  display: none;
 }
 
 .whynot {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sideLeft {
-    width: 60%;
+  width: 60%;
 }
 
 .sideRight {
-    width: 40%;
+  width: 40%;
 }
 
 .tablewidth {
-    width: 100%;
+  width: 100%;
 }
 
 .dontdisplaytest {
-    display: none;
+  display: none;
 }
 
 @media print {
-    .rootprint {
-        padding-top: 0px !important;
-    }
+  .rootprint {
+    padding-top: 0px !important;
+  }
 
-    .noprint {
-        display: none;
-    }
+  .noprint {
+    display: none;
+  }
 
-    .onlyprint {
-        display: block;
-    }
+  .onlyprintafterinject {
+    display: block !important;
+  }
 
-    .displayblock {
-        display: block !important;
-        orphans: 5;
-    }
+  .displayblock {
+    display: block !important;
+    margin: 0px !important;
+    orphans: 12;
+  }
 
-    @page {
-        margin-top: 15mm;
-        margin-bottom: 15mm;
-       }
+  .alwaysBreak {
+    page-break-after: always !important;
+  }
+
+  @page {
+    size: 7.5in 10in;
+    margin-top: 0mm;
+    margin-bottom: 0mm;
+    margin-left: 0mm;
+    margin-right: 0mm;
+  }
 }

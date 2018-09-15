@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Content from './components/Content';
-import Contact from './components/Contact';
+import Content from './components/PageContent';
+import Contact from './components/PageContact';
 
 import './assets/favicon.ico';
 

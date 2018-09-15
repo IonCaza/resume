@@ -5,9 +5,9 @@ import classNames from 'classnames';
 
 import Hidden from '@material-ui/core/Hidden';
 
-import TopBar from './TopBar';
-import LeftNav from './LeftNav';
-import WithRoot from './WithRoot';
+import TopBar from './NavTop';
+import LeftNav from './NavLeft';
+import WithRoot from './NavWithRoot';
 import '../styles/Print.scss';
 
 const drawerWidth = 240;

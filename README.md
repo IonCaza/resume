@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 08/22/2018
+# My Resume - Ion Caza - 09/15/2018
 
 Can be accessed at <http://let.caza.in/>
 
@@ -18,7 +18,6 @@ Can be accessed at <http://let.caza.in/>
 
 ## To Do
 
-* Finish print to pdf
 * Add schema.org to Contact component
 * Add About Me page as index and move Experience
 * Create tracking viewer NavBar on Experience
@@ -36,6 +35,13 @@ Can be accessed at <http://let.caza.in/>
 * Refactor to use `withRouter` instead of passing prop to TopBar manually
 
 ## Change Log
+
+### v2.2.0
+
+* Breaks out Print component
+* Adds support for printing
+* Adds partially implemented script for inserting dynamic breakpoints
+* Renames components based on their general function
 
 ### v2.1.2
 
