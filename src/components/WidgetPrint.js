@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import Experience from './WidgetExperience';
-import SkillsPrint from './WidgetSkills.print';
+import Skills from './WidgetSkills';
 import Education from './WidgetEducation';
 import About from './WidgetAbout';
 import Contact from './WidgetContact';
@@ -63,7 +63,7 @@ const Print = props => {
           <Typography variant="display1" className={classes.mainHeadline}>
             {vars.content.labelSkills}
           </Typography>
-          <SkillsPrint elevation={0} />
+          <Skills print={1} elevation={0} />
         </Grid>
         <Grid item xs={6} className={classes.component}>
           <Typography variant="display1" className={classes.mainHeadline}>
