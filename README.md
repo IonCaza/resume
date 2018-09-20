@@ -1,6 +1,6 @@
-# My Resume - Ion Caza - 09/15/2018
+# My Resume - Ion Caza - 09/19/2018
 
-Can be accessed at <http://let.caza.in/>
+Can be accessed at <https://let.caza.in/>
 
 ## Purpose
 
