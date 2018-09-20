@@ -22,7 +22,6 @@ import skills from '../data/skills';
 const styles = theme => ({
   skills: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 2,
     flexGrow: 1,
   },
   heading: {

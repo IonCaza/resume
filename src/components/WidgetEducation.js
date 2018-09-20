@@ -9,13 +9,12 @@ import Grid from '@material-ui/core/Grid';
 import education from '../data/education';
 
 const styles = theme => ({
-  experience: {
+  education: {
     textAlign: 'center',
     flexGrow: 1,
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary,
     borderRadius: '2px',
@@ -32,7 +31,7 @@ const Education = props => {
   const { classes, elevation } = props;
 
   const educationObject = (
-    <Grid container spacing={16} className={classes.experience}>
+    <Grid container spacing={16} className={classes.education}>
       <Grid item xs={12}>
         <Paper className={classes.paper} elevation={elevation}>
           {education.degrees.map((degree, index) => (

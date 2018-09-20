@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Obfuscate from 'react-obfuscate';
 
 import Layout from './NavLayout';
+
 import contact from '../data/contact';
 
 const styles = theme => ({
@@ -17,12 +18,7 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing.unit * 9,
-    },
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing.unit * 10,
-    },
+    paddingTop: theme.spacing.unit * 10,
   },
   mainHeadline: {
     flexGrow: 1,
@@ -49,7 +45,7 @@ const styles = theme => ({
   },
 });
 
-const Contact = props => {
+const PageContact = props => {
   const { classes } = props;
 
   const contactObject = (
@@ -105,8 +101,8 @@ const Contact = props => {
   return <Layout>{contactObject}</Layout>;
 };
 
-Contact.propTypes = {
+PageContact.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(PageContact);

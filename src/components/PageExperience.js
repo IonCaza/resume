@@ -10,8 +10,8 @@ import Experience from './WidgetExperience';
 import Skills from './WidgetSkills';
 import Education from './WidgetEducation';
 import Print from './WidgetPrint';
-
 import Layout from './NavLayout';
+
 import vars from '../data/general';
 import '../styles/Print.scss';
 
@@ -22,30 +22,15 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       paddingTop: theme.spacing.unit * 9,
     },
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing.unit * 10,
-    },
+    paddingTop: theme.spacing.unit * 8,
   },
   mainHeadline: {
-    [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing.unit * 4,
-    },
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing.unit * 2,
-    },
+    paddingTop: theme.spacing.unit * 3,
     paddingLeft: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit,
-  },
-  secondaryItems: {
-    [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing.unit * 1,
-    },
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing.unit,
-    },
+    paddingBottom: theme.spacing.unit * 3,
   },
   component: {
     paddingLeft: theme.spacing.unit * 1,
@@ -53,6 +38,7 @@ const styles = theme => ({
   },
 });
 
+/* eslint-disable */
 const insertBreakPoints = () => {
   const pxRatio = window.devicePixelRatio;
   const divs = document.querySelectorAll('div[class*=nobreak]');
@@ -67,9 +53,9 @@ const insertBreakPoints = () => {
   }
 };
 
-class Content extends Component {
+class PageExperience extends Component {
   componentDidMount() {
-    insertBreakPoints();
+    // insertBreakPoints();
   }
 
   render() {
@@ -97,24 +83,26 @@ class Content extends Component {
               <Experience />
             </Grid>
             <Grid item xs={12} md={4} className={classes.component}>
-              <Grid container spacing={0}>
+              <Grid container spacing={8}>
                 <Grid item xs={12} sm={6} md={12}>
                   <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
                     {vars.content.labelSkills}
                   </Typography>
-                  <Skills className={classes.component} />
+                  <Skills />
                 </Grid>
-                <Grid item xs={12} sm={6} md={12} className={classes.secondaryItems}>
+                <Grid item xs={12} sm={6} md={12}>
                   <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
                     {vars.content.labelEducation}
                   </Typography>
-                  <Education className={classes.component} />
+                  <Education />
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-        <Print />
+        <Grid item xs={12}>
+          <Print />
+        </Grid>
       </Grid>
     );
 
@@ -122,9 +110,9 @@ class Content extends Component {
   }
 }
 
-Content.propTypes = {
+PageExperience.propTypes = {
   classes: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Content);
+export default withStyles(styles)(PageExperience);

@@ -18,7 +18,6 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary,

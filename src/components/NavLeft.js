@@ -7,7 +7,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ContactIcon from '@material-ui/icons/Message';
-import ExperienceIcon from '@material-ui/icons/AssignmentInd';
+import TerrainIcon from '@material-ui/icons/Terrain';
+import TagFacesIcon from '@material-ui/icons/TagFaces';
 import LinkIcon from '@material-ui/icons/Link';
 
 import IconButton from '@material-ui/core/IconButton';
@@ -27,9 +28,15 @@ const mainItems = (
   <div>
     <ListItem button component={Link} to="/">
       <ListItemIcon>
-        <ExperienceIcon />
+        <TerrainIcon />
       </ListItemIcon>
       <ListItemText primary="Experience" />
+    </ListItem>
+    <ListItem button component={Link} to="/about">
+      <ListItemIcon>
+        <TagFacesIcon />
+      </ListItemIcon>
+      <ListItemText primary="About Me" />
     </ListItem>
     <ListItem button component={Link} to="/contact">
       <ListItemIcon>

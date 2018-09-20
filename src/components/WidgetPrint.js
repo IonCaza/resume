@@ -36,40 +36,42 @@ const Print = props => {
   const { classes } = props;
 
   const printObject = (
-    <Grid item xs={12} className="onlyprint">
-      <Grid container spacing={0} className="rootprint">
-        <Grid item xs={8} className={classes.component}>
-          <Typography variant="display1" className={classes.mainHeadline}>
-            {vars.content.labelAbout}
-          </Typography>
-          <About elevation={0} />
+    <Grid container spacing={0}>
+      <Grid item xs={12} className="onlyprint">
+        <Grid container spacing={0} className="rootprint">
+          <Grid item xs={8} className={classes.component}>
+            <Typography variant="display1" className={classes.mainHeadline}>
+              {vars.content.labelAbout}
+            </Typography>
+            <About elevation={0} />
+          </Grid>
+          <Grid item xs={4} className={classes.component}>
+            <Typography variant="display1" className={classes.mainHeadline}>
+              {vars.content.labelContact}
+            </Typography>
+            <Contact elevation={0} />
+          </Grid>
+          <Grid item xs={12} className={classes.component}>
+            <Typography variant="display1" className={classes.mainHeadline}>
+              {vars.content.labelExperience}
+            </Typography>
+            <Experience elevation={0} print={1} />
+          </Grid>
         </Grid>
-        <Grid item xs={4} className={classes.component}>
-          <Typography variant="display1" className={classes.mainHeadline}>
-            {vars.content.labelContact}
-          </Typography>
-          <Contact elevation={0} />
-        </Grid>
-        <Grid item xs={12} className={classes.component}>
-          <Typography variant="display1" className={classes.mainHeadline}>
-            {vars.content.labelExperience}
-          </Typography>
-          <Experience elevation={0} print={1} />
-        </Grid>
-      </Grid>
-      <Breakpoint />
-      <Grid container spacing={0} className="rootprint">
-        <Grid item xs={6} className={classes.component}>
-          <Typography variant="display1" className={classes.mainHeadline}>
-            {vars.content.labelSkills}
-          </Typography>
-          <Skills print={1} elevation={0} />
-        </Grid>
-        <Grid item xs={6} className={classes.component}>
-          <Typography variant="display1" className={classes.mainHeadline}>
-            {vars.content.labelEducation}
-          </Typography>
-          <Education elevation={0} />
+        <Breakpoint />
+        <Grid container spacing={0} className="rootprint">
+          <Grid item xs={6} className={classes.component}>
+            <Typography variant="display1" className={classes.mainHeadline}>
+              {vars.content.labelSkills}
+            </Typography>
+            <Skills print={1} elevation={0} />
+          </Grid>
+          <Grid item xs={6} className={classes.component}>
+            <Typography variant="display1" className={classes.mainHeadline}>
+              {vars.content.labelEducation}
+            </Typography>
+            <Education elevation={0} />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
