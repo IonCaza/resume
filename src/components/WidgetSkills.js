@@ -45,51 +45,53 @@ const styles = theme => ({
 const Skills = props => {
   const { classes, elevation, print } = props;
   const skillsObject = (
-    <div className={classes.skills}>
-      {skills.skillCategories.map(category => (
-        <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>{category.name}</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails className={classes.panelDetails}>
-            <Table>
-              <TableBody>
-                {category.skills.map(skill => (
-                  <TableRow key={skill.id}>
-                    <TableCell component="th" scope="row" className={classes.skillNames}>
-                      {skill.name}
-                    </TableCell>
-                    <TableCell numeric className={classes.skillYears}>
-                      {skill.level}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-      ))}
-      {skills.knowledgeCategories.map(category => (
-        <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>{category.name}</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails className={classes.panelDetails}>
-            <Table>
-              <TableBody>
-                {category.knowledges.map((skill, index) => (
-                  <TableRow key={index}>
-                    <TableCell component="th" scope="row" className={classes.skillNames}>
-                      {skill}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-      ))}
-    </div>
+    <Grid container spacing={16} className={classes.skills}>
+      <Grid item xs={12}>
+        {skills.skillCategories.map(category => (
+          <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography className={classes.heading}>{category.name}</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails className={classes.panelDetails}>
+              <Table>
+                <TableBody>
+                  {category.skills.map(skill => (
+                    <TableRow key={skill.id}>
+                      <TableCell component="th" scope="row" className={classes.skillNames}>
+                        {skill.name}
+                      </TableCell>
+                      <TableCell numeric className={classes.skillYears}>
+                        {skill.level}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        ))}
+        {skills.knowledgeCategories.map(category => (
+          <ExpansionPanel key={category.id} defaultExpanded={category.open} elevation={elevation}>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography className={classes.heading}>{category.name}</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails className={classes.panelDetails}>
+              <Table>
+                <TableBody>
+                  {category.knowledges.map((skill, index) => (
+                    <TableRow key={index}>
+                      <TableCell component="th" scope="row" className={classes.skillNames}>
+                        {skill}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        ))}
+      </Grid>
+    </Grid>
   );
 
   const skillsPrintObject = (

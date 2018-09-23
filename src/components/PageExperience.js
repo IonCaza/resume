@@ -38,7 +38,6 @@ const styles = theme => ({
   },
 });
 
-/* eslint-disable */
 const insertBreakPoints = () => {
   const pxRatio = window.devicePixelRatio;
   const divs = document.querySelectorAll('div[class*=nobreak]');
@@ -55,7 +54,7 @@ const insertBreakPoints = () => {
 
 class PageExperience extends Component {
   componentDidMount() {
-    // insertBreakPoints();
+    insertBreakPoints();
   }
 
   render() {

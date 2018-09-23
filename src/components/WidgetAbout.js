@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 import about from '../data/about';
 import profilePic from '../assets/Ion-Caza-profile.png';
+import '../styles/Print.scss';
 
 const styles = theme => ({
   experience: {
@@ -25,13 +26,10 @@ const styles = theme => ({
   paragraph: {
     paddingBottom: theme.spacing.unit * 2,
   },
-  pic: {
-    width: '100%',
-  },
 });
 
 const About = props => {
-  const { classes, elevation } = props;
+  const { classes, elevation, print } = props;
 
   const aboutObject = (
     <Paper className={classes.paper} elevation={elevation}>
@@ -55,19 +53,30 @@ const About = props => {
           <Typography variant="subheading" gutterBottom className={classes.paragraph}>
             {about.content.messageHeritage}
           </Typography>
-          <Typography variant="subheading" gutterBottom className={classes.paragraph}>
+          <Typography variant="subheading">
             If you&apos;d like to learn more about my professional life, please check out{' '}
             <Link to="/">my experience</Link>.
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
-          <img src={profilePic} alt="Ion Caza, profile shot" className={classes.pic} />
+          <img src={profilePic} alt="Ion Caza, profile shot" className="pic" />
         </Grid>
       </Grid>
     </Paper>
   );
 
-  return aboutObject;
+  const aboutPrintObject = (
+    <Grid container spacing={16} className={classes.experience}>
+      <Grid item xs={3}>
+        <img src={profilePic} alt="Ion Caza, profile shot" className="pic" />
+      </Grid>
+      <Grid item xs={9}>
+        <Typography variant="subheading">{about.content.messageGoal}</Typography>
+      </Grid>
+    </Grid>
+  );
+
+  return print ? aboutPrintObject : aboutObject;
 };
 
 About.propTypes = {
@@ -76,6 +85,7 @@ About.propTypes = {
 
 About.defaultProps = {
   elevation: 2,
+  print: 0,
 };
 
 export default withStyles(styles)(About);

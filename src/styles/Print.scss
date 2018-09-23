@@ -2,8 +2,12 @@
   color: red;
 }
 
+.pic {
+  width: 100%;
+}
+
 .onlyprint {
-  display: none;
+  display: block;
 }
 
 .onlyprintafterinject {
@@ -55,9 +59,9 @@
 
   @page {
     size: 7.5in 10in;
-    margin-top: 0mm;
-    margin-bottom: 0mm;
-    margin-left: 0mm;
-    margin-right: 0mm;
+    margin-top: 6mm;
+    margin-bottom: 6mm;
+    margin-left: 4mm;
+    margin-right: 4mm;
   }
 }
