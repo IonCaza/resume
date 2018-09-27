@@ -23,10 +23,12 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     borderRadius: '2px',
   },
-  leftAlign: {
+  paperPrint: {
+    paddingBottom: theme.spacing.unit * 2,
     textAlign: 'left',
+    borderRadius: '2px',
   },
-  rightAlign: {
+  right: {
     textAlign: 'right',
   },
   indent1: {
