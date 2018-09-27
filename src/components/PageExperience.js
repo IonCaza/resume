@@ -39,17 +39,30 @@ const styles = theme => ({
 });
 
 const insertBreakPoints = () => {
-  const pxRatio = window.devicePixelRatio;
-  const divs = document.querySelectorAll('div[class*=nobreak]');
+  const pixelRatio = window.devicePixelRatio;
+  const documentHeight = document.body.offsetHeight;
+  const documentWidth = document.body.offsetWidth;
+  const divs = document.querySelectorAll('div[class*=noBreak]');
   for (let i = 0; i < divs.length; i += 1) {
     console.log(i, ' at ', divs[i].offsetTop);
   }
-  console.log('pxratio ', pxRatio);
-  const onlyprint = document.querySelectorAll('div[class*=onlyprint]');
+  console.log('pixelRatio ', pixelRatio);
+  console.log('documentHeight ', documentHeight);
+  console.log('documentWidth ', documentWidth);
+
+  // Apparently we can't calculate the height of elements that have display:none
+  // so we show it all on load, insert breakpoints, and then hide what will be printed
+
+  /* const onlyprint = document.querySelectorAll('div[class*=onlyPrint]');
   for (let i = 0; i < onlyprint.length; i += 1) {
-    onlyprint[i].classList.remove('onlyprint');
-    onlyprint[i].classList.add('onlyprintafterinject');
+    onlyprint[i].classList.remove('onlyPrint');
+    onlyprint[i].classList.add('onlyPrintAfterInject');
   }
+  const noprint = document.querySelectorAll('div[class*=noPrintBeforeInject]');
+  for (let i = 0; i < noprint.length; i += 1) {
+    noprint[i].classList.remove('noPrintBeforeInject');
+    noprint[i].classList.add('noPrint');
+  } */
 };
 
 class PageExperience extends Component {
@@ -73,7 +86,7 @@ class PageExperience extends Component {
 
     const contentObject = (
       <Grid container spacing={0}>
-        <Grid item xs={12} className={classNames('noprint' /* , 'dontdisplaytest' */)}>
+        <Grid item xs={12} className={classNames('noPrintBeforeInject')}>
           <Grid container spacing={0} className={classes.root}>
             <Grid item xs={12} md={8} className={classes.component}>
               <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
@@ -82,7 +95,7 @@ class PageExperience extends Component {
               <Experience />
             </Grid>
             <Grid item xs={12} md={4} className={classes.component}>
-              <Grid container spacing={8}>
+              <Grid container spacing={16}>
                 <Grid item xs={12} sm={6} md={12}>
                   <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
                     {vars.content.labelSkills}

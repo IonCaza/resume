@@ -6,16 +6,16 @@
   width: 100%;
 }
 
-.onlyprint {
-  display: block;
-}
-
-.onlyprintafterinject {
+.noPrintBeforeInject {
   display: none;
 }
 
-.whynot {
-  display: inline-block;
+.onlyPrint {
+  display: block;
+}
+
+.onlyPrintAfterInject {
+  display: none;
 }
 
 .sideLeft {
@@ -26,28 +26,24 @@
   width: 40%;
 }
 
-.tablewidth {
+.tableWidth {
   width: 100%;
 }
 
-.dontdisplaytest {
-  display: none;
-}
-
 @media print {
-  .rootprint {
+  .rootPrint {
     padding-top: 0px !important;
   }
 
-  .noprint {
+  .noPrint {
     display: none;
   }
 
-  .onlyprintafterinject {
+  .onlyPrintAfterInject {
     display: block !important;
   }
 
-  .displayblock {
+  .displayBlock {
     display: block !important;
     margin: 0px !important;
     orphans: 12;

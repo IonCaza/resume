@@ -105,7 +105,7 @@ class Layout extends Component {
     return (
       <WithRoot>
         <div className={classes.root}>
-          <div className="noprint">
+          <div className="noPrintBeforeInject">
             <TopBar toggleDrawer={this.toggleDrawer} drawerIsOpen={drawerIsOpen} path={path} />
             <Hidden mdUp>
               <LeftNav

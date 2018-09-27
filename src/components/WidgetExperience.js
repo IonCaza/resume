@@ -41,18 +41,21 @@ const Experience = props => {
     <Grid
       container
       spacing={24}
-      className={classNames(classes.experience, print ? 'displayblock' : '')}
+      className={classNames(classes.experience, print ? 'displayBlock' : '')}
     >
-      <Grid item xs={12} className={print ? 'displayblock' : ''}>
+      <Grid item xs={12} className={print ? 'displayBlock' : ''}>
         {experience.jobs.map(job => (
           <Paper
-            className={classNames(classes.paper, print ? 'displayblock' : '')}
+            className={classNames(
+              print ? classes.paperPrint : classes.paper,
+              print ? 'displayBlock' : ''
+            )}
             elevation={elevation}
             key={job.id}
           >
             {print ? (
-              <Grid container className="displayblock">
-                <Grid item xs={12} className="nobreak">
+              <Grid container className="displayBlock">
+                <Grid item xs={12} className="noBreak">
                   <Typography variant="title">
                     {job.position} for {job.company}
                   </Typography>
@@ -69,7 +72,7 @@ const Experience = props => {
                     {job.position}
                   </Typography>
                 </Grid>
-                <Grid item xs={4} className={classes.rightAlign}>
+                <Grid item xs={4} className={classes.right}>
                   <Typography variant="subheading">
                     {job.startDate} - {job.endDate}
                   </Typography>
@@ -77,7 +80,7 @@ const Experience = props => {
                 <Grid item xs={6}>
                   <Typography variant="title">{job.company}</Typography>
                 </Grid>
-                <Grid item xs={6} className={classes.rightAlign}>
+                <Grid item xs={6} className={classes.right}>
                   <Typography variant="subheading">{job.location}</Typography>
                 </Grid>
                 <Grid item xs={12}>

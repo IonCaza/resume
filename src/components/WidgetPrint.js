@@ -23,7 +23,6 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing.unit * 2,
     },
-    paddingLeft: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit,
   },
   component: {
@@ -45,10 +44,7 @@ const Print = props => {
           <Grid item xs={12} className={classes.component}>
             <About elevation={0} print={1} />
           </Grid>
-          <Grid item xs={12} className={classes.component}>
-            <Typography variant="display1" className={classes.mainHeadline}>
-              {vars.content.labelExperience}
-            </Typography>
+          <Grid item xs={12}>
             <Experience elevation={0} print={1} />
           </Grid>
         </Grid>
