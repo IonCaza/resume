@@ -4,6 +4,7 @@ module.exports = () => {
   const userRootPath = path.resolve(process.cwd());
   const buildPath = path.join(userRootPath, 'build');
   const srcPath = path.join(userRootPath, 'src');
+  const dataPath = path.join(srcPath, 'data');
   const publicBuildPath = path.join(buildPath, 'public');
   const configPath = path.join(userRootPath, 'config');
   const assetPath = path.join(srcPath, 'assets');
@@ -16,6 +17,7 @@ module.exports = () => {
     publicBuildPath,
     configPath,
     webpackConfigPath,
+    sassVarsPath: path.join(dataPath, 'printvars.json'),
     entryPoint: path.join(srcPath, 'index.js'),
     publicSrcPath: path.join(srcPath, 'public'),
     serverSrcPath: path.join(srcPath, 'server'),

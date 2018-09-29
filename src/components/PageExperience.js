@@ -14,6 +14,9 @@ import Layout from './NavLayout';
 
 import vars from '../data/general';
 import '../styles/Print.scss';
+import printVars from '../data/printvars';
+
+const { pageWidth, pageHeight, pageMargins } = printVars;
 
 const styles = theme => ({
   root: {
@@ -42,13 +45,16 @@ const insertBreakPoints = () => {
   const pixelRatio = window.devicePixelRatio;
   const documentHeight = document.body.offsetHeight;
   const documentWidth = document.body.offsetWidth;
-  const divs = document.querySelectorAll('div[class*=noBreak]');
+  const divs = document.querySelectorAll('div[class*=unbreakable]');
   for (let i = 0; i < divs.length; i += 1) {
     console.log(i, ' at ', divs[i].offsetTop);
   }
   console.log('pixelRatio ', pixelRatio);
   console.log('documentHeight ', documentHeight);
   console.log('documentWidth ', documentWidth);
+  console.log('pageWidth ', pageWidth);
+  console.log('pageHeight ', pageHeight);
+  console.log('pageMargins ', pageMargins);
 
   // Apparently we can't calculate the height of elements that have display:none
   // so we show it all on load, insert breakpoints, and then hide what will be printed

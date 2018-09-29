@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^1.4.2",
     "@material-ui/icons": "^2.0.0",
+    "node-sass-utils": "^1.1.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dev-utils": "^5.0.1",

@@ -2,6 +2,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const sass = require('node-sass');
+const sassUtils = require('node-sass-utils')(sass);
 
 const {
   userNodeModulesPath,
@@ -19,6 +21,8 @@ const postCssLoader = {
     },
   },
 };
+
+const sassVars = require('../src/data/printvars.json');
 
 module.exports = {
   entry: entryPoint,
@@ -54,7 +58,33 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           postCssLoader,
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              functions: {
+                /* eslint-disable */ // Eslint doesn't like this implementation
+                'get($keys)': function(keys) {
+                  keys = keys.getValue().split('.');
+                  let result = sassVars;
+                  let i;
+                  for (i = 0; i < keys.length; i++) {
+                    result = result[keys[i]];
+                    // Convert to SassDimension if dimenssion
+                    if (typeof result === 'string') {
+                      result = convertStringToSassDimension(result);
+                    } else if (typeof result === 'object') {
+                      Object.keys(result).forEach(key => {
+                        let value = result[key];
+                        result[key] = convertStringToSassDimension(value);
+                      });
+                    }
+                  }
+                  result = sassUtils.castToSass(result);
+                  return result;
+                },
+              },
+            },
+          },
         ],
         exclude: [userNodeModulesPath],
       },

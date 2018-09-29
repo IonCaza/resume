@@ -33,6 +33,7 @@ const styles = theme => ({
   },
   indent1: {
     paddingLeft: theme.spacing.unit * 2,
+    paddingRight: theme.spacing.unit * 2,
   },
 });
 
@@ -57,14 +58,14 @@ const Experience = props => {
           >
             {print ? (
               <Grid container className="displayBlock">
-                <Grid item xs={12} className="noBreak">
+                <Grid item xs={12} className="unbreakable">
                   <Typography variant="title">
                     {job.position} for {job.company}
                   </Typography>
                   <Typography variant="subheading">
                     Between {job.startDate} and {job.endDate} in {job.location}
                   </Typography>
-                  <Typography className={classes.indent1}>{job.description}</Typography>
+                  <Typography className={classNames(classes.indent1)}>{job.description}</Typography>
                 </Grid>
               </Grid>
             ) : (
@@ -86,7 +87,7 @@ const Experience = props => {
                   <Typography variant="subheading">{job.location}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography gutterBottom className={classes.indent1}>
+                  <Typography gutterBottom className={classNames(classes.indent1)}>
                     {job.description}
                   </Typography>
                 </Grid>
@@ -95,7 +96,7 @@ const Experience = props => {
             {job.summary && (
               <Grid item xs={12}>
                 <Typography variant="subheading">{vars.experience.labelSummary}</Typography>
-                <Typography className={classes.indent1}>{job.summary}</Typography>
+                <Typography className={classNames(classes.indent1)}>{job.summary}</Typography>
               </Grid>
             )}
             {job.responsibilities && (
@@ -104,7 +105,7 @@ const Experience = props => {
                   {vars.experience.labelResponsibilities}
                 </Typography>
                 {job.responsibilities.map((responsibility, index) => (
-                        <Typography key={index} className={classes.indent1}>&bull; {responsibility}</Typography> /* eslint-disable-line */
+                  <Typography key={index} className={classNames(classes.indent1)}>&bull; {responsibility}</Typography> /* eslint-disable-line */
                 ))}
               </Grid>
             )}
@@ -112,7 +113,7 @@ const Experience = props => {
               <Grid item xs={12}>
                 <Typography variant="subheading">{vars.experience.labelAchievements}</Typography>
                 {job.achievements.map((achievement, index) => (
-                        <Typography key={index} className={classes.indent1}>&bull; {achievement}</Typography> /* eslint-disable-line */
+                        <Typography key={index} className={classNames(classes.indent1)}>&bull; {achievement}</Typography> /* eslint-disable-line */
                 ))}
               </Grid>
             )}

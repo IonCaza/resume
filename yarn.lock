@@ -5362,6 +5362,10 @@ node-releases@^1.0.0-alpha.10:
   dependencies:
     semver "^5.3.0"
 
+node-sass-utils@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/node-sass-utils/-/node-sass-utils-1.1.2.tgz#d03639cfa4fc962398ba3648ab466f0db7cc2131"
+
 node-sass@^4.9.2:
   version "4.9.2"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.9.2.tgz#5e63fe6bd0f2ae3ac9d6c14ede8620e2b8bdb437"

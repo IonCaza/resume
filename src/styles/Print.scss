@@ -1,3 +1,10 @@
+$pageWidth: get(pageWidth);
+$pageHeight: get(pageHeight);
+$pageMargins: get(pageMargins);
+$pageWidthIn: $pageWidth + 0in;
+$pageHeightIn: $pageHeight + 0in;
+$pageMarginsIn: $pageMargins + 0in;
+
 .test {
   color: red;
 }
@@ -46,18 +53,16 @@
   .displayBlock {
     display: block !important;
     margin: 0px !important;
-    orphans: 12;
+    orphans: 5;
   }
 
   .alwaysBreak {
     page-break-after: always !important;
   }
 
+  // http://ryanve.com/lab/resolution/
   @page {
-    size: 7.5in 10in;
-    margin-top: 6mm;
-    margin-bottom: 6mm;
-    margin-left: 4mm;
-    margin-right: 4mm;
+    size: $pageWidthIn $pageHeightIn;
+    margin: $pageMarginsIn;
   }
 }
