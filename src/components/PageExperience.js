@@ -11,12 +11,13 @@ import Skills from './WidgetSkills';
 import Education from './WidgetEducation';
 import Print from './WidgetPrint';
 import Layout from './NavLayout';
+import Breakpoint from './WidgetBreakpoint';
 
 import vars from '../data/general';
 import '../styles/Print.scss';
 import printVars from '../data/printvars';
 
-const { pageWidth, pageHeight, pageMargins } = printVars;
+const { pageWidth, pageHeight, pageMargins, pxPerIn } = printVars;
 
 const styles = theme => ({
   root: {
@@ -45,16 +46,44 @@ const insertBreakPoints = () => {
   const pixelRatio = window.devicePixelRatio;
   const documentHeight = document.body.offsetHeight;
   const documentWidth = document.body.offsetWidth;
+  const pageHeightPx = pageHeight * pxPerIn;
   const divs = document.querySelectorAll('div[class*=unbreakable]');
+  const offset = 50;
+  const splitAt = 100;
   for (let i = 0; i < divs.length; i += 1) {
-    console.log(i, ' at ', divs[i].offsetTop);
+    console.log(i, ' at ', divs[i].offsetTop + offset);
+    const onPage = Math.ceil((divs[i].offsetTop + offset) / pageHeightPx);
+    console.log(i, ' onPage ', onPage);
+    const splitMath = pageHeightPx * onPage - (divs[i].offsetTop + offset + divs[i].offsetHeight);
+    console.log(i, ' splitmath ', splitMath);
+    if (splitMath >= 0) {
+      console.log('doesnt split page');
+    } else {
+      console.log('splits page ', splitMath + divs[i].offsetHeight);
+      if (splitMath + divs[i].offsetHeight > splitAt) {
+        divs[i].insertBefore(Breakpoint, divs[i]);
+        console.log(
+          'Breakpoint inserted because ',
+          splitMath + divs[i].offsetHeight,
+          ' greater than ',
+          splitAt
+        );
+      }
+    }
   }
+  const numberOfPagesFromLastElem = Math.ceil(
+    (divs[divs.length - 1].offsetTop + divs[divs.length - 1].offsetHeight) / pageHeightPx
+  );
+  const numberOfPagesFromDocumentHeight = Math.ceil(documentHeight / pageHeightPx);
   console.log('pixelRatio ', pixelRatio);
   console.log('documentHeight ', documentHeight);
   console.log('documentWidth ', documentWidth);
   console.log('pageWidth ', pageWidth);
   console.log('pageHeight ', pageHeight);
   console.log('pageMargins ', pageMargins);
+  console.log('pageHeightPx ', pageHeightPx);
+  console.log('numberOfPagesFromLastElem ', numberOfPagesFromLastElem);
+  console.log('numberOfPagesFromDocumentHeight ', numberOfPagesFromDocumentHeight);
 
   // Apparently we can't calculate the height of elements that have display:none
   // so we show it all on load, insert breakpoints, and then hide what will be printed

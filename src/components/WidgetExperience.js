@@ -46,19 +46,20 @@ const Experience = props => {
       spacing={24}
       className={classNames(classes.experience, print ? 'displayBlock' : '')}
     >
-      <Grid item xs={12} className={print ? 'displayBlock' : ''}>
+      <Grid item xs={12} className={classNames(print ? 'displayBlock' : '')}>
         {experience.jobs.map(job => (
           <Paper
             className={classNames(
               print ? classes.paperPrint : classes.paper,
-              print ? 'displayBlock' : ''
+              print ? 'displayBlock' : '',
+              print ? 'unbreakable' : ''
             )}
             elevation={elevation}
             key={job.id}
           >
             {print ? (
               <Grid container className="displayBlock">
-                <Grid item xs={12} className="unbreakable">
+                <Grid item xs={12}>
                   <Typography variant="title">
                     {job.position} for {job.company}
                   </Typography>
