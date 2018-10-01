@@ -42,8 +42,8 @@ const Print = props => {
 
   const printObject = (
     <Grid container spacing={0}>
-      <Grid item className={classNames('onlyprint', classes.printSize)}>
-        <Grid container spacing={0} className="rootprint">
+      <Grid item className={classNames('onlyPrint', classes.printSize)}>
+        <Grid container spacing={0} className="rootPrint">
           <Grid item xs={12} className={classes.component}>
             <Contact elevation={0} print={1} />
           </Grid>
@@ -54,7 +54,7 @@ const Print = props => {
             <Experience elevation={0} print={1} />
           </Grid>
         </Grid>
-        <Grid container spacing={0} className={classNames('rootprint', 'unbreakable')}>
+        <Grid container spacing={0} className={classNames('rootPrint', 'unbreakable')}>
           <Grid item xs={6} className={classNames(classes.component)}>
             <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelSkills}

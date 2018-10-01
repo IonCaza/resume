@@ -11,7 +11,7 @@ import Skills from './WidgetSkills';
 import Education from './WidgetEducation';
 import Print from './WidgetPrint';
 import Layout from './NavLayout';
-import Breakpoint from './WidgetBreakpoint';
+// import Breakpoint from './WidgetBreakpoint';
 
 import vars from '../data/general';
 import '../styles/Print.scss';
@@ -50,7 +50,14 @@ const insertBreakPoints = () => {
   const divs = document.querySelectorAll('div[class*=unbreakable]');
   const offset = 50;
   const splitAt = 100;
+  // const brk = new Breakpoint();
+  const breakpointElement = document.createElement('div');
+  const breakpointSpace = document.createTextNode(' ');
+  breakpointElement.className = 'alwaysBreak';
+  breakpointElement.appendChild(breakpointSpace);
+
   for (let i = 0; i < divs.length; i += 1) {
+    console.log('----------');
     console.log(i, ' at ', divs[i].offsetTop + offset);
     const onPage = Math.ceil((divs[i].offsetTop + offset) / pageHeightPx);
     console.log(i, ' onPage ', onPage);
@@ -61,7 +68,7 @@ const insertBreakPoints = () => {
     } else {
       console.log('splits page ', splitMath + divs[i].offsetHeight);
       if (splitMath + divs[i].offsetHeight > splitAt) {
-        divs[i].insertBefore(Breakpoint, divs[i]);
+        divs[i].parentNode.insertBefore(breakpointElement, divs[i]);
         console.log(
           'Breakpoint inserted because ',
           splitMath + divs[i].offsetHeight,
@@ -87,8 +94,8 @@ const insertBreakPoints = () => {
 
   // Apparently we can't calculate the height of elements that have display:none
   // so we show it all on load, insert breakpoints, and then hide what will be printed
-
-  /* const onlyprint = document.querySelectorAll('div[class*=onlyPrint]');
+  // /*
+  const onlyprint = document.querySelectorAll('div[class*=onlyPrint]');
   for (let i = 0; i < onlyprint.length; i += 1) {
     onlyprint[i].classList.remove('onlyPrint');
     onlyprint[i].classList.add('onlyPrintAfterInject');
@@ -97,7 +104,7 @@ const insertBreakPoints = () => {
   for (let i = 0; i < noprint.length; i += 1) {
     noprint[i].classList.remove('noPrintBeforeInject');
     noprint[i].classList.add('noPrint');
-  } */
+  } // */
 };
 
 class PageExperience extends Component {
