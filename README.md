@@ -18,6 +18,7 @@ Can be accessed at <https://let.caza.in/>
 
 ## To Do
 
+* Refactor dynamic breakpoint generation
 * Calculate exact print Width to make printing even more accurate
 * Add schema.org to Contact component
 * Add About Me page as index and move Experience
@@ -40,6 +41,7 @@ Can be accessed at <https://let.caza.in/>
 ### v2.3.0
 
 * Printing is in a usable state. On the Experience page, you can now Print (Cmd + P / Ctrl + P) accurately
+* Breakpoints are added dynamically after the page is rendered
 
 ### v2.2.0
 
