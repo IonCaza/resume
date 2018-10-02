@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -10,6 +10,7 @@ import Obfuscate from 'react-obfuscate';
 import Layout from './NavLayout';
 
 import contact from '../data/contact';
+import { togglePrintNonPrint } from './FunctionsPrint';
 
 const styles = theme => ({
   root: {
@@ -45,61 +46,67 @@ const styles = theme => ({
   },
 });
 
-const PageContact = props => {
-  const { classes } = props;
+class PageContact extends Component {
+  componentDidMount() {
+    togglePrintNonPrint();
+  }
 
-  const contactObject = (
-    <Grid container spacing={0} className={classes.root}>
-      <Grid item md={8}>
-        <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-          {contact.label.header}
-        </Typography>
-        <Typography variant="subheading" gutterBottom className={classes.mainHeadline}>
-          {contact.content.introMessage}
-        </Typography>
-        <Grid container spacing={0} className={classes.contactItems}>
-          <Grid item md={6}>
-            <Typography variant="title" gutterBottom className={classes.mainHeadline}>
-              {contact.label.phone}: &nbsp;
-              <Obfuscate tel={contact.info.phone}>
-                <Button variant="contained" color="primary" className={classes.button}>
-                  {contact.info.phone}
-                </Button>
-              </Obfuscate>
-            </Typography>
-          </Grid>
-          <Grid item md={6}>
-            <Typography variant="title" gutterBottom className={classes.mainHeadline}>
-              {contact.label.email}: &nbsp;
-              <Obfuscate
-                email={contact.info.email}
-                headers={{
-                  subject: "Let's get in touch",
-                }}
-              >
-                <Button variant="contained" color="primary" className={classes.button}>
-                  {contact.info.email}
-                </Button>
-              </Obfuscate>
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item md={4}>
-        <Grid container spacing={0}>
+  render() {
+    const { classes } = this.props;
+
+    const contactObject = (
+      <Grid container spacing={0} className={classes.root}>
+        <Grid item md={8}>
           <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-            {contact.label.location}
+            {contact.label.header}
           </Typography>
-          <Typography variant="title" gutterBottom className={classes.mainHeadline}>
-            {contact.info.location}
+          <Typography variant="subheading" gutterBottom className={classes.mainHeadline}>
+            {contact.content.introMessage}
           </Typography>
+          <Grid container spacing={0} className={classes.contactItems}>
+            <Grid item md={6}>
+              <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+                {contact.label.phone}: &nbsp;
+                <Obfuscate tel={contact.info.phone}>
+                  <Button variant="contained" color="primary" className={classes.button}>
+                    {contact.info.phone}
+                  </Button>
+                </Obfuscate>
+              </Typography>
+            </Grid>
+            <Grid item md={6}>
+              <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+                {contact.label.email}: &nbsp;
+                <Obfuscate
+                  email={contact.info.email}
+                  headers={{
+                    subject: "Let's get in touch",
+                  }}
+                >
+                  <Button variant="contained" color="primary" className={classes.button}>
+                    {contact.info.email}
+                  </Button>
+                </Obfuscate>
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item md={4}>
+          <Grid container spacing={0}>
+            <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+              {contact.label.location}
+            </Typography>
+            <Typography variant="title" gutterBottom className={classes.mainHeadline}>
+              {contact.info.location}
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
-  );
+    );
 
-  return <Layout>{contactObject}</Layout>;
-};
+    return <Layout>{contactObject}</Layout>;
+  }
+}
 
 PageContact.propTypes = {
   classes: PropTypes.object.isRequired,

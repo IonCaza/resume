@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -9,6 +9,7 @@ import Layout from './NavLayout';
 import About from './WidgetAbout';
 
 import vars from '../data/general';
+import { togglePrintNonPrint } from './FunctionsPrint';
 
 const styles = theme => ({
   root: {
@@ -34,22 +35,28 @@ const styles = theme => ({
   },
 });
 
-const PageAbout = props => {
-  const { classes } = props;
+class PageAbout extends Component {
+  componentDidMount() {
+    togglePrintNonPrint();
+  }
 
-  const aboutObject = (
-    <Grid container spacing={0} className={classes.root}>
-      <Grid item xs={12} className={classes.component}>
-        <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
-          {vars.content.labelAbout}
-        </Typography>
-        <About />
+  render() {
+    const { classes } = this.props;
+
+    const aboutObject = (
+      <Grid container spacing={0} className={classes.root}>
+        <Grid item xs={12} className={classes.component}>
+          <Typography variant="display1" gutterBottom className={classes.mainHeadline}>
+            {vars.content.labelAbout}
+          </Typography>
+          <About />
+        </Grid>
       </Grid>
-    </Grid>
-  );
+    );
 
-  return <Layout>{aboutObject}</Layout>;
-};
+    return <Layout>{aboutObject}</Layout>;
+  }
+}
 
 PageAbout.propTypes = {
   classes: PropTypes.object.isRequired,

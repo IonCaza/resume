@@ -61,7 +61,7 @@ const Experience = props => {
               <Grid container className="displayBlock">
                 <Grid item xs={12}>
                   <Typography variant="title">
-                    {job.position} for {job.company}
+                    {job.position} at {job.company}
                   </Typography>
                   <Typography variant="subheading">
                     Between {job.startDate} and {job.endDate} in {job.location}
