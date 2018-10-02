@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 09/19/2018
+# My Resume - Ion Caza - 10/01/2018
 
 Can be accessed at <https://let.caza.in/>
 
@@ -18,6 +18,7 @@ Can be accessed at <https://let.caza.in/>
 
 ## To Do
 
+* Calculate exact print Width to make printing even more accurate
 * Add schema.org to Contact component
 * Add About Me page as index and move Experience
 * Create tracking viewer NavBar on Experience
@@ -35,6 +36,10 @@ Can be accessed at <https://let.caza.in/>
 * Refactor to use `withRouter` instead of passing prop to TopBar manually
 
 ## Change Log
+
+### v2.3.0
+
+* Printing is in a usable state. On the Experience page, you can now Print (Cmd + P / Ctrl + P) accurately
 
 ### v2.2.0
 

@@ -12,13 +12,9 @@ import Education from './WidgetEducation';
 import Print from './WidgetPrint';
 import Layout from './NavLayout';
 
-// TODO exact WIDTH
-
 import vars from '../data/general';
 import '../styles/Print.scss';
 import printVars from '../data/printvars';
-
-const debug = 1;
 
 const { pageHeight, pageMargins, pxPerIn } = printVars;
 
@@ -46,27 +42,12 @@ const styles = theme => ({
 });
 
 const insertBreakPoints = () => {
-  const pixelRatio = window.devicePixelRatio;
-  const documentHeight = document.body.offsetHeight;
-  const documentWidth = document.body.offsetWidth;
   const pageHeightPx = pageHeight * pxPerIn - 2 * pageMargins * pxPerIn;
   const divsClean = document.querySelectorAll('div[class*=cleanBreak]');
   const divsNever = document.querySelectorAll('div[class*=neverBreak]');
   const offset = 50; // pixels not accounted for on top
   const splitAtPercent = 0.7; // if content on next page is more than this percent, split
-  const numberOfPagesFromLastElem = Math.ceil(
-    (divsClean[divsClean.length - 1].offsetTop + divsClean[divsClean.length - 1].offsetHeight) /
-      pageHeightPx
-  );
-  const numberOfPagesFromDocumentHeight = Math.ceil(documentHeight / pageHeightPx);
-  if (debug) {
-    console.log('pixelRatio ', pixelRatio);
-    console.log('documentHeight ', documentHeight);
-    console.log('documentWidth ', documentWidth);
-    console.log('pageHeightPx ', pageHeightPx);
-    console.log('numberOfPagesFromLastElem ', numberOfPagesFromLastElem);
-    console.log('numberOfPagesFromDocumentHeight ', numberOfPagesFromDocumentHeight);
-  }
+
   const printCleanOffsetTops = new Array(divsClean.length - 1);
   const printNeverOffsetTops = new Array(divsNever.length - 1);
 
@@ -85,31 +66,15 @@ const insertBreakPoints = () => {
       pageHeightPx * onPage - (printCleanOffsetTops[i] + offset + divsClean[i].offsetHeight);
     const doTheSplit = () =>
       Math.abs(remainderOnNextPage / divsClean[i].offsetHeight) > splitAtPercent;
-    if (debug) {
-      const splitDescription = `${i} remainderOnNextPage ${remainderOnNextPage} = ${pageHeightPx} * ${onPage} -( ${
-        printCleanOffsetTops[i]
-      } + ${offset} + ${divsClean[i].offsetHeight})`;
-      console.log('----------');
-      console.log(i, ' at ', printCleanOffsetTops[i] + offset);
-      console.log(i, ' onPage ', onPage);
-      console.log(i, ' height ', divsClean[i].offsetHeight);
-      console.log(splitDescription);
-    }
+
     if (remainderOnNextPage < 0) {
-      if (debug) console.log('splits page ', remainderOnNextPage);
       if (doTheSplit()) {
         const breakpointElement = document.createElement('div');
         const breakpointSpace = document.createTextNode(' ');
         breakpointElement.className = 'breakHere';
         breakpointElement.appendChild(breakpointSpace);
         divsClean[i].parentNode.insertBefore(breakpointElement, divsClean[i]);
-        if (debug)
-          console.log(
-            'Breakpoint inserted because ',
-            Math.abs(remainderOnNextPage / divsClean[i].offsetHeight),
-            ' greater than ',
-            splitAtPercent
-          );
+
         // now add the difference to all the divsClean below this one
         for (let o = i + 1; o < divsClean.length; o += 1) {
           printCleanOffsetTops[o] +=
@@ -132,31 +97,15 @@ const insertBreakPoints = () => {
     const remainderOnNextPage =
       pageHeightPx * onPage - (printNeverOffsetTops[i] + offset + divsNever[i].offsetHeight);
     const doTheSplit = () => Math.abs(remainderOnNextPage / divsNever[i].offsetHeight) > 0;
-    if (debug) {
-      const splitDescription = `${i} remainderOnNextPage ${remainderOnNextPage} = ${pageHeightPx} * ${onPage} -( ${
-        printNeverOffsetTops[i]
-      } + ${offset} + ${divsNever[i].offsetHeight})`;
-      console.log('----------');
-      console.log(i, ' at ', printNeverOffsetTops[i] + offset);
-      console.log(i, ' onPage ', onPage);
-      console.log(i, ' height ', divsNever[i].offsetHeight);
-      console.log(splitDescription);
-    }
+
     if (remainderOnNextPage < 0) {
-      if (debug) console.log('splits page ', remainderOnNextPage);
       if (doTheSplit()) {
         const breakpointElement = document.createElement('div');
         const breakpointSpace = document.createTextNode(' ');
         breakpointElement.className = 'breakHere';
         breakpointElement.appendChild(breakpointSpace);
         divsNever[i].parentNode.insertBefore(breakpointElement, divsNever[i]);
-        if (debug)
-          console.log(
-            'Breakpoint inserted because ',
-            Math.abs(remainderOnNextPage / divsNever[i].offsetHeight),
-            ' greater than ',
-            0
-          );
+
         // now add the difference to all the divsNever below this one
         for (let o = i + 1; o < divsNever.length; o += 1) {
           printNeverOffsetTops[o] +=
@@ -166,22 +115,10 @@ const insertBreakPoints = () => {
       }
     }
   }
-  if (debug) {
-    console.log('At end of divsClean manipulation');
-    for (let i = 0; i < divsClean.length; i += 1) {
-      console.log(printCleanOffsetTops[i]);
-    }
-  }
-  if (debug) {
-    console.log('At end of divsNever manipulation');
-    for (let i = 0; i < divsNever.length; i += 1) {
-      console.log(printNeverOffsetTops[i]);
-    }
-  }
 
   // Apparently we can't calculate the height of elements that have display:none
   // so we show it all on load, insert breakpoints, and then hide what will be printed
-  /*
+
   const onlyprint = document.querySelectorAll('div[class*=onlyPrint]');
   for (let i = 0; i < onlyprint.length; i += 1) {
     onlyprint[i].classList.remove('onlyPrint');
@@ -191,7 +128,7 @@ const insertBreakPoints = () => {
   for (let i = 0; i < noprint.length; i += 1) {
     noprint[i].classList.remove('noPrintBeforeInject');
     noprint[i].classList.add('noPrint');
-  } */
+  }
 };
 
 class PageExperience extends Component {
@@ -200,16 +137,6 @@ class PageExperience extends Component {
   }
 
   render() {
-    const mediaQueryList = window.matchMedia('print');
-
-    mediaQueryList.addListener(mql => {
-      if (mql.matches) {
-        // console.log('onbeforeprint equivalent');
-      } else {
-        // console.log('onafterprint equivalent');
-      }
-    });
-
     const { classes, location } = this.props;
     const { pathname } = location;
 
