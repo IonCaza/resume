@@ -39,6 +39,9 @@ const styles = theme => ({
   },
   cell: {
     paddingBottom: theme.spacing.unit * 1,
+    paddingLeft: '0px !important',
+    paddingRight: '0px !important',
+    borderBottom: '0px',
   },
 });
 
@@ -97,7 +100,7 @@ const Skills = props => {
   const skillsPrintObject = (
     <Grid container spacing={16} className={classes.skills}>
       <Grid item xs={12}>
-        <Paper className={classes.paper} elevation={elevation}>
+        <Paper elevation={elevation}>
           {skills.skillCategories.map(category => (
             <Table key={category.id}>
               <TableBody>

@@ -52,7 +52,7 @@ const Experience = props => {
             className={classNames(
               print ? classes.paperPrint : classes.paper,
               print ? 'displayBlock' : '',
-              print ? 'unbreakable' : ''
+              print ? 'cleanBreak' : ''
             )}
             elevation={elevation}
             key={job.id}

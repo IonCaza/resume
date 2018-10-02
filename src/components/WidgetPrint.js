@@ -25,15 +25,10 @@ const styles = theme => ({
     },
     paddingBottom: theme.spacing.unit,
   },
-  component: {
-    paddingLeft: theme.spacing.unit * 1,
-    paddingRight: theme.spacing.unit * 1,
-  },
   printSize: {
     // height: 1056 - theme.spacing.unit * 2,
     width: 816 - theme.spacing.unit * 2,
-    paddingLeft: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
+    padding: theme.spacing.unit,
   },
 });
 
@@ -44,28 +39,28 @@ const Print = props => {
     <Grid container spacing={0}>
       <Grid item className={classNames('onlyPrint', classes.printSize)}>
         <Grid container spacing={0} className="rootPrint">
-          <Grid item xs={12} className={classes.component}>
+          <Grid item xs={12}>
             <Contact elevation={0} print={1} />
           </Grid>
-          <Grid item xs={12} className={classes.component}>
+          <Grid item xs={12}>
             <About elevation={0} print={1} />
           </Grid>
           <Grid item xs={12}>
             <Experience elevation={0} print={1} />
           </Grid>
         </Grid>
-        <Grid container spacing={0} className={classNames('rootPrint', 'unbreakable')}>
-          <Grid item xs={6} className={classNames(classes.component)}>
+        <Grid container spacing={16} className={classNames('rootPrint', 'neverBreak')}>
+          <Grid item xs={6}>
             <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelSkills}
             </Typography>
-            <Skills print={1} elevation={0} />
+            <Skills elevation={0} print={1} />
           </Grid>
-          <Grid item xs={6} className={classes.component}>
+          <Grid item xs={6}>
             <Typography variant="display1" className={classes.mainHeadline}>
               {vars.content.labelEducation}
             </Typography>
-            <Education elevation={0} />
+            <Education elevation={0} print={1} />
           </Grid>
         </Grid>
       </Grid>

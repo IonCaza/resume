@@ -33,7 +33,7 @@ $pageMarginsIn: $pageMargins + 0in;
   width: 100%;
 }
 
-.alwaysBreak {
+.breakHere {
   display: none;
 }
 
@@ -53,10 +53,9 @@ $pageMarginsIn: $pageMargins + 0in;
   .displayBlock {
     display: block !important;
     margin: 0px !important;
-    orphans: 5;
   }
 
-  .alwaysBreak {
+  .breakHere {
     display: block;
     page-break-after: always !important;
   }

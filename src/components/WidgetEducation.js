@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
@@ -19,8 +20,8 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     borderRadius: '2px',
   },
-  paper2: {
-    padding: theme.spacing.unit * 2,
+  paperPrint: {
+    paddingBottom: theme.spacing.unit * 2,
     textAlign: 'left',
     color: theme.palette.text.secondary,
     borderRadius: '2px',
@@ -28,12 +29,15 @@ const styles = theme => ({
 });
 
 const Education = props => {
-  const { classes, elevation } = props;
+  const { classes, elevation, print } = props;
 
   const educationObject = (
     <Grid container spacing={16} className={classes.education}>
       <Grid item xs={12}>
-        <Paper className={classes.paper} elevation={elevation}>
+        <Paper
+          className={classNames(print ? classes.paperPrint : classes.paper)}
+          elevation={elevation}
+        >
           {education.degrees.map((degree, index) => (
             <Grid container key={degree.id}>
               <Grid item xs={12}>
@@ -62,7 +66,10 @@ const Education = props => {
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper2} elevation={elevation}>
+        <Paper
+          className={classNames(print ? classes.paperPrint : classes.paper)}
+          elevation={elevation}
+        >
           {education.certifications.map((certification, index) => (
             <Grid container key={certification.id}>
               <Grid item xs={12}>
@@ -97,6 +104,7 @@ Education.propTypes = {
 
 Education.defaultProps = {
   elevation: 2,
+  print: 0,
 };
 
 export default withStyles(styles)(Education);

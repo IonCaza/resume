@@ -11,13 +11,16 @@ import Skills from './WidgetSkills';
 import Education from './WidgetEducation';
 import Print from './WidgetPrint';
 import Layout from './NavLayout';
-// import Breakpoint from './WidgetBreakpoint';
+
+// TODO exact WIDTH
 
 import vars from '../data/general';
 import '../styles/Print.scss';
 import printVars from '../data/printvars';
 
-const { pageWidth, pageHeight, pageMargins, pxPerIn } = printVars;
+const debug = 1;
+
+const { pageHeight, pageMargins, pxPerIn } = printVars;
 
 const styles = theme => ({
   root: {
@@ -46,55 +49,139 @@ const insertBreakPoints = () => {
   const pixelRatio = window.devicePixelRatio;
   const documentHeight = document.body.offsetHeight;
   const documentWidth = document.body.offsetWidth;
-  const pageHeightPx = pageHeight * pxPerIn;
-  const divs = document.querySelectorAll('div[class*=unbreakable]');
-  const offset = 50;
-  const splitAt = 100;
-  // const brk = new Breakpoint();
-  const breakpointElement = document.createElement('div');
-  const breakpointSpace = document.createTextNode(' ');
-  breakpointElement.className = 'alwaysBreak';
-  breakpointElement.appendChild(breakpointSpace);
+  const pageHeightPx = pageHeight * pxPerIn - 2 * pageMargins * pxPerIn;
+  const divsClean = document.querySelectorAll('div[class*=cleanBreak]');
+  const divsNever = document.querySelectorAll('div[class*=neverBreak]');
+  const offset = 50; // pixels not accounted for on top
+  const splitAtPercent = 0.7; // if content on next page is more than this percent, split
+  const numberOfPagesFromLastElem = Math.ceil(
+    (divsClean[divsClean.length - 1].offsetTop + divsClean[divsClean.length - 1].offsetHeight) /
+      pageHeightPx
+  );
+  const numberOfPagesFromDocumentHeight = Math.ceil(documentHeight / pageHeightPx);
+  if (debug) {
+    console.log('pixelRatio ', pixelRatio);
+    console.log('documentHeight ', documentHeight);
+    console.log('documentWidth ', documentWidth);
+    console.log('pageHeightPx ', pageHeightPx);
+    console.log('numberOfPagesFromLastElem ', numberOfPagesFromLastElem);
+    console.log('numberOfPagesFromDocumentHeight ', numberOfPagesFromDocumentHeight);
+  }
+  const printCleanOffsetTops = new Array(divsClean.length - 1);
+  const printNeverOffsetTops = new Array(divsNever.length - 1);
 
-  for (let i = 0; i < divs.length; i += 1) {
-    console.log('----------');
-    console.log(i, ' at ', divs[i].offsetTop + offset);
-    const onPage = Math.ceil((divs[i].offsetTop + offset) / pageHeightPx);
-    console.log(i, ' onPage ', onPage);
-    const splitMath = pageHeightPx * onPage - (divs[i].offsetTop + offset + divs[i].offsetHeight);
-    console.log(i, ' splitmath ', splitMath);
-    if (splitMath >= 0) {
-      console.log('doesnt split page');
-    } else {
-      console.log('splits page ', splitMath + divs[i].offsetHeight);
-      if (splitMath + divs[i].offsetHeight > splitAt) {
-        divs[i].parentNode.insertBefore(breakpointElement, divs[i]);
-        console.log(
-          'Breakpoint inserted because ',
-          splitMath + divs[i].offsetHeight,
-          ' greater than ',
-          splitAt
-        );
+  // Store offsetTop in separate array which we manipulate later
+  for (let i = 0; i < divsClean.length; i += 1) {
+    printCleanOffsetTops[i] = divsClean[i].offsetTop;
+  }
+  for (let i = 0; i < divsNever.length; i += 1) {
+    printNeverOffsetTops[i] = divsNever[i].offsetTop;
+  }
+
+  // Iterate through all divs to calculate whether splitting is required
+  for (let i = 0; i < divsClean.length; i += 1) {
+    const onPage = Math.ceil((printCleanOffsetTops[i] + offset) / pageHeightPx);
+    const remainderOnNextPage =
+      pageHeightPx * onPage - (printCleanOffsetTops[i] + offset + divsClean[i].offsetHeight);
+    const doTheSplit = () =>
+      Math.abs(remainderOnNextPage / divsClean[i].offsetHeight) > splitAtPercent;
+    if (debug) {
+      const splitDescription = `${i} remainderOnNextPage ${remainderOnNextPage} = ${pageHeightPx} * ${onPage} -( ${
+        printCleanOffsetTops[i]
+      } + ${offset} + ${divsClean[i].offsetHeight})`;
+      console.log('----------');
+      console.log(i, ' at ', printCleanOffsetTops[i] + offset);
+      console.log(i, ' onPage ', onPage);
+      console.log(i, ' height ', divsClean[i].offsetHeight);
+      console.log(splitDescription);
+    }
+    if (remainderOnNextPage < 0) {
+      if (debug) console.log('splits page ', remainderOnNextPage);
+      if (doTheSplit()) {
+        const breakpointElement = document.createElement('div');
+        const breakpointSpace = document.createTextNode(' ');
+        breakpointElement.className = 'breakHere';
+        breakpointElement.appendChild(breakpointSpace);
+        divsClean[i].parentNode.insertBefore(breakpointElement, divsClean[i]);
+        if (debug)
+          console.log(
+            'Breakpoint inserted because ',
+            Math.abs(remainderOnNextPage / divsClean[i].offsetHeight),
+            ' greater than ',
+            splitAtPercent
+          );
+        // now add the difference to all the divsClean below this one
+        for (let o = i + 1; o < divsClean.length; o += 1) {
+          printCleanOffsetTops[o] +=
+            (1 - Math.abs(remainderOnNextPage / divsClean[i].offsetHeight)) *
+            divsClean[i].offsetHeight;
+        }
       }
     }
   }
-  const numberOfPagesFromLastElem = Math.ceil(
-    (divs[divs.length - 1].offsetTop + divs[divs.length - 1].offsetHeight) / pageHeightPx
-  );
-  const numberOfPagesFromDocumentHeight = Math.ceil(documentHeight / pageHeightPx);
-  console.log('pixelRatio ', pixelRatio);
-  console.log('documentHeight ', documentHeight);
-  console.log('documentWidth ', documentWidth);
-  console.log('pageWidth ', pageWidth);
-  console.log('pageHeight ', pageHeight);
-  console.log('pageMargins ', pageMargins);
-  console.log('pageHeightPx ', pageHeightPx);
-  console.log('numberOfPagesFromLastElem ', numberOfPagesFromLastElem);
-  console.log('numberOfPagesFromDocumentHeight ', numberOfPagesFromDocumentHeight);
+
+  const diffTotalOffset =
+    printCleanOffsetTops[divsClean.length - 1] - divsClean[divsClean.length - 1].offsetTop;
+
+  for (let i = 0; i < printNeverOffsetTops.length; i += 1) {
+    printNeverOffsetTops[i] += diffTotalOffset;
+  }
+
+  for (let i = 0; i < divsNever.length; i += 1) {
+    const onPage = Math.ceil((printNeverOffsetTops[i] + offset) / pageHeightPx);
+    const remainderOnNextPage =
+      pageHeightPx * onPage - (printNeverOffsetTops[i] + offset + divsNever[i].offsetHeight);
+    const doTheSplit = () => Math.abs(remainderOnNextPage / divsNever[i].offsetHeight) > 0;
+    if (debug) {
+      const splitDescription = `${i} remainderOnNextPage ${remainderOnNextPage} = ${pageHeightPx} * ${onPage} -( ${
+        printNeverOffsetTops[i]
+      } + ${offset} + ${divsNever[i].offsetHeight})`;
+      console.log('----------');
+      console.log(i, ' at ', printNeverOffsetTops[i] + offset);
+      console.log(i, ' onPage ', onPage);
+      console.log(i, ' height ', divsNever[i].offsetHeight);
+      console.log(splitDescription);
+    }
+    if (remainderOnNextPage < 0) {
+      if (debug) console.log('splits page ', remainderOnNextPage);
+      if (doTheSplit()) {
+        const breakpointElement = document.createElement('div');
+        const breakpointSpace = document.createTextNode(' ');
+        breakpointElement.className = 'breakHere';
+        breakpointElement.appendChild(breakpointSpace);
+        divsNever[i].parentNode.insertBefore(breakpointElement, divsNever[i]);
+        if (debug)
+          console.log(
+            'Breakpoint inserted because ',
+            Math.abs(remainderOnNextPage / divsNever[i].offsetHeight),
+            ' greater than ',
+            0
+          );
+        // now add the difference to all the divsNever below this one
+        for (let o = i + 1; o < divsNever.length; o += 1) {
+          printNeverOffsetTops[o] +=
+            (1 - Math.abs(remainderOnNextPage / divsNever[i].offsetHeight)) *
+            divsNever[i].offsetHeight;
+        }
+      }
+    }
+  }
+  if (debug) {
+    console.log('At end of divsClean manipulation');
+    for (let i = 0; i < divsClean.length; i += 1) {
+      console.log(printCleanOffsetTops[i]);
+    }
+  }
+  if (debug) {
+    console.log('At end of divsNever manipulation');
+    for (let i = 0; i < divsNever.length; i += 1) {
+      console.log(printNeverOffsetTops[i]);
+    }
+  }
 
   // Apparently we can't calculate the height of elements that have display:none
   // so we show it all on load, insert breakpoints, and then hide what will be printed
-  // /*
+  /*
   const onlyprint = document.querySelectorAll('div[class*=onlyPrint]');
   for (let i = 0; i < onlyprint.length; i += 1) {
     onlyprint[i].classList.remove('onlyPrint');
@@ -104,7 +191,7 @@ const insertBreakPoints = () => {
   for (let i = 0; i < noprint.length; i += 1) {
     noprint[i].classList.remove('noPrintBeforeInject');
     noprint[i].classList.add('noPrint');
-  } // */
+  } */
 };
 
 class PageExperience extends Component {
