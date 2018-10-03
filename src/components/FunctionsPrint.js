@@ -22,19 +22,14 @@ export function togglePrintNonPrint() {
 export function insertBreakPoints() {
   const pageHeightPx = pageHeight * pxPerIn - 2 * pageMargins * pxPerIn;
   const divsClean = document.querySelectorAll('div[class*=cleanBreak]');
-  const divsNever = document.querySelectorAll('div[class*=neverBreak]');
-  const offset = 50; // pixels not accounted for on top
-  const splitAtPercent = 0.7; // if content on next page is more than this percent, split
+  const offset = 45; // pixels not accounted for on top
+  const splitAtPercent = 0.65; // if content on next page is more than this percent, split
 
   const printCleanOffsetTops = new Array(divsClean.length - 1);
-  const printNeverOffsetTops = new Array(divsNever.length - 1);
 
   // Store offsetTop in separate array which we manipulate later
   for (let i = 0; i < divsClean.length; i += 1) {
     printCleanOffsetTops[i] = divsClean[i].offsetTop;
-  }
-  for (let i = 0; i < divsNever.length; i += 1) {
-    printNeverOffsetTops[i] = divsNever[i].offsetTop;
   }
 
   // Iterate through all divs to calculate whether splitting is required
@@ -47,9 +42,11 @@ export function insertBreakPoints() {
 
     if (remainderOnNextPage < 0) {
       if (doTheSplit()) {
+        const breakpointHeight = divsClean[i].offsetHeight + remainderOnNextPage;
+        const csstext = `height:${breakpointHeight}px;display:block;width:100%;clear:both;`;
         const breakpointElement = document.createElement('div');
+        breakpointElement.style.cssText = csstext;
         const breakpointSpace = document.createTextNode(' ');
-        breakpointElement.className = 'breakHere';
         breakpointElement.appendChild(breakpointSpace);
         divsClean[i].parentNode.insertBefore(breakpointElement, divsClean[i]);
 
@@ -63,11 +60,10 @@ export function insertBreakPoints() {
     }
   }
 
-  const diffTotalOffset =
-    printCleanOffsetTops[divsClean.length - 1] - divsClean[divsClean.length - 1].offsetTop;
-
-  for (let i = 0; i < printNeverOffsetTops.length; i += 1) {
-    printNeverOffsetTops[i] += diffTotalOffset;
+  const divsNever = document.querySelectorAll('div[class*=neverBreak]');
+  const printNeverOffsetTops = new Array(divsNever.length - 1);
+  for (let i = 0; i < divsNever.length; i += 1) {
+    printNeverOffsetTops[i] = divsNever[i].offsetTop;
   }
 
   for (let i = 0; i < divsNever.length; i += 1) {
@@ -78,9 +74,11 @@ export function insertBreakPoints() {
 
     if (remainderOnNextPage < 0) {
       if (doTheSplit()) {
+        const breakpointHeight = divsNever[i].offsetHeight + remainderOnNextPage;
+        const csstext = `height:${breakpointHeight}px;display:block;width:100%;clear:both;`;
         const breakpointElement = document.createElement('div');
+        breakpointElement.style.cssText = csstext;
         const breakpointSpace = document.createTextNode(' ');
-        breakpointElement.className = 'breakHere';
         breakpointElement.appendChild(breakpointSpace);
         divsNever[i].parentNode.insertBefore(breakpointElement, divsNever[i]);
 
