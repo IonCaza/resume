@@ -41,7 +41,6 @@ const styles = theme => ({
 
 class PageExperience extends Component {
   componentDidMount() {
-    console.log('hits1');
     insertBreakPoints();
     togglePrintNonPrint();
   }
