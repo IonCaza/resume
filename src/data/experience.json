@@ -2,7 +2,7 @@
   "jobs": [{
       "id": 1,
       "company": "Accenture Industry X.0",
-      "position": "Delivery Lead",
+      "position": "Delivery Lead & Senior Technical Consultant",
       "location": "Ann Arbor, Michigan",
       "description": "Industry X.0 is the digital innovation unit of the largest management consulting company in the world.",
       "startDate": "October 2017",
@@ -23,13 +23,15 @@
       ],
       "achievements": [
         "Shifted client's mindset to focus on value-driven delivery (vs. management dictated delivery)",
-        "Successfully delivered the minimum viable product (MVP) for the client's Billing Platform that will be used enterprise-wide",
-        "Implemented metrics that are used by management to understand the pace of delivery in a consistent way across teams",
-        "Achieved proficiency in client's Product Driven Organization (PDO) and Project Management Organization (PMO) practices",
-        "Learned the client's complex ecosystem and helped the client make decisions to drive the direction of their products based on their vision",
-        "Made the client see Accenture as a partner rather than a staff augmentor and in the process became a trusted advisor",
-        "Colocated business and IT together to eliminate communication barriers and increase velocity",
-        "Had 3 scope of work / contract renewals approved by client over the course of 12 months"
+        "Delivered the minimum viable product (MVP) for the client's Billing Platform that will be used enterprise-wide",
+        "Created metrics that are used by management to understand the pace of delivery consistently across teams",
+        "Aligned client's space with the upcoming mandate to move to a product driven organization model",
+        "Helped the client make architectural decisions that aligned the direction of their product with their vision",
+        "Made the client see Accenture as a partner rather than a staff augmentor and became a trusted advisor in the process",
+        "Colocated business and IT to eliminate communication barriers and increase velocity",
+        "Had 3 scope of work/contract renewals approved by client over the course of 12 months",
+        "Managed a budget of over $2m and ensured scope of work was signed off on completion",
+        "Influenced the long-term strategic plan of a business unit of a Fortune 10 corporation"
       ]
     },
     {
@@ -42,20 +44,22 @@
       "endDate": "October 2017",
       "summary": "Direct hire position within the Project Management Organization at Vectorform in the capacity of product manager and technical project manager in charge of delivering the Mopar.com program.",
       "achievements": [
-        "Aligned the vision of the client to a feasible roadmap that produced the most value to consumers",
-        "Launched Mopar.com to consumers on 9/23/16",
         "Reduced a 1.5 year delivery lag to 0",
+        "Launched Mopar.com to consumers on 9/23/16",
+        "Aligned the vision of the client to a feasible roadmap that produced the most value to consumers",
+        "Managed the program's budget of $10m to ensure adequate staffing across functional teams",
         "Achieved set financial targets for the Mopar.com product",
+        "Responsible for overseeing production of the product on 3 platforms (Web, Android, iOS)",
         "Managed both off-shore and on-shore development teams to create the Mopar.com backend",
         "Started the first in-house enterprise-level JAVA development team at Vectorform",
         "Increased efficiency across all Vectorform project teams by creating project management standards",
         "Defined the Product Manager role at Vectorform",
-        "Defined the Mopar.com Software Development Life cycle (SDLC)",
+        "Defined the Mopar.com Software Development Life Cycle (SDLC)",
         "Implemented and optimized standard agile ceremonies in the SDLC",
         "Promoted engineering best practices and added accountability to team-members through the use of peer reviews, transitioning team from SVN to GIT, code standards to achieve JAVA best practices, etc.",
-        "Actively participated in all major deployments of the application andprovided insight and input to successfully promote to production",
-        "Established requirement writing and collection standards",
-        "Raised awareness of business analysis and quality assurance gaps and helped human resources in filling them"
+        "Actively participated in all major deployments of the application and provided insight and input to successfully promote to production",
+        "Established requirement collection and writing standards",
+        "Raised awareness of business analysis and quality assurance gaps and helped human resources fill them"
       ]
     },
     {
@@ -63,12 +67,12 @@
       "company": "Gas Station TV",
       "position": "Technical Project Manager",
       "location": "Birmingham & Detroit, Michigan",
-      "description": "GSTV holds market dominance as the largest network in North America to advertise and display content right at the pump.",
+      "description": "GSTV holds market dominance as the largest network in North America to advertise and display content at the pump.",
       "startDate": "August 2014",
       "endDate": "May 2016",
-      "summary": "Consulting position for facilitating the project management and business analysis for an in-house built Enterprise Resource Planning system.",
+      "summary": "Consulting position facilitating the project management and business analysis for an in-house built Enterprise Resource Planning system.",
       "achievements": [
-        "Improved the accuracy of inventory reports for the executive team by 60% - this increased their understanding of when GSTV is oversold and undersold as a network",
+        "Improved the accuracy of inventory reports for the executive team by 60% - this increased their understanding of when GSTV is oversold or undersold as a network",
         "Defined the company's Scrum Agile Software Development Life cycle (SDLC)",
         "Introduced checks and balances in SDLC that led to a significant increase in the team’s performance",
         "Implemented JIRA and Confluence and designed workflows to integrate these tools in the SDLC",
@@ -101,7 +105,7 @@
         "Streamlined communication between Application Development stakeholders",
         "Gathered, clarified, and approved requirements with product managers weekly",
         "Translated requirements into detailed technical specifications",
-        "Helped the UX/UI and WebServices team get a thorough comprehension of the data its structure",
+        "Helped the UX/UI and WebServices team get a thorough comprehension of the data and its structure",
         "Trained users in the usage of Microsoft Test Manager (MSTM) to streamline QA",
         "Created and executed formal test plans using MSTM",
         "Organized Product Acceptance Testing (PAT) and User Acceptance Testing (UAT) with tailored test plans and coordinated their execution with the stakeholders",
@@ -117,7 +121,7 @@
       "description": "ATEX is a residential appraising company that services the Metro Detroit Area. In 2013 it had appraised properties with an aggregate value of over $500 million. ATEX provides business process automation solutions to other appraisers.",
       "startDate": "December 2005",
       "endDate": "October 2013",
-      "summary": "Direct hire position within the Project Management Organization at Vectorform in the capacity of product manager and technical project manager in charge of delivering the Mopar.com program.Longterm engagement where I accumulated experience in the entire product life cycle by creating products that help internal and external end-users in the fulfillment of the residential appraising process.",
+      "summary": "Longterm engagement where I accumulated experience in the entire product life cycle by creating products that help internal and external end-users in the fulfillment of the residential appraising process.",
       "achievements": [
         "Managed Information Systems and achieved 99% uptime during core hours",
         "Innovated USPAP-compliant proprietary approach to appraisal writing process which improved turnaround time by 65% and gave the company a competitive advantage in its market",

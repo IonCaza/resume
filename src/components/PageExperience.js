@@ -46,6 +46,18 @@ class PageExperience extends Component {
   }
 
   render() {
+    const mediaQueryList = window.matchMedia('print');
+
+    mediaQueryList.addListener(mql => {
+      if (mql.matches) {
+        // console.log('onbeforeprint equivalent');
+        // these events happen async... whatever's rendered on the screen before this gets triggered
+        // is what gets printed .. lame
+      } else {
+        // console.log('onafterprint equivalent');
+      }
+    });
+
     const { classes, location } = this.props;
     const { pathname } = location;
 

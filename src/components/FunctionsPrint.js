@@ -22,8 +22,8 @@ export function togglePrintNonPrint() {
 export function insertBreakPoints() {
   const pageHeightPx = pageHeight * pxPerIn - 2 * pageMargins * pxPerIn;
   const divsClean = document.querySelectorAll('div[class*=cleanBreak]');
-  const offset = 45; // pixels not accounted for on top
-  const splitAtPercent = 0.65; // if content on next page is more than this percent, split
+  const offset = 20; // pixels not accounted for on top
+  const splitAtPercent = 0.5; // if content on next page is more than this percent, split
 
   const printCleanOffsetTops = new Array(divsClean.length - 1);
 
@@ -39,7 +39,7 @@ export function insertBreakPoints() {
       pageHeightPx * onPage - (printCleanOffsetTops[i] + offset + divsClean[i].offsetHeight);
     const doTheSplit = () =>
       Math.abs(remainderOnNextPage / divsClean[i].offsetHeight) > splitAtPercent;
-
+    console.log(i, ' ', remainderOnNextPage / divsClean[i].offsetHeight);
     if (remainderOnNextPage < 0) {
       if (doTheSplit()) {
         const breakpointHeight = divsClean[i].offsetHeight + remainderOnNextPage;

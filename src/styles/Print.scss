@@ -14,7 +14,7 @@ $pageMarginsIn: $pageMargins + 0in;
 }
 
 .onlyPrint {
-  display: block;
+  display: block !important;
 }
 
 .onlyPrintAfterInject {

@@ -1,4 +1,4 @@
-# My Resume - Ion Caza - 10/01/2018
+# My Resume - Ion Caza - 10/19/2018
 
 Can be accessed at <https://let.caza.in/>
 
@@ -37,6 +37,10 @@ Can be accessed at <https://let.caza.in/>
 * Refactor to use `withRouter` instead of passing prop to TopBar manually
 
 ## Change Log
+
+### v2.3.1
+
+* Updated verbiage of experience
 
 ### v2.3.0
 
