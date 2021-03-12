@@ -9,7 +9,7 @@
     "node-sass-utils": "^1.1.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dev-utils": "^5.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.4.1",
     "react-obfuscate": "^2.1.4",
     "react-router": "^4.3.1",
